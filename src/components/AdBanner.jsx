@@ -6,7 +6,7 @@ function AdBanner() {
         <>
         <div  className='ADvideo'>
         <video autoPlay loop muted playsInline>
-            <source  src={AD}  type='video/mp4'></source>
+            <source  src='https://res.cloudinary.com/dopyogopf/video/upload/f_auto:video,q_auto/t0kosepfh8f3i9gylqdt'  type='video/mp4'></source>
         </video>
         </div>
         </>
