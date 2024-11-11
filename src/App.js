@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { Suspense } from 'react';
 import './App.css';
 // import AdBanner from './components/AdBanner';
 import BrandsSection from './components/BrandsSection';
@@ -19,7 +19,10 @@ function App() {
    <Header></Header>
    <ProductCategory></ProductCategory>
    <Topselling></Topselling>
+   <Suspense fallback={<div>Loading...</div>}>
    <AdBanner></AdBanner>
+    </Suspense>
+  
    <NewArrival></NewArrival>
    <FlashSale></FlashSale>
    <BrandsSection></BrandsSection>
