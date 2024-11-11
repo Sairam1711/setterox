@@ -114,10 +114,11 @@ const Footer = () => (
       </div>
      
     </div>
-
+    <div className='thin-linec' >   <hr class="thin-line"></hr></div>
+  
     {/* Footer Bottom Section */}
     <div className="footer-bottom">
-      <div style={{display:'flex',flexDirection:"row" ,width:"100%" ,justifyContent:"space-between"}}>
+      <div style={{display:'flex',flexDirection:"row" ,width:"100%" ,justifyContent:"space-around", gap:"200px"}}>
       <div className="social-icons">
         {/* Add icons here (replace with actual icons in production) */}
        <img className='ficon' src={facebook}></img>
@@ -128,7 +129,7 @@ const Footer = () => (
        <img  className='ficon' src={tictock}></img>
         <img className='money-card' src='https://s3-alpha-sig.figma.com/img/46c7/66ad/a4780fedd9cb04cde2e045a08122e154?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=M9BrRbKo0-V3AUZRGQR8NP-5dtoJbEX6oX6jzVcwRQ7ekgeJ1LerzGbtdeNGWleBoV-JSFSN2O2R3bHAqECpTNvmrj0qwjlS7K7~RjFFF1eaM5Qn5khQ6AySk1634zg6Zh1OZUJSoltU-39~pFDLwgo9JZZK0vSsXqCyzZHwwIoiquy2uGX7IvfEwVF6slqHRiO61BslnKYcuybvWjaI5jbtTvg2iu8vRLPDsWoz-FOEGioINC1c3xu1D3pKpNkdOaU7m9zzwdu7AXZ0FL7LG7NUHiZEaW8NlPXZVuxFSOVu0cNDBQLfRV1cr7aV3HURViVEzK9td1baFDOJClUElQ__'></img>
       </div>
-  
+    
       <div className="footer-buttons">
         <button>Login/Register</button>
         <button>Customer Service</button>
@@ -138,9 +139,10 @@ const Footer = () => (
           <option>Spanish</option>
         </select>
       </div>
+
       </div>
     
-      <div  style={{display:'flex',flexDirection:"row" ,width:"100%" ,justifyContent:"space-between"}}>
+      <div  style={{display:'flex',flexDirection:"row" ,width:"100%" ,justifyContent:"space-around",gap:"180px"}}>
       <div className="legal-links">
         <p>Privacy policy</p>
         <p>Cookie policy</p>

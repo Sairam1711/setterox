@@ -21,7 +21,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+
   color: white;
 }
 
@@ -33,6 +33,9 @@
 
 .header {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 
 }
 
@@ -57,7 +60,7 @@ gap: 70px;
 
 .menuHeader{
   display: flex;
-  gap: 200px;
+  gap: 120px;
   flex-direction: row;
   justify-content:center;
   
@@ -78,6 +81,7 @@ gap: 70px;
   margin-left: 0;
   margin-right: 0;
   gap: 30px;
+  font-family: "Aeonik TRIAL", sans-serif;
 }
 
 
@@ -110,10 +114,11 @@ left: 1403px;
 .menuIcons{
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 50px;
   margin: auto;
   margin-left: 0;
   margin-right: 0;
+  margin-top: 30px;
  
 }
 
@@ -131,7 +136,7 @@ left: 1403px;
   justify-content: center;
   width: 95%;
  height: 724px;
-background: #1a1a1a;
+
 border-radius: 20px;
 margin: auto;
 color: white;
@@ -141,12 +146,14 @@ text-align: center;
 }
 
 .productimg{
-  width: 40%;
-  height: 70%;
-  filter: drop-shadow( 10px 60px 70px#0033cc);
+  width: 100%;
+  height:100%;
+
+  /* filter: drop-shadow( 10px 60px 70px#0033cc); */
   text-align: center;
   margin: auto;
-  margin-top: 10%;
+ 
+ 
 }
 .product-info{
   z-index: 9;
@@ -163,17 +170,18 @@ text-align: justify;
 .product-info h1{
   margin: 0;
   width: 80%;
-font-size: 50px;
-font-weight: 700;
+font-size: 40px;
+font-weight: 600;
 line-height: 57px;
 text-align: left;
+font-family: "Aeonik TRIAL", sans-serif;
 
 
   
 }
 .product-info h3{
 
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 400;
   line-height: 34.2px;
   text-align: left;
@@ -183,7 +191,9 @@ text-align: left;
 .buttonDiv{
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 10px;
+  width: 360px;
 }
 
 /* button custom */
@@ -192,7 +202,12 @@ text-align: left;
   margin-top: 10px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 90px;
+
+
+
+
+
 }
 
 .buttons button {
@@ -200,8 +215,10 @@ text-align: left;
   margin-right: 10px;
   border: none;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 17px;
   cursor: pointer;
+  width: 180px;
+  height:  38px;
 }
 .buttons p{
   margin: 0;
@@ -254,11 +271,11 @@ gap: 65px;
   position: absolute;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  gap: 70px;
+  justify-content: space-around;
+  gap: 50px;
   text-align: center;
   top:  290px;
-right: -30px;
+right: -35px;
   width: 100%;
 }
 .navigation button{
@@ -307,10 +324,13 @@ font-weight: 300;
 .topselling{
   position: relative;
   width: 100%;
-height: 794px;
+
+display: flex;
+flex-direction: column;
+gap: 30px;
 text-align: center;
-overflow-y:scroll;
-margin-bottom: 40px;
+margin-top: 100px;
+margin-bottom: 90px;
 scrollbar-width: none;
 
 }
@@ -319,17 +339,18 @@ scrollbar-width: none;
 width: 100%;
 font-size: 50px;
 font-weight: 400;
-
+margin: 0;
 
 
 
 }
+
 .topsellContent{
 
 font-size: 17px;
 font-weight: 400;
 line-height: 19.38px;
-
+margin: 0;
 
 
 }
@@ -341,7 +362,10 @@ line-height: 19.38px;
   scroll-behavior:smooth;
   gap: 30px;
   overflow-x:scroll;
+  overflow-y:hidden;
   scrollbar-width: none; 
+  margin-left: 100px;
+  height: 500%;
  
  
 }
@@ -349,16 +373,26 @@ line-height: 19.38px;
   position: relative;
   width: 450px;
 height: 642px;
+border-radius: 20px;
 text-align: center;
 
 
 }
+.sellerCardImg1 {
+  width: 100%;
+ 
+  border-radius: 20px;
+  overflow: hidden;
+display: inline-block;
+ 
+
+}
 .sellerCardImg {
   width: 100%;
-    height: 90%;
-    border-radius: 20px;
+  height: 100%;
+  border-radius: 20px;
   object-fit: cover;
-  transition: transform 0.8s;
+  transition: transform 0.3s ease;
 
 }
 .card-bottom{
@@ -439,7 +473,7 @@ border-radius: 15px 15px 15px 15px;
   }
 
   .sellerCard:hover .sellerCardImg { 
-    z-index: -1;
+    position: static;
     transform: scale(1.1);
   }
   .sellerCard:hover .cart-button{
@@ -451,10 +485,14 @@ border-radius: 15px 15px 15px 15px;
     width: 70%;
     height: 400px;
     background-color: white;
+    color: #1a1a1a;
     border-radius: 0 0 10px;
     z-index: 9;
 opacity: 0;
-    transition: opacity 0.3s ease;
+    transition:  2s ;
   
+  }
+  .drawer:hover .drawer {
+    opacity: 1;
   }
  

@@ -185,8 +185,9 @@ text-align: left;
   
   /* Footer Bottom Section */
   .footer-bottom {
-    background-color: #222;
-    padding: 1rem;
+    background: #171717;
+
+    padding: 2rem;
     text-align: center;
     color:white;
     display: flex;
@@ -194,6 +195,9 @@ text-align: left;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+
+
+
   }
   .footer-bottom button{
     border-radius: 5px;
@@ -214,7 +218,7 @@ text-align: left;
     gap: 2rem;
     font-size: 0.8rem;
     margin-top: 0.5rem;
-font-size: 14px;
+font-size: 12px;
 font-weight: 400;
 line-height: 15.96px;
 text-align: left;
@@ -261,7 +265,7 @@ line-height: 15.96px;
 
   }
 .money-card {
-    width: 220px;
+    width: 320px;
 height: 23px;
 
   }
@@ -270,5 +274,22 @@ height: 23px;
 height: 28px;
 
 
+  }
+  .thin-linec{
+    width:100%;
+    background: #171717;
+display: flex;
+justify-content: center;
+    text-align: center;
+  }
+  .thin-line {
+    margin: auto;
+    margin: 0;
+    border: none;             /* Remove default border */
+    height: 1px;               /* Set thickness of the line */
+    background-color: #AFAFAF;   /* Set color of the line */
+    width: 93%;               /* Adjust width as needed */          /* Optional: space around the line */
+    opacity: 0.7;   
+        /* Optional: make it slightly transparent */
   }
   

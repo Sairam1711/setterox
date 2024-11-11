@@ -47,8 +47,10 @@ function Topselling() {
           Top Seller
           </span>
          <button className='orderNow'>Order now</button>
+         <div className='sellerCardImg1'>
         <img className='sellerCardImg' src='https://s3-alpha-sig.figma.com/img/94b5/7130/1c1eabeda44c5f2f7a2b540737165427?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dguviLTsYuBra0QGKhwsjWtqK6lM9mUSQeiWoXOa1Q4AFDz88W1nrTFGXBnxGhYS4gXacHRwahyQtd~R1BUwNP9MutdfEazZBObhQdSGP0F-7YWgDMaT3oWLRIOy4zJ-xyz7r-jefTGlXOMNzJmxSg43sutZh0iTOiD6soZlgFo6yv6aTbw-GbEWcTykrNk8xjeLAuIi2lwLvevnAA52~uBfyQSOzZk1w-jmUo1elrj9QO10g-EASOessdrcNUquUEzrQ4Lpe6VYWyqn9NLLQZ7OV3V0MbWbaTST0lpvNf8-bRKzLZ46nxxa0T9j7XWiNdM8WpMR5ry-Lgm7CWhRCw__'>
         </img>
+        </div>
         <div className='card-bottom' >
             <span className='span1'>Bambu Lab X1 Carbon 
             Combo</span>

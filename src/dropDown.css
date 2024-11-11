@@ -1,0 +1,31 @@
+
+.Dcard{
+    height: 100%;
+}
+.Dcard h3{
+   
+margin: 0;
+
+font-size: 18px;
+font-weight: 400;
+line-height: 20.52px;
+text-align: left;
+
+
+}
+
+.DropImage{
+    width: 180px;
+height: 186px;
+
+
+
+
+}
+
+.dlist span{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 150px;
+}

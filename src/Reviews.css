@@ -50,8 +50,10 @@ line-height: 57px;
 
   }
   .reviews-list ::-webkit-scrollbar {
-    width: 1px; /* Width of the scrollbar */
-}
+    width: 1px;               /* Set width of the vertical scrollbar */
+    height: 1px;              /* Set height of the horizontal scrollbar */
+  }
+
   .review-card {
     background-color: #f0f8ff;
     padding: 1rem;

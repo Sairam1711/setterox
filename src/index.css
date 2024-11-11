@@ -9,6 +9,7 @@ body {
   overflow: hidden;
   overflow-y: scroll;
   scrollbar-width: none;
+  font-family: "Aeonik TRIAL", sans-serif;
 }
 ::-webkit-scrollbar {
   display: none;
