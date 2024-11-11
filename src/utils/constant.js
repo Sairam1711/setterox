@@ -10,8 +10,8 @@ export const header_title = ['We return money within 30 days',
 
 export const headermenu = ["3D Products",
     "   Accessories & Spare Parts",
-    " application",
-    "   software",
+    " Application",
+    "   Software",
     " Offers",
 ]
 
