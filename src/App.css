@@ -28,11 +28,433 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* src/components/Header.css */
+
+.header {
+  text-align: center;
+
 }
+
+
+
+.sliding-text {
+  width: 100%;
+  display: flex;
+
+  gap: 40px;
+  height: 100%; /* Same height as font size */
+ 
+}
+
+.sliding-text {
+text-align: left;
+display: flex;
+flex-direction: row;
+gap: 70px;
+    /* animation: slide-horizontal 9s infinite; */
+}
+
+.menuHeader{
+  display: flex;
+  gap: 200px;
+  flex-direction: row;
+  justify-content:center;
+  
+}
+
+.maindiv {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+
+}
+.menu{
+  display: flex;
+  justify-content: space-around;
+  height: 50%;
+  margin: auto;
+  margin-top: 30px;
+  margin-left: 0;
+  margin-right: 0;
+  gap: 30px;
+}
+
+
+.menu p{
+  padding: 0;
+  margin: auto;
+  height: 50px;
+  font-size: larger;
+  cursor: pointer;
+}
+.logo{
+  /* Group */
+
+width: 211px;
+
+height: 77px;
+
+
+}
+
+.icon{
+width: 25px;
+height: 27px;
+top: 102px;
+left: 1403px;
+gap: 0px;
+opacity: 0px;
+
+}
+.menuIcons{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin: auto;
+  margin-left: 0;
+  margin-right: 0;
+ 
+}
+
+/* banner&header */
+.header-banner{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+/*  banner css */
+.banner{
+  display: flex;
+  justify-content: center;
+  width: 95%;
+ height: 724px;
+background: #1a1a1a;
+border-radius: 20px;
+margin: auto;
+color: white;
+border-radius: 10px;
+text-align: center;
+
+}
+
+.productimg{
+  width: 40%;
+  height: 70%;
+  filter: drop-shadow( 10px 60px 70px#0033cc);
+  text-align: center;
+  margin: auto;
+  margin-top: 10%;
+}
+.product-info{
+  z-index: 9;
+  position:absolute;
+  margin-top: 20%;
+  height: 30%;
+ width: 30%;
+  display: flex;
+  flex-direction: column;
+text-align: justify;
+  gap: 20px;
+  transform: translate(-380px,10px);
+}
+.product-info h1{
+  margin: 0;
+  width: 80%;
+font-size: 50px;
+font-weight: 700;
+line-height: 57px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+  
+}
+.product-info h3{
+
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 34.2px;
+  text-align: left;
+  text-decoration-skip-ink: none;
+  margin: 0;
+}
+.buttonDiv{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+/* button custom */
+
+.buttons {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.buttons button {
+  padding: 10px 15px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.buttons p{
+  margin: 0;
+}
+.buy-now {
+  background-color: #1a73e8;
+  color: white;
+}
+
+.contact-us {
+  background-color: white;
+  color: #1a73e8;
+}
+
+.description {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.rating {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  color: #e0e8f4;
+}
+
+/* videoDiv */
+.videoDiv{
+  position:absolute;
+  z-index: 9;
+/* image */
+transform: translate(485px,350px);
+display: flex;
+flex-direction:column;
+gap: 65px;
+
+
+}
+.videoDivimg{
+  width: 80%;
+  height: 80%;
+  left: 1243px;
+  top: 477px;
+  border-radius: 15px;
+  border: 4px solid; /* Set border thickness */
+  border-color:  #4a90e2;
+}
+.navigation{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 70px;
+  text-align: center;
+  top:  290px;
+right: -30px;
+  width: 100%;
+}
+.navigation button{
+  border-radius: 30px;
+  height: 40px;
+  width: 40px;
+  font-size:larger;
+  padding: 0;
+  /* Ellipse 10 */
+background: #E0E0E0;
+
+}
+.group-button{
+  display: flex;
+  justify-content:space-around;
+  margin: auto;
+  gap: 10px;
+}
+.view-product button{
+  color: #1a1a1a;
+  background-color: #EDF6FF;
+  width: 220px;
+  height: 90px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+font-size: 30px;
+font-weight: 300;
+
+
+}
+
+.ADvideo{
+  width: 100%;
+  justify-content: center;
+}
+.ADvideo video{
+  margin: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* topselling */
+
+.topselling{
+  position: relative;
+  width: 100%;
+height: 794px;
+text-align: center;
+overflow-y:scroll;
+margin-bottom: 40px;
+scrollbar-width: none;
+
+}
+.topTitle{
+  
+width: 100%;
+font-size: 50px;
+font-weight: 400;
+
+
+
+
+}
+.topsellContent{
+
+font-size: 17px;
+font-weight: 400;
+line-height: 19.38px;
+
+
+
+}
+
+.topsellerSlider{
+  position:relative;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto ;
+  scroll-behavior:smooth;
+  gap: 30px;
+  overflow-x:scroll;
+  scrollbar-width: none; 
+ 
+ 
+}
+.sellerCard{
+  position: relative;
+  width: 450px;
+height: 642px;
+text-align: center;
+
+
+}
+.sellerCardImg {
+  width: 100%;
+    height: 90%;
+    border-radius: 20px;
+  object-fit: cover;
+  transition: transform 0.8s;
+
+}
+.card-bottom{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+.span1{
+font-size: 20px;
+font-weight: 400;
+line-height: 22.8px;
+width: 50%;
+text-align: left;
+
+}
+.span2{
+
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 28.5px;
+  text-align: left;
+
+  
+}
+.orderNow{
+
+ position: absolute;
+top: 70%;
+left: 35%;
+width: 161px;
+height: 52px;
+border-radius: 15px 15px 15px 15px;
+    z-index: 9;
+    text-align: center;
+    background-color:#0071C5;
+    color: white;
+    border: none;
+    padding: 10px;
+   
+    margin: auto;
+
+
+    
+}
+.topsller{
+  position: absolute;
+  width: 135px;
+  height: 44px;
+  text-align: center;
+  background-image: url('./assets/images/Rectangle 29.png');
+  color: white;
+ font-size: 25px;
+ font-weight: 300;
+ line-height: 28.5px;
+ top: 30px;
+ margin: auto;
+ z-index:9 ;
+}
+
+.cart-button {
+    position: absolute;
+    width: 50px;
+    height:50px ;
+
+    top: 30px;
+    right: 36px;
+    z-index: 9;
+    background: none;
+    border-radius: 30px;
+    border: none;
+    background-color: #E0E0E0;
+    font-weight: bold;
+    color: black;
+    font-size: 1.5em;
+    cursor: pointer;
+    visibility: visible;
+  }
+
+  .sellerCard:hover .sellerCardImg { 
+    z-index: -1;
+    transform: scale(1.1);
+  }
+  .sellerCard:hover .cart-button{
+   visibility:visible;
+  }
+  
+  .drawer{
+    position: absolute;
+    width: 70%;
+    height: 400px;
+    background-color: white;
+    border-radius: 0 0 10px;
+    z-index: 9;
+opacity: 0;
+    transition: opacity 0.3s ease;
+  
+  }
+ 

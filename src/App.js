@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
 
+import React from 'react';
+import './App.css';
+// import AdBanner from './components/AdBanner';
+import BrandsSection from './components/BrandsSection';
+import FlashSale from './components/FlashSale';
+import Footer from './components/Footer';
+import Gallery from './components/Gallery';
+import Header from './components/Header';
+import NewArrival from './components/NewArrival';
+import ProductCategory from './components/ProductCategory';
+import ProductShowcase from './components/ProductShowcase';
+import Reviews from './components/reviews';
+import Topselling from './components/Topselling';
+const AdBanner= React.lazy(() => import('./components/AdBanner'))
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+   <Header></Header>
+   <ProductCategory></ProductCategory>
+   <Topselling></Topselling>
+   <AdBanner></AdBanner>
+   <NewArrival></NewArrival>
+   <FlashSale></FlashSale>
+   <BrandsSection></BrandsSection>
+   <ProductShowcase></ProductShowcase>
+   <Gallery></Gallery>
+   <Reviews></Reviews>
+   <Footer></Footer>
+   </>
   );
 }
 

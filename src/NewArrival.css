@@ -1,0 +1,127 @@
+/* Container for New Arrival section */
+.new-arrival {
+    display: flex;
+    align-items: center;
+  /* Light blue background */
+    width: 100%;
+    height: 900px;
+
+
+
+  }
+  
+  /* Text Section Styles */
+  .text-section {
+    height:80% ;
+    max-width: 40%;
+    margin: auto;
+  }
+  
+  .text-section h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .text-section p {
+    font-size: 1rem;
+    color:black;
+    margin-bottom: 20px;
+    text-align: justify;
+    width: 450px;
+font-size: 17px;
+font-weight: 400;
+line-height: 19.38px;
+
+
+
+  }
+  
+  .explore-button {
+    background-color: #0071C5;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+height: 50px;
+font-size: 17px;
+font-weight: 400;
+line-height: 19.38px;
+
+
+
+  }
+  
+  /* Image Slider Styles */
+  .image-slider {
+    display: flex;
+    gap: 20px;
+    /* Light blue background for the slider */
+    border-radius: 10px;
+    height: 100%;
+    width: 60%;
+    justify-content: space-around;
+  }
+  
+  /* Thumbnails Styles */
+  .thumbnail-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    width: 20%;
+    height:auto;
+  }
+  
+  .thumbnail {
+width: 100%;
+    
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .thumbnail:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Main Image Styles */
+  .main-image {
+    position: relative;
+    width: 70%;
+    height: 90%;
+    margin: auto;
+  
+  }
+  
+  .main-image .image-big {
+    width: 100%;
+    margin-top: 90px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Play Button Styles */
+  .play-button {
+    position: absolute;
+    top: 20%;
+    right: 40px;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color:black;
+    background-color: rgba(242, 240, 240, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .play-button img{
+    width: 20.98px;
+height: 22.5px;
+
+
+
+  }
