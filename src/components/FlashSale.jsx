@@ -48,7 +48,7 @@ function FlashSale() {
         {products.map((product,index) => (
           <div key={product.id} className="flash-sale-card" id={`item`+index} >
             
-         {   index===0? '': <div className="badge">{product.badge}</div>}
+         {   index===0? '' : <div className="badge">{product.badge}</div>}
             <button className="cart-button1"><img src={CartIcon}/></button>
             <div className='product-info1' >
               <h2 style={{width:"300px"}}>{product.title}</h2>

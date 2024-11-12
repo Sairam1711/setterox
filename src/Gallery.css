@@ -6,7 +6,7 @@
     background-color:white;
  gap: 50px;
     width:100%;
-height: 913.04px;
+height: 1010px;
 font-family: "Aeonik";
 
 
@@ -64,21 +64,29 @@ text-align: left;
   }
   
   /* Image items */
-  .gallery-item {
+  .gallery-item  {
     width: 100%;
-    height: 700px;
+  position: relative;
+    height: 100%;
+    border-radius: 15px;
+ 
+  }
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
     border-radius: 15px;
     object-fit: cover;
     transition: transform 0.3s ease;
+ 
   }
-  
 
   #Galleryitem1{
     grid-column: 1 ;
     grid-row:  1 / span 2;
   }
-  #Galleryitem2,#Galleryitem3,#Galleryitem4,#Galleryitem5{
-height: 340px;
+  #Galleryitem2 img ,#Galleryitem3 img,#Galleryitem4 img,#Galleryitem5 img{
+height: 440px;
 width: 100%;
   }
   .gallery-content{
@@ -94,4 +102,70 @@ z-index: 9;
 height: 400px;
     background-color: blue;
     opacity: 200px;
+  }
+  .Gcontent{
+    position: absolute;
+    z-index: 2;
+    background-color: hsla(200, 100%, 41%, 0.5);
+    width: 100%;
+    height: 100%;
+    color: white;
+    border-radius: 15px;
+    opacity: 0;
+   transition: width 0.8s ease;
+  }
+  .Gcontent h1{
+    width: 369px;
+    height: 47px;   
+    margin: 0;
+  }
+  .Gcontent p{
+    width: 369px;
+    height: 47px;   
+    margin: 0;
+  }
+  #Galleryitem1 .GcontenDetials{
+  
+    width: 369px;
+    height: 100px;
+    transform: translate(20%,750px);
+    z-index: 8;
+
+  }
+   #Galleryitem1 .GcontenDetials p{
+
+font-size: 14px;
+font-weight: 400;
+line-height: 20.52px;
+width: 250px;
+text-align: left;
+margin: 0;
+
+
+  }
+  #Galleryitem2 .GcontenDetials  ,#Galleryitem3 .GcontenDetials,#Galleryitem4 .GcontenDetials ,#Galleryitem5 .GcontenDetials{
+    width: 169px;
+    height: 100px;
+transform: translate(30%,350px); 
+  }
+  #Galleryitem2 .GcontenDetials h1  ,#Galleryitem3 .GcontenDetials h1,#Galleryitem4 .GcontenDetials h1 ,#Galleryitem5 .GcontenDetials h1 {
+   
+    font-size: 22px;
+    font-weight: 700;
+    height: 20px;
+    line-height: 22.8px;
+   margin: 0;
+    
+  }
+  #Galleryitem2 .GcontenDetials p  ,#Galleryitem3 .GcontenDetials p,#Galleryitem4 .GcontenDetials p ,#Galleryitem5 .GcontenDetials p {
+   
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 20.52px;
+   
+    
+    
+  }
+  .Gcontent:hover  {
+ opacity: 1;
   }

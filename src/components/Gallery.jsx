@@ -23,16 +23,25 @@ const Gallery = () => {
       
       <div className="gallery-grid">
         {imagePaths.map((path, index) => (
-           
+           <div   className="gallery-item"  id={`Galleryitem${index + 1}`}>
+         <div className='Gcontent' id={`Galleryitem${index + 1}`}>
+          <div className='GcontenDetials' > 
+          <h1>Lorem Ipsum is simply</h1>
+          <p>
+          Lorem Ipsum is simply lorem Ipsum is simply
+          </p>
+          </div >
+         
+         </div >
           <img
             key={index}
             src={path}
             alt={`Gallery item ${index + 1}`}
-            className="gallery-item"
-            id={`Galleryitem${index + 1}`}
-          >
-      
+            >
+       
           </img>
+         
+          </div >
           
         ))}
       </div>

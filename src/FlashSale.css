@@ -31,6 +31,7 @@ text-align: left;
     color: white;
     border-radius: 10px;
     overflow: hidden;
+    height: 90%;
   }
   #item0{
     grid-column: 1 ;
@@ -39,18 +40,21 @@ text-align: left;
   #item1{
     grid-column: 2 ;
     grid-row:  1 /span 2 ;
+   
   }
   #item3{
     grid-column: 2 ;
-    grid-row:  2;
-    margin-top: 250px;
+    grid-row: 2 ;
+    margin-top: 50px;
+  
   }
   #item4{
-    grid-column: 3 span 1 ;
+    grid-column: 3  ;
     grid-row:  2 /span 1;
+  bottom: 70px;
   }
-  #item1,#item4{
-    height: 60%;
+  #item1, #item4{
+    height: 50%;
   }
   #item2,#item3{
     height: 50%;
@@ -62,8 +66,8 @@ text-align: left;
     height:350px;
   }
   #item4{
-    height: 100%;
-    margin-bottom: 40px;
+    height: 96%;
+ 
   }
   .product-image {
     width: 100%;
