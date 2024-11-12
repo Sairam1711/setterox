@@ -59,7 +59,7 @@ function Header() {
                         {
                             headermenu.map((element, index) => {
                                 return <div className='manuelement'>
-                                    <p className='headermenu' onMouseEnter={handleMouseEnter} style={{fontFamily:"sans-serif"}}
+                                    <p className='headermenu' onMouseEnter={handleMouseEnter} 
                                    key={index}>{element}</p>
                                    
                                    {index!==4&&<hr class="thin-lineh"  ></hr>}
