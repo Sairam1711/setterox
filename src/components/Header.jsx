@@ -46,7 +46,7 @@ function Header() {
                     <div className='sliding-text' >
                         {
                             header_title.map((element, index) => {
-                                return (<span  key={index}>{element}</span>)
+                                return (<span   key={index}>{element}</span>)
                             })
                         }
                     </div >
@@ -59,7 +59,7 @@ function Header() {
                         {
                             headermenu.map((element, index) => {
                                 return <div className='manuelement'>
-                                    <p className='headermenu' onMouseEnter={handleMouseEnter}
+                                    <p className='headermenu' onMouseEnter={handleMouseEnter} style={{fontFamily:"sans-serif"}}
                                    key={index}>{element}</p>
                                    
                                    {index!==4&&<hr class="thin-lineh"  ></hr>}
@@ -81,7 +81,7 @@ function Header() {
             <div className='banner'
                                     >
                 <div className="product-info">
-                    <h1>Workhorse 3D Printer G</h1>
+                    <h1>Workhorse 3D Printer </h1>
                     <h3>Bambu Lab P1S</h3>
                     <div className="buttons">
                         <div className='buttonDiv'><button className="buy-now">Buy Now</button>
