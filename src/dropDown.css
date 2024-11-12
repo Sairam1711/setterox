@@ -27,5 +27,12 @@ height: 186px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 150px;
+    width: 130px;
+}
+.drecord img{
+    width: 13.42px;
+    height: 10.37px;
+   margin: auto;
+  
+    
 }

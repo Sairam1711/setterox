@@ -16,14 +16,26 @@
     color: white;
   }
   
-  .newsletter-section h2 {
-    font-size: 2rem;
-    margin: 0;
+  .newsletter-sectionin h1 {
+
+font-size: 50px;
+font-weight: 700;
+line-height: 57px;
+text-align: left;
+
+margin-top: o;
+
   }
   
-  .newsletter-section p {
-    font-size: 1rem;
-    margin: 0.5rem 0;
+  .newsletter-sectionin h2 {
+
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 34.2px;
+    text-align: left;
+    text-underline-position: from-font;
+ 
+    
   }
   
   .newsletter-description {

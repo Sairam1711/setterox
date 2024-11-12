@@ -14,9 +14,9 @@ const Footer = () => (
     {/* Newsletter Signup Section */}
     <div className="newsletter-section">
       <div style={{width:"30%" ,display:"flex" ,flexDirection:"column",justifyContent:"center", gap:"50px"}}>
-      <div>
-      <h2>Newsletter</h2>
-      <p>Signup</p>
+      <div className='newsletter-sectionin'>
+      <h1 style={{margin:0}}>Newsletter</h1>
+      <h2>Signup</h2>
       </div>
       <p className="newsletter-description">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry.

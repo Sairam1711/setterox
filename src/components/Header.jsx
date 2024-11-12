@@ -36,10 +36,11 @@ function Header() {
     };
 
     const handleMouseLeave = () => {
+        console.log("object");
         setIsHovered(false);
     };
     return (
-        <div className='header-banner'>
+        <div className='header-banner'  onMouseEnter={handleMouseLeave}>
             <header className='header'>
                 <marquee scrollamount="10"  >
                     <div className='sliding-text' >
@@ -57,8 +58,12 @@ function Header() {
 
                         {
                             headermenu.map((element, index) => {
-                                return <p onMouseEnter={handleMouseEnter}
-                                    onMouseLeave={handleMouseLeave} key={index}>{element}</p>
+                                return <div className='manuelement'>
+                                    <p className='headermenu' onMouseEnter={handleMouseEnter}
+                                   key={index}>{element}</p>
+                                   
+                                   {index!==4&&<hr class="thin-lineh"  ></hr>}
+                                   </div>
                             })
                         }
                     </div>
@@ -73,9 +78,10 @@ function Header() {
                     </div>
                 </div>
             </header>
-            <div className='banner'>
+            <div className='banner'
+                                    >
                 <div className="product-info">
-                    <h1>Workhorse 3D Printer</h1>
+                    <h1>Workhorse 3D Printer G</h1>
                     <h3>Bambu Lab P1S</h3>
                     <div className="buttons">
                         <div className='buttonDiv'><button className="buy-now">Buy Now</button>
@@ -99,7 +105,7 @@ function Header() {
                 <div className='videoDiv'>
                     <img className='videoDivimg' src="https://s3-alpha-sig.figma.com/img/dbdd/e0ec/438d3da86655d455be6133e442ff6036?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KnHnupYO-fnaOxPGAEFjYH8Q1rFuq7PS8mafMD8a8Apstws4RjJVovvPsJiuqYObHUvv2B63lJio-6YVmxyA29r2ggMBsY~wyqvGFlx77mFGp8gN-7m9er-9G9~4ekHAylkmQWTfLc-yeR5HO9cE7QrqkaHmnMhpVf0t82KeDVOwe4oNjgIo3lWkPp26TyTlQkMgRVLXjGUx5u8qJcHmAQgY~WXTkeScKLMZVKRXQXlCg4KyjxfIlsEmihjSLprvpPzGeYJR14YX~6nlCYea19lPu~EQxIvz~V~4GoJfPW246ZHShUaaHbflTqKET08oPn2nfa3acrDjcRMuKcj1GQ__" alt="" />
                     <div className="navigation">
-                        <div className='group-button'>
+                        <div className='group-button' style={{visibility:"hidden"}}>
                             <button className="nav-button" onClick={handlePrevImage}><img src={shape2} alt="" /></button>
                             <button className="nav-button" onClick={handleNextImage}><img src={shape1} alt="" /></button>
                         </div>
@@ -110,8 +116,7 @@ function Header() {
 
 
                 </div>
-                <div className='drawer' onMouseEnter={handleMouseEnter}
-                                    onMouseLeave={handleMouseLeave} style={{ opacity: isHovered ? 1 : 0 }}>
+                <div className='drawer' onMouseLeave={handleMouseLeave} style={{ opacity: isHovered ? 1 : 0 }}>
                   <FirstDrop></FirstDrop>
                 </div>
             </div>

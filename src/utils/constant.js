@@ -59,26 +59,25 @@ export const productCatagery = [{
 },{
   
     tiTle: "3D Printers",
-    image: 'https://s3-alpha-sig.figma.com/img/f229/f918/e82a05d34b3d8e9c5a276b8eb1f78c70?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lgvA8dIKe3IMCE6oZ8Elz6nbDHYuNMBHLf5a~E95j9zI-6qUsKAmKON6rrsFUDeHXdl-H9aK08elgfHWW~qj9YiwMQCwGyHraufwmi2h6TAD0fMcTrTToIcUOPFPBnkNoTl9hFWbQ1sjjWGf-yG0CBMFOtYX901dZumA6QAVsJUc5rlp5JIYssDHDS1OxNaeAqKD3DE4rycLJoS3Ha5O0qecx~cu5tsh0l3OKeBdWpT0DwVJgOpjcqNtxooZK2SLWU~xvoIaHJ4d-rPe--ggFl8IDupOJ3OeLS3C3xiyFPF41RKKbiQwttgcj0V89sotLWZsPTOhG2WNZokFRXpmEg__',
-    list: ["Bambu Lab",
-      "Phrozen",
-      "Creality"]
+    image: 'https://s3-alpha-sig.figma.com/img/d5d0/b3f5/131bee8081a9a80711bbc60353eefef0?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nGa1cyFHFs63SKtPPyRRnReCckkwMtRNjkkKU8GSQBmxF483tMLkNDpB6gNtIXzSgxZHbk6v4r-Le2L~Ewp7i7BxW8VNLcNh9ssJR328JEBAJb88LbCsQrK20u6kjW2Ijg9wMESV1B4JmuoG4Bn8EDp7NqSujqCKRx7Cr95eMcGfNmhAAnGbcFcwWChg6fNaAwB1AP5xNlcYghewUw9HemI-c6JMEO6kJuL8ZE1vNul3Km7hudOHD4iwjj9Ehf-omXbGRKYkd4Q0JDCfY9t~-JXx33IkuvdThXAnaOP5XYnGhcx3y5S3pO16P7BPKGjWO3AFLOuvlqq7gCKAotLmvA__',
+    list: ["Polymaker",
+     " Bambu Lab",
+     " eSUN",
+      "JAMG HE"]
 },
   {
   
     tiTle: "3D Printers",
-    image: 'https://s3-alpha-sig.figma.com/img/f229/f918/e82a05d34b3d8e9c5a276b8eb1f78c70?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lgvA8dIKe3IMCE6oZ8Elz6nbDHYuNMBHLf5a~E95j9zI-6qUsKAmKON6rrsFUDeHXdl-H9aK08elgfHWW~qj9YiwMQCwGyHraufwmi2h6TAD0fMcTrTToIcUOPFPBnkNoTl9hFWbQ1sjjWGf-yG0CBMFOtYX901dZumA6QAVsJUc5rlp5JIYssDHDS1OxNaeAqKD3DE4rycLJoS3Ha5O0qecx~cu5tsh0l3OKeBdWpT0DwVJgOpjcqNtxooZK2SLWU~xvoIaHJ4d-rPe--ggFl8IDupOJ3OeLS3C3xiyFPF41RKKbiQwttgcj0V89sotLWZsPTOhG2WNZokFRXpmEg__',
-    list: ["Bambu Lab",
-      "Phrozen",
-      "Creality"]
+image:"https://s3-alpha-sig.figma.com/img/6f87/2d7c/d1fab215522df009a02b5841631f05a6?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cZA3bfiDgLdtpJVrtfNmMgqxwX5sf42LClFmv-we1sdaLJuAr103~kypQ2yyPEjXMeQeMacieaacqRu5MzHKBPkxuLizxJBlWjq3T16F89MDgYAa4oQiOgu~Pqfbo9E0s7I5QqUoYfwACPKBmXAWQGdUe5buN12VLw~ehYawSU1jkewEUYQQ070P17ObwgjG5tkGM4BQRO-h9JZ-hX~IBvlY8ExypY2R1A0z6FQncrio0VksXD46LSG70-wASXtJvBR466O6AuFCbHjyuViEqs3Lys420-sIQLti92HnTan1BpUMyJI9fGQHqzPbVP17YAyRs2D5jAuqQacqTRnC-Q__",
+    list: ["Phrozen",
+      "eSUN",
+     " JAMG HE"]
 },{
   
   
     tiTle: "3D Printers",
-    image: 'https://s3-alpha-sig.figma.com/img/f229/f918/e82a05d34b3d8e9c5a276b8eb1f78c70?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lgvA8dIKe3IMCE6oZ8Elz6nbDHYuNMBHLf5a~E95j9zI-6qUsKAmKON6rrsFUDeHXdl-H9aK08elgfHWW~qj9YiwMQCwGyHraufwmi2h6TAD0fMcTrTToIcUOPFPBnkNoTl9hFWbQ1sjjWGf-yG0CBMFOtYX901dZumA6QAVsJUc5rlp5JIYssDHDS1OxNaeAqKD3DE4rycLJoS3Ha5O0qecx~cu5tsh0l3OKeBdWpT0DwVJgOpjcqNtxooZK2SLWU~xvoIaHJ4d-rPe--ggFl8IDupOJ3OeLS3C3xiyFPF41RKKbiQwttgcj0V89sotLWZsPTOhG2WNZokFRXpmEg__',
-    list: ["Bambu Lab",
-      "Phrozen",
-      "Creality"]
+image:"https://s3-alpha-sig.figma.com/img/0341/8026/7f4d3c3893e8f3d35f748d264c59df2e?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=iKuUd9PXtEpSGzF4eSwspFxXc8hVXjVc4aiMjMC4hl2OPH1dXqrWdV9w~XIFCn2L93w59z~jL8W-G9IbrO2ePrL7iiCUny4jH37uijDCfdY7wQHI~moT1RnsTObHpQzG0SLNKVfHZmZ-5zy9xyzcvRY88sXCtM4640qdaOHOmLsug4gbu20sUADC7ik0OKLHKsyer5YYhcEv1DQVIA0ZvfJZwjLuUQOdsdW67ycxD72ZVgVW04Fgy~zW~7XSn26UFYf1XlbcXfPk2kSe6kmuujuTMiy3tCvSfsHX7YyKVjErQaeADD~rbClgOz08x3K6PpztQZtBjubflsCd8zQxCQ__" ,   
+list: ["3Dmakerpro"]
 }
 
 ]

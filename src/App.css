@@ -75,22 +75,46 @@ gap: 70px;
 .menu{
   display: flex;
   justify-content: space-around;
-  height: 50%;
+  
   margin: auto;
   margin-top: 30px;
   margin-left: 0;
   margin-right: 0;
   gap: 30px;
-  font-family: "Aeonik TRIAL", sans-serif;
+  font-family: "Aeonik";
 }
 
-
-.menu p{
+.manuelement{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.headermenu{
   padding: 0;
-  margin: auto;
-  height: 50px;
+  margin: 0;
   font-size: larger;
   cursor: pointer;
+}
+.thin-lineh{
+  margin: auto;
+  margin: 0;
+  border: none;             /* Remove default border */
+  height: 2px;
+             /* Set thickness of the line */
+   width: 0;         
+  background-color: #0071C5; 
+  transition: width 0.4s ease
+}
+@keyframes expandLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60px;
+  }
+}
+.manuelement:hover  .thin-lineh{
+  animation: expandLine 0.3s forwards
 }
 .logo{
   /* Group */
@@ -127,6 +151,9 @@ left: 1403px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+height: 1050px;
+font-family: "Aeonik";
+
 
 }
 
@@ -139,33 +166,38 @@ left: 1403px;
 
 border-radius: 20px;
 margin: auto;
+margin-top: 0;
 color: white;
 border-radius: 10px;
-text-align: center;
+
 
 }
 
 .productimg{
   width: 100%;
-  height:100%;
+  /* height:100%; */
 
+  height: 854px;
+
+  
   /* filter: drop-shadow( 10px 60px 70px#0033cc); */
-  text-align: center;
-  margin: auto;
+ 
+
  
  
 }
 .product-info{
   z-index: 9;
   position:absolute;
-  margin-top: 20%;
+
+  margin-top: 30%;
   height: 30%;
  width: 30%;
   display: flex;
   flex-direction: column;
 text-align: justify;
   gap: 20px;
-  transform: translate(-380px,10px);
+  transform: translate(-410px,10px);
 }
 .product-info h1{
   margin: 0;
@@ -174,7 +206,6 @@ font-size: 40px;
 font-weight: 600;
 line-height: 57px;
 text-align: left;
-font-family: "Aeonik TRIAL", sans-serif;
 
 
   
@@ -202,7 +233,7 @@ font-family: "Aeonik TRIAL", sans-serif;
   margin-top: 10px;
   display: flex;
   flex-direction: column;
-  gap: 90px;
+  gap: 70px;
 
 
 
@@ -251,7 +282,7 @@ font-family: "Aeonik TRIAL", sans-serif;
   position:absolute;
   z-index: 9;
 /* image */
-transform: translate(485px,350px);
+transform: translate(500px,460px);
 display: flex;
 flex-direction:column;
 gap: 65px;
@@ -259,10 +290,9 @@ gap: 65px;
 
 }
 .videoDivimg{
-  width: 80%;
-  height: 80%;
-  left: 1243px;
-  top: 477px;
+  width: 95%;
+  height: 95%;
+ 
   border-radius: 15px;
   border: 4px solid; /* Set border thickness */
   border-color:  #4a90e2;
@@ -272,10 +302,10 @@ gap: 65px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  gap: 50px;
+  gap: 40px;
   text-align: center;
-  top:  290px;
-right: -35px;
+  top:  300px;
+right: -45px;
   width: 100%;
 }
 .navigation button{
@@ -483,16 +513,15 @@ border-radius: 15px 15px 15px 15px;
   .drawer{
     position: absolute;
     width: 70%;
-    height: 400px;
+    height: 450px;
     background-color: white;
     color: #1a1a1a;
-    border-radius: 0 0 10px;
+    border-radius: 0 0 10px 10px;
     z-index: 9;
-opacity: 0;
     transition:  2s ;
   
   }
-  .drawer:hover .drawer {
+  /* .drawer:hover .drawer {
     opacity: 1;
-  }
+  } */
  

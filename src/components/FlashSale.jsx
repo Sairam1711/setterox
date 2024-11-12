@@ -28,14 +28,14 @@ function FlashSale() {
     {
       id: 4,
       image: 'https://s3-alpha-sig.figma.com/img/a627/2573/2d5cf97e5eee3c14697c1ded123a4b9b?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=amlgCSHdfjMyC4Lp9nLbjtxcAUCwsnC0bSfF8A-PlTtA28qUCryG~08AsRvJtgZopyo5TrCZsDEW-nmth1dKAtJBBuylvUuBgAZWcvO0ZXWDjPyL60Kba9ZgSIoF9G49NNx6ogxkbbsPk9FuX0-0AvzRLDyS~mcjxZb24tBKRmGRdpDs-f9Z0Xi0I6TyoRK7L6V9JJIusntrz34oVF9YVgxY0f4bI~iljPwptbCBOtoa7d1lCZJJ7X3NNIcqYp0ECP2LGcffPFOETpHeim-ch1xOFfWLo38HQRHb6yZ9gV5nitOlZ6PZ-LkYFIJ4kMy8D2tic6LIEw97agQW4gCftA__',
-      title: 'PPA-Cf',
+      title: 'Glue Stick For Build Plate',
       badge: 'Top Seller',
       buttonLabel: 'Order now',
     },
     {
       id: 5,
       image: 'https://s3-alpha-sig.figma.com/img/1a1d/15a5/6e7f4e5c4e06dae001b6a4a4bf1a592e?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=o1GCE2UVymFOayRnL4rzn689~8NLwh-WNTiodIhtFZ1GF6ByPiIq93xuUSlnGL4S2vh6-h6xHoH0507ix5-Fd3bvNcX7kPGPPd3KJBssq6KaO7NQVNFhfeI-IrSniZHcQ0phTD019ELG4VmKBSXlaB1IUpKMlCUJY1rfwALAorvE18aHhRwrb~RgMv8iVXND2MyXOFMDMv~NZa8odtkwLrjdGA8zKXtitj1ebINi~FMI0-rKpkaPks86~Ojygs4NJVuoTI9n1Vm91GNptBFXccLgNqaQF~Im6wECK8v12GBINt0f6E0ZDdaaGgMJYciRpR6Y~yHGcXv8nIqlqqL5NQ__',
-      title: 'Glue Stick For Build Plate',
+      title: 'PPA-Cf ',
       badge: 'Top Seller',
       buttonLabel: 'Order now',
     },
@@ -51,7 +51,7 @@ function FlashSale() {
          {   index===0? '': <div className="badge">{product.badge}</div>}
             <button className="cart-button1"><img src={CartIcon}/></button>
             <div className='product-info1' >
-              <h2>{product.title}</h2>
+              <h2 style={{width:"300px"}}>{product.title}</h2>
               {product.subtitle && <p>{product.subtitle}</p>}
               <button className="order-button">{product.buttonLabel}</button>
             </div>

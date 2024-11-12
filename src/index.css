@@ -1,15 +1,16 @@
+@font-face {
+  font-family: "Aeonik";
+  src: url("./assets/fonts/NewAeonikTrials/AeonikTRIAL-Regular.otf") format("opentype");
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color:#EDF6FF;
   overflow: hidden;
   overflow-y: scroll;
   scrollbar-width: none;
-  font-family: "Aeonik TRIAL", sans-serif;
+  font-family: "Aeonik";
 }
 ::-webkit-scrollbar {
   display: none;

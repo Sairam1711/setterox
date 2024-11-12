@@ -21,14 +21,14 @@ const Showcase = () => {
      <div className="showcase-footer">
      <div className="showcase-footer-item">
        <img src={secureIcon} alt="Secure Payment" className="footer-icon" />
-       <h3 className="footer-title">Secure & Flexible Payment options</h3>
+       <h3 className="footer-title">Secure <span style={{fontFamily:"sans-serif"}} >&</span> Flexible Payment options </h3>
        <p className="footer-description">
          Spread the cost of your purchase with our flexible payment options.
        </p>
      </div>
      <div className="showcase-footer-item">
        <img src={deliveryIcon} alt="Free Delivery" className="footer-icon" />
-       <h3 className="footer-title">Free & Fast Delivery</h3>
+       <h3 className="footer-title">Free <span style={{fontFamily:"sans-serif"}} >&</span> Fast Delivery</h3>
        <p className="footer-description">
          Free delivery for all orders over AED 999.
        </p>
