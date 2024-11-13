@@ -12,6 +12,9 @@ import star from '../assets/images/Group 36.png'
 import shape1 from '../assets/images/shape (1).png'
 import shape2 from '../assets/images/shape (2).png'
 import FirstDrop from './dropDown/FirstDrop'
+import c1 from '../assets/images/1.png'
+import c2 from '../assets/images/2.png'
+import c3 from '../assets/images/3.png'
 function Header({isHovered2, setIsHovered2,searchdiv,setsearchdiv}) {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
@@ -54,6 +57,7 @@ function Header({isHovered2, setIsHovered2,searchdiv,setsearchdiv}) {
     };
 const clickme=()=>{
     setsearchdiv(true)
+    handleMouseLeave2()
 }
  const clickmenot= ()=>{
     setsearchdiv(false)
@@ -98,8 +102,25 @@ const clickme=()=>{
                     </div>
                 </div>
             </header>
-            <div className='banner'
-                                    >
+            <div className='banner' >
+                <div className='circle' >
+              {/* <img className='circleImage1' src={c1}></img> */}
+              <div class="image-layer-container">
+  <img src={c1} class="layer-img img-small" alt="Small Image" />
+  <img src={c2} class="layer-img img-medium" alt="Medium Image" />
+  <img src={c3} class="layer-img img-large" alt="Large Image" />
+</div>
+<h1>Lorem ipsum dolor sit amet</h1>
+                </div>
+                <div className='circle2' >
+              {/* <img className='circleImage1' src={c1}></img> */}
+              <div class="image-layer-container">
+  <img src={c1} class="layer-img img-small" alt="Small Image" />
+  <img src={c2} class="layer-img img-medium" alt="Medium Image" />
+  <img src={c3} class="layer-img img-large" alt="Large Image" />
+</div>
+<h1>Lorem ipsum dolor sit amet</h1>
+                </div>
                 <div className="product-info">
                     <h1>Workhorse 3D Printer </h1>
                     <h3>Bambu Lab P1S</h3>
@@ -139,7 +160,7 @@ const clickme=()=>{
                 <div className='drawer' onMouseLeave={handleMouseLeave} style={{ opacity: isHovered ? 1 : 0 }}>
                   <FirstDrop></FirstDrop>
                 </div>
-            </div>searchinput
+            </div>
 <div className='searchdiv' onClick={clickmenot} style={{visibility:searchdiv?"visible":"hidden",zIndex:searchdiv?8:0}}>
     
 </div>

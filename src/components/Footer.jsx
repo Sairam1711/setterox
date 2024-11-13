@@ -8,7 +8,7 @@ import twtter  from '../assets/images/Vector (5).png'
 import linkedin  from '../assets/images/Vector (7).png'
 import youtube  from '../assets/images/Vector (8).png'
 import tictock  from '../assets/images/Group 63.png'
-
+import small_arrow  from '../assets/images/shape (3).png'
 const Footer = () => (
   <div className="footer-container">
     {/* Newsletter Signup Section */}
@@ -33,7 +33,7 @@ const Footer = () => (
     <div className="footer-links-section">
       <div className="footer-left">
         <div style={{display:'flex',flexDirection:"row"}}>
-        <img src={logwhite}></img>
+        <img src={logwhite} style={{marginBottom:"20px"}}></img>
         <h3 style={{padding:0,margin:0,marginTop:"50px"}}>Setterox</h3>
         </div>
        
@@ -41,40 +41,40 @@ const Footer = () => (
           Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         </p>
-        <ul style={{display:'flex',flexDirection:"column",gap:"10px"}} >
-          <li>Products <span>{'>'}</span></li>
-          <li>Softwares <span>{'>'}</span></li>
-          <li>Application <span>{'>'}</span></li>
-          <li>Offers <span>{'>'}</span></li>
+        <ul className='unoderlist' style={{display:'flex',flexDirection:"column",gap:"10px"}} >
+          <li>Products <img src={small_arrow}/></li>
+          <li>Softwares <img src={small_arrow}/></li>
+          <li>Application <img src={small_arrow}/></li>
+          <li>Offers <img src={small_arrow}/></li>
         </ul>
       </div>
       <div style={{display:'flex',flexDirection:"column"}}>
       <div className="footer-links">
         <div>
-          <h4>3D Printers</h4>
+          <h4 style={{marginBottom:"20px"}} >3D Printers</h4>
           <p>Bambu Lab</p>
           <p>Phrozen</p>
           <p>Creality</p>
         </div>
         <div>
-          <h4>3D Filaments</h4>
+          <h4 style={{marginBottom:"20px"}} >3D Filaments</h4>
           <p>Polymaker</p>
           <p>Bambu Lab</p>
           <p>eSUN</p>
           <p>JAMG HE</p>
         </div>
         <div>
-          <h4>3D Printing Resins</h4>
+          <h4 style={{marginBottom:"20px"}} >3D Printing Resins</h4>
           <p>Phrozen</p>
           <p>eSUN</p>
           <p>JAMG HE</p>
         </div>
         <div>
-          <h4>3D Scanner</h4>
+          <h4 style={{marginBottom:"20px"}} >3D Scanner</h4>
           <p>3DMAKERPRO</p>
         </div>
         <div>
-          <h4>Accessories & Spare Parts</h4>
+          <h4 style={{marginBottom:"20px"}}>Accessories & Spare Parts</h4>
           <p>Bambu Lab</p>
           <p>Phrozen</p>
           <p>Creality</p>
@@ -82,7 +82,7 @@ const Footer = () => (
       </div>
       <div className="footer-applications" >
         <div style={{width:"100%"}}>
-        <h4>Application</h4>
+        <h4 style={{marginBottom:"20px"}} >Application</h4>
         <div style={{height:'160px' ,width:"90%", display:'flex',flexDirection:"column",flexWrap:"wrap"}}>
      
         <p>3D Printing Services</p>
@@ -104,11 +104,11 @@ const Footer = () => (
         </div>
      
         <div style={{width:"30%"}}> 
-          <h4>softwares</h4>
-          <p>Polymaker</p>
-          <p>Bambu Lab</p>
-          <p>eSUN</p>
-          <p>JAMG HE</p>
+          <h4 style={{marginBottom:"20px"}}>softwares</h4>
+          <p>Bambu Studio - Bambu Lab</p>
+          <p> Creality Cloud </p>
+          <p>Phrozen</p>
+          <p>Flashforge</p>
         </div>
       </div>
       </div>
@@ -142,7 +142,7 @@ const Footer = () => (
 
       </div>
     
-      <div  style={{display:'flex',flexDirection:"row" ,width:"100%" ,justifyContent:"space-around",gap:"180px"}}>
+      <div  style={{display:'flex',flexDirection:"row" ,width:"100%" ,justifyContent:"space-around",gap:"220px"}}>
       <div className="legal-links">
         <p>Privacy policy</p>
         <p>Cookie policy</p>
@@ -150,7 +150,7 @@ const Footer = () => (
         <p>Terms and conditions</p>
       </div>
       <p className="copyright">
-        © All rights reserved by Setterox. Made by SetoTechnologies
+      © All rights reserved by Setterox. Made by SeitoTechnologies
       </p>
       </div>
      
