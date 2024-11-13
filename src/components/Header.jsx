@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../App.css';
 import { header_title, headericons } from '../utils/constant'
 import { headermenu } from '../utils/constant';
@@ -12,10 +12,13 @@ import star from '../assets/images/Group 36.png'
 import shape1 from '../assets/images/shape (1).png'
 import shape2 from '../assets/images/shape (2).png'
 import FirstDrop from './dropDown/FirstDrop'
-function Header() {
+function Header({isHovered2, setIsHovered2,searchdiv,setsearchdiv}) {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    const productImages = [product, "https://s3-alpha-sig.figma.com/img/dbdd/e0ec/438d3da86655d455be6133e442ff6036?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KnHnupYO-fnaOxPGAEFjYH8Q1rFuq7PS8mafMD8a8Apstws4RjJVovvPsJiuqYObHUvv2B63lJio-6YVmxyA29r2ggMBsY~wyqvGFlx77mFGp8gN-7m9er-9G9~4ekHAylkmQWTfLc-yeR5HO9cE7QrqkaHmnMhpVf0t82KeDVOwe4oNjgIo3lWkPp26TyTlQkMgRVLXjGUx5u8qJcHmAQgY~WXTkeScKLMZVKRXQXlCg4KyjxfIlsEmihjSLprvpPzGeYJR14YX~6nlCYea19lPu~EQxIvz~V~4GoJfPW246ZHShUaaHbflTqKET08oPn2nfa3acrDjcRMuKcj1GQ__"]; // add all product images here
+  
+    const [isHovered, setIsHovered] = useState(false);
 
+    const productImages = [product, "https://s3-alpha-sig.figma.com/img/dbdd/e0ec/438d3da86655d455be6133e442ff6036?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KnHnupYO-fnaOxPGAEFjYH8Q1rFuq7PS8mafMD8a8Apstws4RjJVovvPsJiuqYObHUvv2B63lJio-6YVmxyA29r2ggMBsY~wyqvGFlx77mFGp8gN-7m9er-9G9~4ekHAylkmQWTfLc-yeR5HO9cE7QrqkaHmnMhpVf0t82KeDVOwe4oNjgIo3lWkPp26TyTlQkMgRVLXjGUx5u8qJcHmAQgY~WXTkeScKLMZVKRXQXlCg4KyjxfIlsEmihjSLprvpPzGeYJR14YX~6nlCYea19lPu~EQxIvz~V~4GoJfPW246ZHShUaaHbflTqKET08oPn2nfa3acrDjcRMuKcj1GQ__"]; // add all product images here
+ 
     // Function to go to the next image
     const handleNextImage = () => {
         setCurrentImageIndex((prevIndex) =>
@@ -29,7 +32,17 @@ function Header() {
             prevIndex === 0 ? productImages.length - 1 : prevIndex - 1
         );
     };
-    const [isHovered, setIsHovered] = useState(false);
+   
+
+    const handleMouseEnter2 = () => {
+        setIsHovered2(true);
+    };
+
+    const handleMouseLeave2 = () => {
+        console.log("object");
+        setIsHovered2(false);
+    };
+  
 
     const handleMouseEnter = () => {
         setIsHovered(true);
@@ -39,6 +52,13 @@ function Header() {
         console.log("object");
         setIsHovered(false);
     };
+const clickme=()=>{
+    setsearchdiv(true)
+}
+ const clickmenot= ()=>{
+    setsearchdiv(false)
+ }
+    
     return (
         <div className='header-banner'  onMouseEnter={handleMouseLeave}>
             <header className='header'>
@@ -71,9 +91,9 @@ function Header() {
 
                     <div className='menuIcons'>
                     <img className='icon' src={ContactIcon} />
-                        <img className="icon" src={searchIcon} />
+                        <img className="icon" src={searchIcon} onClick={clickme} />
                        
-                        <img className='icon' src={AccountIcon} />
+                        <img className='icon' onClick={clickme} src={AccountIcon} />
                         <img className='icon' src={CartIcon} />
                     </div>
                 </div>
@@ -119,8 +139,16 @@ function Header() {
                 <div className='drawer' onMouseLeave={handleMouseLeave} style={{ opacity: isHovered ? 1 : 0 }}>
                   <FirstDrop></FirstDrop>
                 </div>
-            </div>
-
+            </div>searchinput
+<div className='searchdiv' onClick={clickmenot} style={{visibility:searchdiv?"visible":"hidden",zIndex:searchdiv?8:0}}>
+    
+</div>
+<div className='searchdiv2' style={{visibility:searchdiv?"visible":"hidden"}}>
+<div className='searchinput'>
+    <img className='iconinput' src={searchIcon} style={{opacity:isHovered2?0:1}}  /> 
+    <input type="text"   onMouseEnter={handleMouseEnter2} className='inputelement'  placeholder='Search' />
+    </div>
+    </div>
         </div>
     )
 }
