@@ -329,6 +329,11 @@ background: #E0E0E0;
   justify-content:space-around;
   margin: auto;
   gap: 10px;
+transform: translate(-26px,-2px) ;
+}
+.nav-button{
+  border: none;
+  cursor: pointer;
 }
 .view-product button{
   color: #1a1a1a;
@@ -336,6 +341,7 @@ background: #E0E0E0;
   width: 220px;
   height: 90px;
   padding: 10px 15px;
+
   border: none;
   border-radius: 9px;
   cursor: pointer;
@@ -551,7 +557,7 @@ border-radius: 15px 15px 15px 15px;
   visibility: hidden;
 text-align: center;
   cursor: pointer;
- 
+
  }
  
  .searchdiv2 input::placeholder {
@@ -583,6 +589,7 @@ text-align: center;
   visibility: hidden;
 text-align: center;
   cursor: pointer;
+
 }
 .searchinput{
 
@@ -678,20 +685,28 @@ line-height: 22.8px;
 }
 .rate{
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
   background-color:hsla(199, 26%, 81%, 0.5) ;
   transform: translate(8px,-70px);
   color: black;
-  display: flex;
-  justify-content: space-around;
   text-align: left;
   width: 140px;
   height: 80px;
   border-radius: 10px;
   opacity: 0;
- z-index: 11;
+  z-index: 11;
   transition: 1s;
 }
-
+.rate p{
+  z-index: 12;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
 .layer-img {
   position: absolute;
   top: 50%;
@@ -721,6 +736,19 @@ line-height: 22.8px;
   height: auto;
   z-index: 1;
   animation-delay: 2s;
+}
+.hover-button{
+  position: absolute;
+  border-radius: 30px;
+  height: 30px;
+  width: 30px;
+  font-size:small;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  /* Ellipse 10 */
+background: #E0E0E0;
+transform: translate(0,40px);
 }
 
 /* Animation to expand and contract each image */

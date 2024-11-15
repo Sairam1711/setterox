@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../App.css';
-import { header_title, headericons } from '../utils/constant'
+import { Accessories, Application, header_title, headericons, productCatagerys, Software } from '../utils/constant'
 import { headermenu } from '../utils/constant';
 import logo from '../assets/images/Group.png'
 import searchIcon from '../assets/images/path996@2x.png'
@@ -15,13 +15,18 @@ import FirstDrop from './dropDown/FirstDrop'
 import c1 from '../assets/images/1.png'
 import c2 from '../assets/images/2.png'
 import c3 from '../assets/images/3.png'
+
 function Header({ isHovered2, setIsHovered2, searchdiv, setsearchdiv }) {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
+    const [productCatagery, setproductCatagery] = useState([]);
     const [isHovered, setIsHovered] = useState(false);
     const [isHovered3, setIsHovered3] = useState(false);
     const [isHovered4, setIsHovered4] = useState(false );
-
+    const [scale,setscale]=useState({
+        height:"",
+        width:""
+    })
+const [borderRadius,setborderRadius]=useState()
     const productImages = [product, "https://s3-alpha-sig.figma.com/img/dbdd/e0ec/438d3da86655d455be6133e442ff6036?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KnHnupYO-fnaOxPGAEFjYH8Q1rFuq7PS8mafMD8a8Apstws4RjJVovvPsJiuqYObHUvv2B63lJio-6YVmxyA29r2ggMBsY~wyqvGFlx77mFGp8gN-7m9er-9G9~4ekHAylkmQWTfLc-yeR5HO9cE7QrqkaHmnMhpVf0t82KeDVOwe4oNjgIo3lWkPp26TyTlQkMgRVLXjGUx5u8qJcHmAQgY~WXTkeScKLMZVKRXQXlCg4KyjxfIlsEmihjSLprvpPzGeYJR14YX~6nlCYea19lPu~EQxIvz~V~4GoJfPW246ZHShUaaHbflTqKET08oPn2nfa3acrDjcRMuKcj1GQ__"]; // add all product images here
 
     // Function to go to the next image
@@ -50,7 +55,44 @@ function Header({ isHovered2, setIsHovered2, searchdiv, setsearchdiv }) {
         fun(value);
     };
 
-    const handleMouseEnter = () => {
+    const handleMouseEnter = (key) => {
+        if (key!==headermenu[3]) {
+            setborderRadius("")
+        }
+        if (key!==headermenu[2]) {
+            setscale(
+                {
+                    height:"",
+                    width:""
+                }
+            )
+        }
+        switch (key) {
+         case headermenu[0]:
+               setproductCatagery(productCatagerys)
+                break;
+         case headermenu[1]:
+               setproductCatagery(Accessories)
+                break;
+         case headermenu[2]:
+            setscale(
+                {
+                    height:"300px",
+                    width:"300px"
+                }
+            )
+                   setproductCatagery(Application)
+                     break; 
+        case headermenu[3]:
+            setborderRadius("0")
+                     setproductCatagery(Software)
+                      break; 
+        case headermenu[3]:
+                 setproductCatagery(productCatagerys)
+                  break;                                     
+            default:
+                break;
+        }
         setIsHovered(true);
     };
 
@@ -86,7 +128,13 @@ function Header({ isHovered2, setIsHovered2, searchdiv, setsearchdiv }) {
                         {
                             headermenu.map((element, index) => {
                                 return <div className='manuelement'>
-                                    <p className='headermenu' onMouseEnter={handleMouseEnter}
+                                    <p className='headermenu' onMouseEnter={()=>{
+                                        if (index !== 4 ) {
+                                            handleMouseEnter(element)
+                                        }else{
+                                            handleMouseLeave(element)
+                                        }
+                                      }}
                                         key={index}>{element}</p>
 
                                     {index !== 4 && <hr class="thin-lineh"  ></hr>}
@@ -118,7 +166,9 @@ function Header({ isHovered2, setIsHovered2, searchdiv, setsearchdiv }) {
                     }} onMouseLeave={() => {
                         handleMouseLeaveGeneral(false, setIsHovered3)
                     }} style={{ opacity: isHovered3 ? 1 : 0 }}>
-                        <p>Best Price</p>
+                        <p className='rate1' style={{fontSize:"14px" }}> Best Price</p>
+                        <p className='rate2' style={{fontSize:"26px"}}>999.00</p>
+                        <button className="hover-button">    <img style={{borderRadius:"10px"}} src={shape1}/> </button>   
                     </div>
                     <h1>Lorem ipsum dolor sit amet</h1>
                 </div>
@@ -134,7 +184,9 @@ function Header({ isHovered2, setIsHovered2, searchdiv, setsearchdiv }) {
                     }} onMouseLeave={() => {
                         handleMouseLeaveGeneral(false, setIsHovered4)
                     }} style={{ opacity: isHovered4 ? 1 : 0 }} className='rate'>
-                        <p>Best Price</p>
+                      <p className='rate1' style={{fontSize:"14px" }}> Best Price</p>
+                        <p className='rate2' style={{fontSize:"26px"}}>999.00</p>
+                        <button className="hover-button">    <img style={{borderRadius:"10px"}} src={shape1}/> </button>  
                     </div>
                     <h1>Lorem ipsum dolor sit amet</h1>
                 </div>
@@ -163,9 +215,9 @@ function Header({ isHovered2, setIsHovered2, searchdiv, setsearchdiv }) {
                 <div className='videoDiv'>
                     <img className='videoDivimg' src="https://s3-alpha-sig.figma.com/img/dbdd/e0ec/438d3da86655d455be6133e442ff6036?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KnHnupYO-fnaOxPGAEFjYH8Q1rFuq7PS8mafMD8a8Apstws4RjJVovvPsJiuqYObHUvv2B63lJio-6YVmxyA29r2ggMBsY~wyqvGFlx77mFGp8gN-7m9er-9G9~4ekHAylkmQWTfLc-yeR5HO9cE7QrqkaHmnMhpVf0t82KeDVOwe4oNjgIo3lWkPp26TyTlQkMgRVLXjGUx5u8qJcHmAQgY~WXTkeScKLMZVKRXQXlCg4KyjxfIlsEmihjSLprvpPzGeYJR14YX~6nlCYea19lPu~EQxIvz~V~4GoJfPW246ZHShUaaHbflTqKET08oPn2nfa3acrDjcRMuKcj1GQ__" alt="" />
                     <div className="navigation">
-                        <div className='group-button' style={{ visibility: "hidden" }}>
+                        <div className='group-button' >
                             <button className="nav-button" onClick={handlePrevImage}><img src={shape2} alt="" /></button>
-                            <button className="nav-button" onClick={handleNextImage}><img src={shape1} alt="" /></button>
+                            <button className="nav-button" onClick={handleNextImage} ><img src={shape1} alt="" /></button>
                         </div>
                         <div className='view-product'>
                             <button> view product </ button>
@@ -175,7 +227,7 @@ function Header({ isHovered2, setIsHovered2, searchdiv, setsearchdiv }) {
 
                 </div>
                 <div className='drawer' onMouseLeave={handleMouseLeave} style={{ opacity: isHovered ? 1 : 0 }}>
-                    <FirstDrop></FirstDrop>
+                    <FirstDrop productCatagery={productCatagery} borderRadius={borderRadius} width={scale.width} height={scale.height}></FirstDrop>
                 </div>
             </div>
             <div className='searchdiv' onClick={clickmenot} style={{ visibility: searchdiv ? "visible" : "hidden", zIndex: searchdiv ? 8 : 0 }}>
