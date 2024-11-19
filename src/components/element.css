@@ -1,0 +1,524 @@
+:root {
+    /* Button color variables */
+    --button-bg: #0D6EFD;
+    --button-hover-bg: #0A58CA;
+    --button-text-color: #fff;
+}
+
+
+/* General button styles */
+.modern-button {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--button-text-color);
+    background: var(--button-bg);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+}
+
+.lable{
+
+}
+.icon{
+    width: 15px;
+height: 15px;
+
+
+
+}
+.modern-button:hover {
+    background: var(--button-hover-bg);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modern-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+}
+
+/* Button width variants */
+.modern-button.full {
+    width: 100%;
+
+font-size: 16px;
+font-weight: 600;
+line-height: 24px;
+
+
+}
+
+.modern-button.medium {
+    width: 50%;
+}
+
+.modern-button.small {
+    padding: 8px;
+
+    width: 85px;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+.modern-button.primary{
+
+    background: white;
+    color: #5F5F5F;
+    font-size: 12px;
+    font-weight: 500;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+border:solid;
+box-shadow: none;
+border: 2px solid #898989
+
+
+}
+/* Container for buttons */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    max-width: 600px;
+}
+.inputlable{
+ 
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+  
+    
+}
+
+.ourgames{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    gap: 20px;
+   
+
+}
+.two{
+    display: flex;
+    flex-direction: row;
+    align-items:center ;
+    justify-content: center;
+    width:100%;
+height: 171px;
+gap: 20px;
+
+
+}
+.two img{
+    width: 171px;
+height: 171px;
+
+
+}
+.imgtwo{
+    width: 164px;
+height: 164px;
+
+
+}
+.our-game-header{
+    font-family: Poppins;
+font-size: 16px;
+font-weight: 700;
+
+
+}
+
+/* App CSS */
+.classicGames {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color :#6F6F6F;
+    width: 100%;
+
+  }
+  .line{
+    background-color:#898989 ;
+   width: 25%;
+   height: 2px;
+  }
+  .headerText{
+    font-family: Poppins;
+font-size: 16px;
+font-weight: 700;
+
+  }
+  /* Input Section */
+  .input-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 404px;
+height: 48px;
+border: 1px solid #ddd;
+
+  }
+  
+  .amount-input {
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+ border: none;
+    border-radius: 6px;
+    margin-right: 10px;
+  }
+  
+  .set-button {
+    padding: 10px 20px;
+    width: 124px;
+    height: 48px;
+   
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 0px 12px 12px 0px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: Inter;
+font-size: 16px;
+font-weight: 500;
+
+  }
+  
+  .set-button:hover {
+    background-color: #004bca;
+  }
+  
+  /* Challenge Card */
+  .challenge-card {
+    width: 420px;
+height: 108px;
+border-radius: 10px;
+display: flex;
+flex-direction: column;
+align-items: center;
+border: 1px solid #898989;
+ background-color: #fff;
+  }
+  
+  .challenge-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+ .Challengeheader {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-around;
+gap: 200px;
+  width: 420px;
+height: 39px;
+background: #F7F7F7;
+border-radius: 10px 10px 0 0;
+border-bottom:  1px solid #898989;
+font-family: Inter;
+font-size: 16px;
+font-weight: 400;
+
+
+
+
+    /* border: 1px solid #ddd; */
+  }
+  .amountrs {
+    font-weight: bold;
+    color: green;
+  }
+  
+  .amountrs-centered {
+    font-size: 16px;
+    font-weight: bold;
+    color: green;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .challenge-content {
+    display: flex;
+    align-items: center;
+    
+    justify-content: space-between;
+   
+    width: 90%;
+  }
+  
+  .player {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .player-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 auto 5px;
+  }
+  
+  .vs {
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+  }
+  
+  .challenge-action {
+    text-align: right;
+    margin-top: 10px;
+  }
+  
+  .play-button {
+    padding: 5px 15px;
+    width: 77px;
+height: 35px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-family: Inter;
+font-size: 16px;
+font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .play-button:hover {
+    background-color: #004bca;
+  }
+  
+  .cardlist{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .bluefiled{
+    width: 95%;
+    height: 78px;
+    background: #CFE2FF;
+    color: #1A3A6D;
+
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+  }
+  .chipstext{
+    font-family: Inter;
+font-size: 16px;
+font-weight: 600;
+margin: 0;
+
+
+  }
+  .chipstext2{
+    font-family: Inter;
+font-size: 24px;
+font-weight: 500;
+margin: 8px;
+
+
+
+  }
+  .amount{
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+height:70px;
+gap: 6px;
+
+
+  }
+  .moneychip{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+  .summary-detils{
+display: flex;
+flex-direction: row;
+width: 90%;
+justify-content: space-between;
+font-family: Inter;
+font-size: 14px;
+font-weight: 400;
+text-align: left;
+
+
+  }
+  .wchip{
+    width: 420px;
+height: 39px;
+background: #6C757E;
+color: white;
+display: flex;
+text-align: center;
+align-items: center;
+justify-content: center;
+  }
+
+  .dropdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+  }
+  
+  .styled-select {
+    width: 389px;
+    height: 44px;
+   
+    
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 8px 12px;
+    appearance: none; /* Remove native dropdown arrow */
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23ccc" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px;
+    color: #333;
+  }
+  
+  .styled-select:focus {
+    border-color: #0d6efd; /* Highlight color */
+    outline: none;
+  }
+  
+  .styled-select option {
+    font-size: 16px;
+  }
+  .history{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+  }
+  .listelement{
+    display: flex;
+    flex-direction: row;
+    width:402px;
+    justify-content: start;
+    gap: 15px;
+  }
+  .vertical-line {
+    width: 2px; /* Thickness of the line */
+    height: 90%; /* Height of the line */
+    background-color:  #D9D9D9; /* Line color */
+    text-align: left;
+  }
+  .history-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    width: 80%;
+  }
+  .hspan{
+    height: 15px;
+    font-family: Inter;
+font-size: 10px;
+font-weight: 400;
+text-align: left;
+
+
+  }
+  .htext{
+    font-family: Inter;
+font-size: 14px;
+font-weight: 700;
+line-height: 24px;
+text-align: left;
+
+
+  }
+  .htext2{
+    font-family: Inter;
+font-size: 12px;
+font-weight: 400;
+line-height: 24px;
+text-align: left;
+color: #5D5D5D;
+
+
+  }
+  .redbox{
+    width: 386px;
+    height: 78px;
+   border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+border: 1px solid #D60000
+
+
+  }
+  .redbox1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    width: 50%;
+    height: 100%;
+    gap: 10px;
+  }
+  .redbox2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    height: 100%;
+ 
+  }
