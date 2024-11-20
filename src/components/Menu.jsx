@@ -17,7 +17,7 @@ const navigate = useNavigate()
 
    
     return (
-        <div className={`menu ${isExpanded ? "expand" : "collapse"}`}>
+        <div className={`menu `}>
             <header className='menu-header'>
           <p className='header-header'>LOGO HERE </p>  
             <img onClick={toggleExpand} src={menuicon}></img>

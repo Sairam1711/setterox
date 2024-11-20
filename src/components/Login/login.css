@@ -181,7 +181,9 @@ color: #090A5A;
     height: 100%;
     background-color:hsla(0, 0%, 0%, 0.3);
     z-index: 2;
-    visibility: hidden;
+    transform: translate(-500px,0);
+    transition: width  5s ease;
+ 
     
   }
   .menu{
@@ -189,7 +191,7 @@ color: #090A5A;
     z-index: 3;
     height: 100%;
     width: 90%;
-   transform: translate(-400px,0);
+
     transition: width  5s ease;
   }
   .menu-header{
@@ -245,7 +247,7 @@ text-align: left;
 
   }
   .drawer.visibility{
-    visibility: visible;
+    visibility: hidden;
      }
   .menu.expanded {
     width:90%; /* Expand to this width */
@@ -277,11 +279,14 @@ height: 80px;
     height: auto;
   }
   .expand {
+    visibility: visible;
     animation: expandAnimation 0.2s forwards; /* Expanding animation */
+   
   }
   
   .collapse {
-    animation: collapseAnimation 0.5s forwards; /* Collapsing animation */
+    animation: collapseAnimation 0.2s forwards; /* Collapsing animation */
+   
   }
   @keyframes expandAnimation {
     from {
@@ -295,9 +300,11 @@ height: 80px;
   /* Keyframes for collapsing */
   @keyframes collapseAnimation {
     from {
-      width:  90%;
+      transform: translate(0px,0)
     }
     to {
-      width: 0;
+      transform: translate(-500px,0);
+     
+      
     }
   }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './login.css';
 import menu from '../../assest/icon-outline-Expand.png'
 import '.././element.css';
@@ -8,14 +8,19 @@ import Menu from '../Menu';
 
 function Template({MiniScreen,MiniButtons}) {
     const [isExpanded, setIsExpanded] = useState(false);
+    const [firstrender, setfirstrender] = useState(true);
+    useEffect(()=>{
+        setfirstrender(false)
+    },[])
     const toggleExpand = () => {
         setIsExpanded(!isExpanded);
+        setfirstrender(true)
       };
     return (
        <div className='loginContainer'>
 
 <div className='leftside'>
-<div className={`drawer  ${isExpanded ? "visibility" : ""}`}>
+<div className={`drawer  ${isExpanded ? "expand" : !firstrender? "": "collapse"}`}>
 <Menu isExpanded={isExpanded} setIsExpanded={setIsExpanded} toggleExpand={toggleExpand}></Menu>
 </div>
 <div className='loginbutton'>
