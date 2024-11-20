@@ -70,7 +70,13 @@ const ChallengeCard = ({ player1, player2, amount, showPlayButton }) => (
       
     </div>
     <div className="challenge-header">
-    <span className="amountrs-centered">Rs. {amount}</span>
+    <span className="amountrs-centered" style={{fontFamily: "Inter",
+fontSize: "20px",
+fontWeight: "700",
+margin:"15px"
+
+
+}}>Rs. {amount}</span>
     </div>
     </>}
     {/* {showPlayButton && (
