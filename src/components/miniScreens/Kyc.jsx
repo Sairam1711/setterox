@@ -3,7 +3,7 @@ import arrowleft from "../../assest/arrow-left.png";
 import alert from "../../assest/Group 41.png";
 import { useNavigate } from "react-router-dom";
 
-function Kyc() {
+function Kyc({notify,setnotify,rules,setrules}) {
     const navigate =useNavigate()
     return (
         <div className="wallet">
@@ -97,6 +97,10 @@ function Kyc() {
               fontSize: "20px",
               fontWeight: " 600",
               borderRadius: "4px",
+            }}
+            onClick={()=>{
+              setrules(false)
+              setnotify(true)
             }}
           >
      Request for KYC

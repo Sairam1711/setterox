@@ -16,9 +16,59 @@ function VerifyOtp() {
 Lorem Ipsum doler sit amet Lorem Ipsum doler sit amet 
 </p>
 <label htmlFor="phone-input" className="phone-label">Enter OTP</label>
-<input    className="normal-input" style={{height:"48px",padding:0}}></input>
+<div className='flex' style={{gap:"8px"}}>
+<input    className="normal-input" style={{height:"48px",padding:0,
+    width:"50px",
+    height:"48px",
+    borderRadius: "8px" ,
+    border:" 1px solid #D0D5DD ",
+
+    
+}}></input>
+<input    className="normal-input" style={{height:"48px",padding:0,
+    width:"50px",
+    height:"48px",
+    borderRadius: "8px" ,
+    border:" 1px solid #D0D5DD ",
+
+    
+}}></input>
+<input    className="normal-input" style={{height:"48px",padding:0,
+    width:"50px",
+    height:"48px",
+    borderRadius: "8px" ,
+    border:" 1px solid #D0D5DD ",
+
+    
+}}></input>
+<input    className="normal-input" style={{height:"48px",padding:0,
+    width:"50px",
+    height:"48px",
+    borderRadius: "8px" ,
+    border:" 1px solid #D0D5DD ",
+
+    
+}}></input>
+<input    className="normal-input" style={{height:"48px",padding:0,
+    width:"50px",
+    height:"48px",
+    borderRadius: "8px" ,
+    border:" 1px solid #D0D5DD ",
+
+    
+}}></input>
+<input    className="normal-input" style={{height:"48px",padding:0,
+    width:"50px",
+    height:"48px",
+    borderRadius: "8px" ,
+    border:" 1px solid #D0D5DD ",
+
+    
+}}></input>
+</div>
+
 <button className='modern-button full'>login</button>
-<p>Resend OTP</p>
+<p style={{textAlign:"center"}}>Resend OTP</p>
 </div>
     )
 }

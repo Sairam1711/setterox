@@ -59,7 +59,9 @@ Lorem Ipsum doler sit amet Lorem Ipsum doler sit amet
 </div>
 <button className='modern-button full' onClick={()=>{
 navigate("verify")
-}}>login</button></div>
+}}>login</button>
+<p style={{textAlign:"center",fontWeight:"500"}}>Don't have an account? <a href='/#/registation' style={{color: "#0D6EFD"}}>Register</a></p>
+</div>
     )
 }
 

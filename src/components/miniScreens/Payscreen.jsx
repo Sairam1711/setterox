@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import arrowleft from "../../assest/arrow-left.png";
 import { useNavigate } from 'react-router-dom';
 function Payscreen() {
   const navigate =useNavigate()
+   const [payment ,setpayment]=useState()
     return (
         <div className='Payscreen'>
              <div className="headerbuttons">
@@ -62,10 +63,13 @@ function Payscreen() {
         
         
          <div className="dropdown-container">
-      <select className="styled-select">
+      <select onChange={(event)=>{
+        setpayment(event.target.value)
+console.log(event.target.value);
+      }} className="styled-select">
         <option value="upi">UPI (Instant ⚡)</option>
-        <option value="credit">Credit Card</option>
-        <option value="debit">Debit Card</option>
+        <option value="Bank Transfer">Bank Transfer</option>
+        {/* <option value="debit">Debit Card</option> */}
       </select>
     </div>
         </div>
@@ -78,14 +82,14 @@ function Payscreen() {
           </div>
           <div className="amount">
             <label htmlFor="phone-input" style={{color:"#344054" ,fontWeight:"500"}} className="phone-label">
-            UPI ID
+           {payment==="Bank Transfer"?"Account Number" : "UPI ID"}
             </label>
             <input className="normal-input" placeholder="Enter your upi id"></input>
           </div>
           <span style={{width:"90%",color:"#017C0E",textAlign:"left"}}>Bank Name should be same as kaiful haque</span>
           <div className="amount">
             <label htmlFor="phone-input" style={{color:"#344054"}} className="phone-label">
-            Re Enter UPI ID
+           { payment==="Bank Transfer"?"Account Number" :" Re Enter UPI ID"}
             </label>
             <input className="normal-input" placeholder="Enter your upi id"></input>
           </div>

@@ -30,7 +30,7 @@ function Referral() {
       >
         <div className="challenge-header">
           <div className="Challengeheader">
-            <span>Metrics</span>
+            <span>Refer A Friend</span>
           </div>
         </div>
 
@@ -46,7 +46,7 @@ function Referral() {
           />
           <button className="set-button">Copy</button>
         </div>
-        <p className="kycheader" style={{ textAlign: "center" }}>
+        <p className="kycheader" style={{ textAlign: "center", justifyContent:"center" }}>
           OR
         </p>
         <div className="flex coloum" style={{height:"100%" ,justifyContent:"start", gap:"16.6px" }}>

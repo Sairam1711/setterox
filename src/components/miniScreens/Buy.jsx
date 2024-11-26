@@ -105,7 +105,7 @@ function Buy() {
               borderRadius: "4px",
             }}
             onClick={()=>{
-  navigate("/pay")
+  
 }}
           >
             Pay

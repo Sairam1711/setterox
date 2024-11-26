@@ -70,6 +70,8 @@ fontWeight:" 600",
 fontSize: "24px",
 fontWeight:" 600",
 
+} } onClick={()=>{
+  navigate("/pay")
 }}>Withdraw</button>
   </div>
  
