@@ -93,12 +93,12 @@ console.log(event.target.value);
             </label>
             <input className="normal-input" placeholder="Enter your upi id"></input>
           </div>
-          <div className="amount">
+         {payment==="Bank Transfer"?"": <div className="amount">
             <label htmlFor="phone-input" style={{color:"#344054"}} className="phone-label">
             Chips 
             </label>
             <input className="normal-input" placeholder="Chips"></input>
-          </div>
+          </div>}
           <span style={{width:"90%",textAlign:"center",
             fontFamily: "Inter",
             fontSize: "14px",

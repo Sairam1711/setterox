@@ -3,16 +3,16 @@ import { useNavigate } from 'react-router-dom'
 
 function Profile() {
   const navigate =useNavigate()
-  const Mini_card=()=>{
+  const Mini_card=({element})=>{
     return(
-      <div className="challenge-card mini">
+      <div className="challenge-card mini" style={{justifyContent:"left" }}>
       <div className="challenge-header">
         <div className="Challengeheader" style={{justifyContent:"left"}}>
-          <span >Metrics</span>
+          <span style={{marginLeft:"20px" ,fontWeight:"500"}}>{element}</span>
         </div>
         
       </div>
-     
+     <p style={{margin:"0",marginLeft:"10px" ,width:"100%"}}><strong>0</strong></p>
     </div>
     )
   } 
@@ -103,7 +103,7 @@ Edit
            
           </div>
           <div style={{display:"flex",flexDirection:"row", width:"100%" ,height:"100%",flexWrap:"wrap", justifyContent:"space-around"}}>
-          {         [1,2,3,4].map(()=> <Mini_card></Mini_card>)}
+          {         ["Games Played","Chip Won","Referral Earning","Penalty"].map((element)=> <Mini_card element={element}></Mini_card>)}
           </div>
 
          
