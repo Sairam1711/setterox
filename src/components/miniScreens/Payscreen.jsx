@@ -84,14 +84,14 @@ console.log(event.target.value);
             <label htmlFor="phone-input" style={{color:"#344054" ,fontWeight:"500"}} className="phone-label">
            {payment==="Bank Transfer"?"Account Number" : "UPI ID"}
             </label>
-            <input className="normal-input" placeholder="Enter your upi id"></input>
+            <input className="normal-input" placeholder={payment==="Bank Transfer"?"Enter your account number":"Enter your upi id"}></input>
           </div>
           <span style={{width:"90%",color:"#017C0E",textAlign:"left"}}>Bank Name should be same as kaiful haque</span>
           <div className="amount">
             <label htmlFor="phone-input" style={{color:"#344054"}} className="phone-label">
-           { payment==="Bank Transfer"?"Account Number" :" Re Enter UPI ID"}
+           { payment==="Bank Transfer"?"IFSC" :" Re Enter UPI ID"}
             </label>
-            <input className="normal-input" placeholder="Enter your upi id"></input>
+            <input className="normal-input" placeholder={payment==="Bank Transfer"?"Enter your IFSC":"Enter your upi id"}></input>
           </div>
          {payment==="Bank Transfer"?"": <div className="amount">
             <label htmlFor="phone-input" style={{color:"#344054"}} className="phone-label">
