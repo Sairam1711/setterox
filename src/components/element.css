@@ -228,7 +228,10 @@ align-items: center;
 border: 1px solid #898989;
  background-color: #fff;
   }
-  
+  .challenge-card.mini{
+    width: 200px;
+    height: 80px;
+  }
   .challenge-header {
     display: flex;
     width: 100%;
@@ -522,3 +525,283 @@ border: 1px solid #D60000
     height: 100%;
  
   }
+.flex{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.flex.coloum{
+flex-direction: column;
+}
+  .important{
+width: 413px;
+height: 118px;
+border-radius: 8px ;
+background: #FFF3CD;
+
+  }
+.iicon{
+  width: 26px;
+height: 25px;
+transform: translate(0px,-22px);
+
+}
+.important p {
+  width: 345px;
+height: 72px;
+font-family: Inter;
+font-size: 16px;
+font-weight: 700;
+line-height: 24px;
+text-align: left;
+
+
+
+
+
+}
+  .important span {
+
+font-family: Inter;
+font-size: 14px;
+font-weight: 700;
+line-height: 24px;
+text-align: left;
+
+
+
+
+
+  }
+
+  .notification{
+    position: absolute;
+    background: #00000087; 
+    width: 100%;
+    height: auto;
+    display: none;
+
+  }
+  .kyc-detials{
+    width: 100%;
+    height: auto;
+    
+transform: translate(0,400px);
+background: #FFFFFF;
+justify-content: start;
+overflow: scroll;
+scrollbar-width: none;
+
+  }
+  .kycheader{
+    width: 90%;
+    font-family: Inter;
+font-size: 24px;
+font-weight: 700;
+line-height: 24px;
+text-align: left;
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+
+  }
+  .kycheader img{
+    width: 24px;
+    height: 24px;
+   
+    
+
+
+  }
+  .kyc-content{
+    width: 90%;
+    text-align: left;
+  }
+  .kyc-content div{
+    justify-content: space-between;
+  }
+  .kyc-left{
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    color: #000000;
+    ;
+  }
+  .kyc-right{
+    font-family: Inter;
+font-size: 14px;
+font-weight: 400;
+line-height: 24px;
+text-align: center;
+text-underline-position: from-font;
+
+
+  }
+  .refered{
+width: 100%;
+height: 100%;
+justify-content: space-around;align-items:flex-start;
+  }
+
+.referedp{
+  margin-top: 0;
+  font-family: Inter;
+font-size: 14px;
+font-weight: 700;
+line-height: 24px;
+text-align: center;
+
+
+
+}
+.refered-span{
+  font-family: Inter;
+  width: 100%;
+font-size: 20px;
+font-weight: 500;
+line-height: 24px;
+text-align: center;
+text-underline-position: from-font;
+
+}
+  .vrline{
+    border-left:  1px solid #D9D9D9; height: 70%;
+  }
+  .referral-image{
+    width: 373px;
+    height: 262px;
+    top: 285px;
+    left: 35px;
+    gap: 0px;
+    opacity: 0px;
+    
+  }
+  .referedp2{
+    font-family: Inter;
+font-size: 18px;
+font-weight: 400;
+line-height: 24px;
+text-align: center;
+text-underline-position: from-font;
+
+
+  }
+  .referedp2 span {
+    font-family: Inter;
+font-size: 18px;
+font-weight: 700;
+line-height: 24px;
+text-align: center;
+text-underline-position: from-font;
+
+
+  }
+  .matchp{
+    width: 331px;
+    height: 100px;
+    font-family: Inter;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 50px;
+    text-align: center;
+  
+    
+
+
+  }
+
+  .game-result{
+    width: 468px;
+height: 52px;
+display: flex;
+align-items: center;
+background: #F4E6E6;
+font-family: Inter;
+font-size: 18px;
+font-weight: 600;
+line-height: 24px;
+text-align: left;
+margin-top: 18px;
+margin-bottom: 21px;
+
+
+
+  }
+  .game-result p{
+    margin-left:40px ;
+  }
+  .support-img{
+    width: 416px;
+    height: 416px;
+  margin-top: 29px;
+  }
+  .ulist li{
+    width: 100%;
+    font-family: Inter;
+font-size: 18px;
+font-weight: 600;
+line-height: 35px;
+text-align: left;
+
+
+  }
+  .ulist li span{
+
+    font-family: Inter;
+font-size: 18px;
+font-weight: 400;
+line-height: 35px;
+text-align: left;
+text-underline-position: from-font;
+
+
+  }
+/* Switch Container */
+.theme-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+/* Hide the checkbox */
+.switch input {
+  display: none;
+}
+
+/* The slider */
+.slider {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  background-color: #ccc;
+  border-radius: 34px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+/* When checked */
+input:checked + .slider {
+  background-color: #4caf50;
+}
+
+input:checked + .slider:before {
+  transform: translateX(25px);
+}

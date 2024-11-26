@@ -61,7 +61,7 @@ const navigate = useNavigate()
              <div
               onClick={()=>{
                 toggleExpand(false)
-                navigate("/lobby")
+                navigate("/referral")
                }} className='menu-list'>
                 <div className='menu-1'>  <img style={{width:"50px",height:"50px"}} src={refrence}></img> <p className='menu-content'>Refer & Earn</p></div>
               <img src={arrow}></img>
@@ -69,7 +69,7 @@ const navigate = useNavigate()
              <div
               onClick={()=>{
                 toggleExpand(false)
-                navigate("/lobby")
+                navigate("/support")
                }} className='menu-list'>
                 <div className='menu-1'>  <img style={{width:"50px",height:"50px"}} src={support}></img> <p className='menu-content'>Support</p></div>
               <img src={arrow}></img>

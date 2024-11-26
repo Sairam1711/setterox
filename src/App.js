@@ -13,6 +13,10 @@ import Buy from './components/miniScreens/Buy';
 import Payscreen from './components/miniScreens/Payscreen';
 import History from './components/miniScreens/History';
 import Profile from './components/miniScreens/Profile';
+import Kyc from './components/miniScreens/Kyc';
+import Referral from './components/miniScreens/Referral';
+import Matchmaking from './components/miniScreens/Matchmaking';
+import SupportScreen from './components/miniScreens/SupportScreen';
 
 function App() {
   return (
@@ -29,6 +33,10 @@ function App() {
         <Route path="/pay" element={<Template MiniScreen={()=><Payscreen></Payscreen>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
         <Route path="/history" element={<Template MiniScreen={()=><History></History>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
         <Route path="/profile" element={<Template MiniScreen={()=><Profile></Profile>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
+        <Route path="/kyc" element={<Template MiniScreen={()=><Kyc></Kyc>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
+        <Route path="/referral" element={<Template MiniScreen={()=><Referral></Referral>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
+        <Route path="/match" element={<Template MiniScreen={()=><Matchmaking></Matchmaking>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
+        <Route path="/support" element={<Template MiniScreen={()=><SupportScreen></SupportScreen>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
 
       </Routes>
 

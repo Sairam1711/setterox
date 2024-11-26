@@ -1,6 +1,21 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function Profile() {
+  const navigate =useNavigate()
+  const Mini_card=()=>{
+    return(
+      <div className="challenge-card mini">
+      <div className="challenge-header">
+        <div className="Challengeheader" style={{justifyContent:"left"}}>
+          <span >Metrics</span>
+        </div>
+        
+      </div>
+     
+    </div>
+    )
+  } 
     return (
         <div className='profile'>
    <div className="challenge-card" style={{ height: "314px" ,gap:"10px",margin:"20px" }}>
@@ -70,6 +85,9 @@ Edit
             fontSize: "14px",
             fontWeight: " 500",
           }}
+          onClick={()=>{
+            navigate("/kyc")
+          }}
         >
           {" "}
           Complete KYC
@@ -77,12 +95,17 @@ Edit
             </div>
           </div>
         </div>
-        <div className="challenge-card" style={{ height: "314px" ,gap:"10px",margin:"20px" }}>
+        <div className="challenge-card" style={{ height: "233px" ,gap:"10px",margin:"20px"}}>
           <div className="challenge-header">
             <div className="Challengeheader">
               <span>Metrics</span>
             </div>
+           
           </div>
+          <div style={{display:"flex",flexDirection:"row", width:"100%" ,height:"100%",flexWrap:"wrap", justifyContent:"space-around"}}>
+          {         [1,2,3,4].map(()=> <Mini_card></Mini_card>)}
+          </div>
+
          
         </div>
         </div>

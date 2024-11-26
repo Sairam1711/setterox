@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import icon from '../../assest/cup-star-svgrepo-com 1.png'
 import cup from '../../assest/cup-star-svgrepo-com 2.png'
 import vs from '../../assest/image 21.png'
+import { useNavigate } from "react-router-dom";
 // Header Component
 const Header = () => (
   <div className="header">
@@ -28,8 +29,9 @@ const InputSection = ({setvalue}) => (
 );
 
 // Challenge Card Component
-const ChallengeCard = ({ player1, player2, amount, showPlayButton }) => (
-  <div className="challenge-card">
+const ChallengeCard = ({ player1, player2, amount, showPlayButton }) => {
+  const navigate =useNavigate()
+ return (<div className="challenge-card">
     <div className="challenge-header">
       {showPlayButton ? (
         <>
@@ -52,7 +54,9 @@ const ChallengeCard = ({ player1, player2, amount, showPlayButton }) => (
     
       </div>
       <div className="player">
-      <button className="play-button">Play</button>
+      <button className="play-button" onClick={()=>{
+        navigate("/match")
+      }}>Play</button>
       </div>
     </div>
  
@@ -84,8 +88,8 @@ margin:"15px"
         <button className="play-button">Play</button>
       </div>
     )} */}
-  </div>
-);
+  </div>)
+};
 const ChallengeCard2 = ({ player1, player2, amount, showPlayButton }) => (
   <div className="challenge-card">
     <div className="challenge-header">
@@ -125,7 +129,8 @@ const ChallengeCard2 = ({ player1, player2, amount, showPlayButton }) => (
 );
 // Main App Component
 const ClassicGame = () => {
-  const [value,setvalue]=useState(false)
+  const [value,setvalue]=useState(false);
+const navigate =useNavigate()
   return (
     <div className="classicGames">
       <Header />
