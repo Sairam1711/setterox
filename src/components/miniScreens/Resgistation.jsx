@@ -21,11 +21,12 @@ Lorem Ipsum doler sit amet Lorem Ipsum doler sit amet
 <input    className="normal-input"></input>
 <label htmlFor="phone-input" className="phone-label">Refferal</label>
 <input    className="normal-input"></input>
+<div className='flex'><input style={{borderRadius:"4px",width:"20px",height:"20px",margin:"auto",marginLeft:"0" ,marginRight:"10px"}} type='checkbox'></input><p className='checktext'>You agree to our friendly privacy <a>policy.</a> </p>
+</div>
+
 <button className='modern-button full'>login</button>
 <div style={{display:"flex",flexDirection:"row"}}>
-<input style={{borderRadius:"4px",width:"20px",height:"20px",margin:"auto",marginLeft:"0" ,marginRight:"10px"}} type='checkbox'></input><p className='checktext'>You agree to our friendly privacy <a>policy.</a> </p>
 </div>
-<p>Resend OTP</p>
 </div> 
     )
 }
