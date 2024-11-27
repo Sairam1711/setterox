@@ -1,7 +1,9 @@
 import React from "react";
 import arrowleft from "../../assest/arrow-left.png";
 import { useNavigate } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 function Buy() {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
   const navigate =useNavigate()
   return (
     <div className="wallet">
@@ -42,7 +44,7 @@ function Buy() {
           Guide
         </button>
       </div>
-      <div className="cardlist">
+      <div className="cardlist" style={{marginTop:isMobile?"15px":""}}>
         <div
           className="challenge-card"
           style={{
@@ -112,7 +114,7 @@ function Buy() {
           </button>
         </div>
 
-        <div className="challenge-card" style={{ height: "291px" }}>
+        <div className="challenge-card" style={{ height: "291px",  gap:"10px"}}>
           <div className="challenge-header">
             <div className="Challengeheader">
               <span>Summary</span>
@@ -121,7 +123,7 @@ function Buy() {
           <div className="summary-detils">
             <span
               style={{
-                width: "300px",
+                width:isMobile?"": "300px",
                 textAlign: "left",
                 display: "flex",
                 flexDirection: "row",
@@ -160,7 +162,7 @@ function Buy() {
           <div className="summary-detils">
             <span
               style={{
-                width: "300px",
+                width:isMobile?"": "300px",
                 textAlign: "left",
                 display: "flex",
                 flexDirection: "row",
@@ -176,7 +178,7 @@ function Buy() {
           <div className="summary-detils">
             <span
               style={{
-                width: "300px",
+                width:isMobile?"": "300px",
                 textAlign: "left",
                 display: "flex",
                 flexDirection: "row",
@@ -191,7 +193,7 @@ function Buy() {
           <div className="summary-detils">
             <span
               style={{
-                width: "300px",
+                width:isMobile?"": "300px",
                 textAlign: "left",
                 display: "flex",
                 flexDirection: "row",
@@ -231,7 +233,7 @@ function Buy() {
           <div className="summary-detils">
             <span
               style={{
-                width: "300px",
+                width:isMobile?"": "300px",
                 textAlign: "left",
                 display: "flex",
                 flexDirection: "row",

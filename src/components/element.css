@@ -803,3 +803,74 @@ input:checked + .slider {
 input:checked + .slider:before {
   transform: translateX(25px);
 }
+
+
+@media (max-width: 768px) {
+.challenge-card{
+  width: 95%;
+}
+.Challengeheader{
+  gap: 50px;
+}
+.Challengeheader{
+  width: 100%;
+}
+.challenge-card.mini{
+  width: 40%;
+  height: 45%;
+}
+.input-section{
+  width: 95%;
+}
+.profile{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+
+}
+.game-result{
+  width: 90%;
+}
+.cardlist{
+  width: 100%;
+  align-items: center;
+}
+.amount{
+  width: 90%;
+}
+.moneychip{
+  width: 90%;
+}
+.styled-select{
+  width: 300px;
+}
+.wchip{
+  width: 100%;
+}
+.redbox{
+  width: 90%;
+}
+.listelement{
+  width: 95%;
+}
+.htext2{
+  width: 50%;
+  font-family: Inter;
+font-size: 11px;
+font-weight: 400;
+line-height: 24px;
+text-align: left;
+color: #5D5D5D;
+
+
+}
+
+.referral-image{
+  width: 90%;
+  height: 262px;
+
+  
+}
+}

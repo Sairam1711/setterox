@@ -1,7 +1,9 @@
 import React from 'react'
+import { useMediaQuery } from 'react-responsive';
 import { useNavigate } from 'react-router-dom'
 
 function Profile() {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
   const navigate =useNavigate()
   const Mini_card=({element})=>{
     return(
@@ -18,7 +20,7 @@ function Profile() {
   } 
     return (
         <div className='profile'>
-   <div className="challenge-card" style={{ height: "314px" ,gap:"10px",margin:"20px" }}>
+   <div className="challenge-card" style={{ height: "314px" ,gap:"10px",margin:isMobile?"15px":"20px" }}>
           <div className="challenge-header">
             <div className="Challengeheader">
               <span>Payment Details</span>
@@ -95,7 +97,7 @@ Edit
             </div>
           </div>
         </div>
-        <div className="challenge-card" style={{ height: "233px" ,gap:"10px",margin:"20px"}}>
+        <div className="challenge-card" style={{ height: "233px" ,gap:"10px",margin:isMobile?"":"20px"}}>
           <div className="challenge-header">
             <div className="Challengeheader">
               <span>Metrics</span>

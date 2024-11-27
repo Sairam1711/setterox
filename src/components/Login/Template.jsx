@@ -7,8 +7,10 @@ import questionIcon from '../../assest/icon-outline-Question.png'
 import cross_icon from '../../assest/icon-outline-Cross.png'
 import Menu from '../Menu';
 import { useLocation } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 
 function Template({MiniScreen,MiniButtons,notify,setnotify,rules,setrules}) {
+    const isMobile = useMediaQuery({ maxWidth: 768 });
     const location = useLocation();
 console.log(notify);
    
@@ -99,7 +101,7 @@ console.log(notify);
 <MiniScreen ref={homeRef}></MiniScreen>
 </div>
 </div>
-<div className='rightside'>
+{!isMobile && <div className='rightside'>
     <div style={{display:"flex",
         flexDirection:"column",
         alignItems:"center"
@@ -128,7 +130,7 @@ console.log(notify);
 
     </div>
 
-</div>
+</div>}
 
        </div>
     )

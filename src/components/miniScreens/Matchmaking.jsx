@@ -1,6 +1,8 @@
 import React from "react";
 import vs from "../../assest/image 21.png";
+import { useMediaQuery } from "react-responsive";
 function Matchmaking() {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
   return (
     <div
       className="profile flex coloum"
@@ -48,10 +50,10 @@ function Matchmaking() {
       >
         <p className="matchp">Waiting for creating room</p>
       </div>
-      <div className="game-result"><p>Game Result</p></div>
+      <div  className="game-result"><p>Game Result</p></div>
       <div
         className="flex coloum"
-        style={{ justifyContent: "start", gap: "16.6px" }}
+        style={{ justifyContent: "start", gap: "16.6px",width: isMobile?"100%" : "" }}
       >
         <div
           className="modern-button full primary"
@@ -59,7 +61,7 @@ function Matchmaking() {
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
-            width: "387px",
+            width:isMobile?"90%" : "387px",
             height: "50.4px",
             justifyContent: "center",
             gap: "11px",
@@ -87,7 +89,7 @@ function Matchmaking() {
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
-            width: "387px",
+            width:isMobile?"90%" : "387px",
             height: "50.4px",
             justifyContent: "center",
             gap: "11px",
@@ -115,7 +117,7 @@ function Matchmaking() {
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
-            width: "387px",
+            width:isMobile?"90%" : "387px",
             height: "50.4px",
             justifyContent: "center",
             gap: "11px",
@@ -212,3 +214,4 @@ function Matchmaking() {
 }
 
 export default Matchmaking;
+

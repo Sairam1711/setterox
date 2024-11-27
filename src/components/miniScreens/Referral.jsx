@@ -1,6 +1,8 @@
 import React from "react";
 import whatsapp_icon from "../../assest/Vector (18).png";
+import { useMediaQuery } from "react-responsive";
 function Referral() {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
   return (
     <div className="profile">
       <div
@@ -56,7 +58,7 @@ function Referral() {
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
-            width: "387px",
+            width: isMobile?"300px":"387px",
             height: "50.4px",
             justifyContent: "center",
             gap: "11px",
@@ -83,7 +85,7 @@ function Referral() {
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
-            width: "387px",
+            width: isMobile?"300px":"387px",
             height: "50.4px",
             justifyContent: "center",
             gap: "11px",
