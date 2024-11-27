@@ -87,7 +87,7 @@ function Buy() {
                   width: "67px",
                   height: "35px",
                   fontFamily: "Inter",
-                  fontSize: "16px",
+                  fontSize: isMobile?"14px":"16px",
                   borderRadius: "7px",
                   fontWeight: " 600",
                 }}

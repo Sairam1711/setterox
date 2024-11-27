@@ -12,8 +12,6 @@ import { useMediaQuery } from 'react-responsive';
 function Template({MiniScreen,MiniButtons,notify,setnotify,rules,setrules}) {
     const isMobile = useMediaQuery({ maxWidth: 768 });
     const location = useLocation();
-console.log(notify);
-   
     const [isExpanded, setIsExpanded] = useState(false);
     const [firstrender, setfirstrender] = useState(false);
   
@@ -42,10 +40,12 @@ console.log(notify);
 
 <div className='leftside'>
 <div className='notification'  style={notify?{display:"block"}:{}}>
-<div className='kyc-detials flex coloum' style={false?{transform: "translate(0,186px)"}:{}}>
+<div className='kyc-detials flex coloum' style={rules?{transform: "translate(0,186px)"}:{}}>
     <div className='kycheader' >
     <p className='kycheader'>{rules?"Rules":"KYC Details"}</p>
-    <img src={cross_icon}></img>
+    <img src={cross_icon} onClick={()=>{
+        setnotify(false)
+    }}></img>
     </div>
 { rules?<>
     <ul className='flex coloum ulist' style={{height:"100%" ,justifyContent:"start",

@@ -31,7 +31,7 @@ const navigate = useNavigate()
               toggleExpand(false)
               navigate("/lobby")
              }} className='menu-list'>
-                <div className='menu-1'>  <img style={{width:"50px",height:"50px"}} src={dice}></img> <p className='menu-content'>Play</p></div>
+                <div className='menu-1'>  <img className='iconmenu' src={dice}></img> <p className='menu-content'>Play</p></div>
               <img src={arrow}></img>
              </div>
              <div 
@@ -39,7 +39,7 @@ const navigate = useNavigate()
                 toggleExpand(false)
                 navigate("/Wallet")
                }}className='menu-list'>
-                <div className='menu-1'>  <img style={{width:"50px",height:"50px"}} src={wallet}></img> <p className='menu-content'>Wallet</p></div>
+                <div className='menu-1'>  <img  className='iconmenu' src={wallet}></img> <p className='menu-content'>Wallet</p></div>
               <img src={arrow}></img>
              </div>
              <div 
@@ -47,7 +47,7 @@ const navigate = useNavigate()
                 toggleExpand(false)
                 navigate("/history")
                }}className='menu-list'>
-                <div className='menu-1'>  <img style={{width:"50px",height:"50px"}} src={dice}></img> <p className='menu-content'>History</p></div>
+                <div className='menu-1'>  <img className='iconmenu' src={dice}></img> <p className='menu-content'>History</p></div>
               <img src={arrow}></img>
              </div>
              <div
@@ -55,7 +55,7 @@ const navigate = useNavigate()
                 toggleExpand(false)
                 navigate("/Profile")
                }} className='menu-list'>
-                <div className='menu-1'>  <img style={{width:"50px",height:"50px"}} src={profile1}></img> <p className='menu-content'>Profile</p></div>
+                <div className='menu-1'>  <img className='iconmenu' src={profile1}></img> <p className='menu-content'>Profile</p></div>
               <img src={arrow}></img>
              </div>
              <div
@@ -63,7 +63,7 @@ const navigate = useNavigate()
                 toggleExpand(false)
                 navigate("/referral")
                }} className='menu-list'>
-                <div className='menu-1'>  <img style={{width:"50px",height:"50px"}} src={refrence}></img> <p className='menu-content'>Refer & Earn</p></div>
+                <div className='menu-1'>  <img className='iconmenu' src={refrence}></img> <p className='menu-content'>Refer & Earn</p></div>
               <img src={arrow}></img>
              </div>
              <div
@@ -71,7 +71,7 @@ const navigate = useNavigate()
                 toggleExpand(false)
                 navigate("/support")
                }} className='menu-list'>
-                <div className='menu-1'>  <img style={{width:"50px",height:"50px"}} src={support}></img> <p className='menu-content'>Support</p></div>
+                <div className='menu-1'>  <img className='iconmenu' src={support}></img> <p className='menu-content'>Support</p></div>
               <img src={arrow}></img>
              </div>
         </div>

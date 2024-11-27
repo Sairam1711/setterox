@@ -36,7 +36,7 @@ function App() {
         <Route path="/pay" element={<Template MiniScreen={()=><Payscreen></Payscreen>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
         <Route path="/history" element={<Template MiniScreen={()=><History></History>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
         <Route path="/profile" element={<Template MiniScreen={()=><Profile></Profile>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
-        <Route path="/kyc" element={<Template MiniScreen={()=><Kyc setnotify={setnotify} notify={notify} setrules={setrules} rules={rules}></Kyc>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
+        <Route path="/kyc" element={<Template setnotify={setnotify} notify={notify} setrules={setrules} rules={rules}  MiniScreen={()=><Kyc setnotify={setnotify} notify={notify} setrules={setrules} rules={rules}></Kyc>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
         <Route path="/referral" element={<Template MiniScreen={()=><Referral></Referral>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
         <Route path="/match" element={<Template MiniScreen={()=><Matchmaking></Matchmaking>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
         <Route path="/support" element={<Template MiniScreen={()=><SupportScreen></SupportScreen>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />

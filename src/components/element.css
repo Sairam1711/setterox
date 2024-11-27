@@ -831,7 +831,7 @@ input:checked + .slider:before {
 
 }
 .game-result{
-  width: 90%;
+  width: 100%;
 }
 .cardlist{
   width: 100%;
@@ -858,7 +858,7 @@ input:checked + .slider:before {
 .htext2{
   width: 50%;
   font-family: Inter;
-font-size: 11px;
+font-size: 10px;
 font-weight: 400;
 line-height: 24px;
 text-align: left;
@@ -872,5 +872,19 @@ color: #5D5D5D;
   height: 262px;
 
   
+}
+.referedp2{
+ 
+font-size: 15px;
+
+
+
+}
+.referedp2 span {
+
+font-size: 15px;
+
+
+
 }
 }

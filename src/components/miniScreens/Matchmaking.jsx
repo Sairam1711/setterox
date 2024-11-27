@@ -158,7 +158,7 @@ function Matchmaking() {
               style={{
                 width: "100%",
                 fontFamily: "Inter",
-                fontSize: "18px",
+                fontSize:isMobile?"16px": "18px",
                 fontWeight: "400",
                 lineHeight: "24px",
                 textAlign: "left",
@@ -177,7 +177,7 @@ function Matchmaking() {
               style={{
                 width: "100%",
                 fontFamily: "Inter",
-                fontSize: "18px",
+                fontSize:isMobile?"16px": "18px",
                 fontWeight: "400",
                 lineHeight: "24px",
                 textAlign: "left",
@@ -196,7 +196,7 @@ function Matchmaking() {
               style={{
                 width: "100%",
                 fontFamily: "Inter",
-                fontSize: "18px",
+                fontSize:isMobile?"16px": "18px",
                 fontWeight: "400",
                 lineHeight: "24px",
                 textAlign: "left",

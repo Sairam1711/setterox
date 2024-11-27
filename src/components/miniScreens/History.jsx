@@ -1,6 +1,8 @@
 import React from 'react'
 import icon from '../../assest/Ellipse 2.png'
+import { useMediaQuery } from 'react-responsive';
 function History() {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
     return (
         <div className='history'>
             <div className="moneychip" style={{margin:"20px"}}>
@@ -17,7 +19,7 @@ function History() {
                   width: "87px",
                   height: "35px",
                   fontFamily: "Inter",
-                  fontSize: "16px",
+                  fontSize:isMobile?"14px": "16px",
                   borderRadius: "15px",
                   fontWeight: " 600",
                 }}

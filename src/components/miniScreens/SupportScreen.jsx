@@ -8,7 +8,7 @@ function SupportScreen() {
   const isMobile = useMediaQuery({ maxWidth: 768 });
     return (
      <div>
-        <img className='support-img' src='https://s3-alpha-sig.figma.com/img/1959/16ab/fe8c7907428e15546b39600787e08b07?Expires=1733702400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=gTzBe9XeX2dCcbLw~pImAQvmynxIUGMXSIp2MznLjzovUJhIxWRXil5ZJ-ySpodR8yBOTqear21cBw4o0Y2b63hSe-RQwnML7UgmLUW8XF-3~ymZBXt5B00AMqdr2JVvgIixGfQTCrsE0vNFYY2srdRRNpio~-gkOVb4NVZH~8o86aTcE~-SLxS43SrkaFjqdcpu5Gwsn1nULEaL9t6n5pusyuzH5MTZzsarzooE4i3ILNR9Lc0IdyPAzkSLBtFE2MjuSjvAPBziUBBqKeH8~5CL7mYS1XPD9xc6GMavETh97xPVjXVMuAZYpVeJMkUX4wOlENBVef2naQHbN-e5lg__'> 
+        <img className='support-img' style={{width:"100%"}} src='https://s3-alpha-sig.figma.com/img/1959/16ab/fe8c7907428e15546b39600787e08b07?Expires=1733702400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=gTzBe9XeX2dCcbLw~pImAQvmynxIUGMXSIp2MznLjzovUJhIxWRXil5ZJ-ySpodR8yBOTqear21cBw4o0Y2b63hSe-RQwnML7UgmLUW8XF-3~ymZBXt5B00AMqdr2JVvgIixGfQTCrsE0vNFYY2srdRRNpio~-gkOVb4NVZH~8o86aTcE~-SLxS43SrkaFjqdcpu5Gwsn1nULEaL9t6n5pusyuzH5MTZzsarzooE4i3ILNR9Lc0IdyPAzkSLBtFE2MjuSjvAPBziUBBqKeH8~5CL7mYS1XPD9xc6GMavETh97xPVjXVMuAZYpVeJMkUX4wOlENBVef2naQHbN-e5lg__'> 
         </img>
         <div className="flex coloum" style={{height:"auto", width:"100%" ,justifyContent:"start", gap:"16.6px" }}>
         <div

@@ -289,6 +289,10 @@ height: 80px;
     animation: collapseAnimation 0.2s forwards; /* Collapsing animation */
    
   }
+  .iconmenu{
+    width: 50px;
+    height: 50px;
+  }
   @keyframes expandAnimation {
     from {
       transform: translate(-400px,0);
@@ -314,6 +318,29 @@ height: 80px;
 .leftside{
   width: 100%;
 }
+.liftbottom{
+  width: 95%;
+  padding: 20px;
+}
+.hey{font-family: Inter;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
 
-    
+  }
+  .menu-content{
+    width: 200px;
+  
+font-size: 26px;
+
+
+
+  }
+  .iconmenu{
+    width: 40px;
+    height: 40px;
+  }
+  .menu-list{
+height: 75px;
+  } 
   }

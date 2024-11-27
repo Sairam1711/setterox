@@ -119,12 +119,12 @@ function Referral() {
         </div>
         <div className="flex refered coloum" style={{ justifyContent:"start",alignItems:"center"}}>
           <div style={{ textAlign: "center" }}>
-            <p style={{width:"332px" }} className="referedp2">You can refer and <span>Earn 1%</span> of your referral winning, every time</p>
+            <p style={{width:isMobile?"100%":"332px" }} className="referedp2">You can refer and <span>Earn 1%</span> of your referral winning, every time</p>
          
           </div>
           <hr style={{width:"90%",border: "1px solid #D9D9D9", margin:"0"}}></hr>
-          <div style={{ textAlign: "center" }}>
-            <p style={{width:"361px", marginTop:"17px"}} className="referedp2">Like if your player plays for <span>₹10000 </span>and wins, You will get <span>₹100</span> as referral amount.</p>
+          <div style={{textAlign:"center"}}>
+            <p style={{width:isMobile?"100%":"361px", marginTop:"17px"}} className="referedp2">Like if your player plays for <span>₹10000 </span>and wins, You will get <span>₹100</span> as referral amount.</p>
           
           </div>
         </div>
