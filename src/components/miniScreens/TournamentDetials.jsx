@@ -81,7 +81,7 @@ function TournamentDetials() {
           <span
             className="sheader"
             style={{
-              width: isMobile ? "" : "300px",
+              width: isMobile ? "" : "420px",
               textAlign: "left",
               display: "flex",
               flexDirection: "row",
@@ -110,7 +110,7 @@ function TournamentDetials() {
             transition: "height 0.3s ease-in-out", // Smooth transition effect
           }}
         >
-          <div className="flex coloum">
+          <div className="flex coloum ttext" style={{color:"black"}}>
             <div style={{ width: "90%" }} className="flex">
               <p style={{ fontSize: "16px", fontWeight: 600 }}>
                 Total Moves:{" "}
@@ -135,9 +135,10 @@ function TournamentDetials() {
               <p style={{ fontSize: "16px", fontWeight: 600 }}>
                 Scoring:{" "}
                 <span style={{ fontWeight: "200" }}>
-                  Moving one box earns 1 point. Get 10 Extra score when your
-                  token reach at final position. Players can tap on tokens to
-                  see the points each token carries.
+                 <ul> <li> Moving one box earns 1 point. Get 10 Extra score when your</li>
+                 <li>token reach at final position. Players can tap on tokens to</li>
+                 <li> see the points each token carries.</li>
+                  </ul>
                 </span>{" "}
               </p>
             </div>
@@ -145,10 +146,12 @@ function TournamentDetials() {
               <p style={{ fontSize: "16px", fontWeight: 600 }}>
                 Extra Moves:{" "}
                 <span style={{ fontWeight: "200" }}>
-                  Players get extra moves when, They kill a token placed in a
-                  fixed position on the board. A token reaches the Home
-                  position. Token Cutting: Each game has 36 open moves, with
-                  8-10 tokens available to cut for extra points.
+                    <ul>
+                 <li> Players get extra moves when, They kill a token placed in a</li>
+                 <li> fixed position on the board. A token reaches the Home</li>
+                 <li>  position. Token Cutting: Each game has 36 open moves, with</li>
+                 <li>  8-10 tokens available to cut for extra points.</li>
+                 </ul>
                 </span>{" "}
               </p>
             </div>
@@ -166,11 +169,24 @@ function TournamentDetials() {
               <p style={{ fontSize: "16px", fontWeight: 600 }}>
                 Dice Rolls:{" "}
                 <span style={{ fontWeight: "200" }}>
-                  Every player receives an equal number of each dice value (1,
-                  2, 3, 4, 5, and 6). The dice values are arranged in random
+                    <ul><li> Every player receives an equal number of each dice value (1,
+                        2, 3, 4, 5, and 6). </li>
+                    <li>  The dice values are arranged in random
                   order, so players get a different sequence of rolls.
-                  Objective: Score the highest points by cutting tokens and
-                  reaching Home quickly to rank at the top of the leaderboard.
+             </li></ul>
+                 
+                
+                </span>{" "}
+              </p>
+            </div>
+            <div style={{ width: "90%" }} className="flex">
+              <p style={{ fontSize: "16px", fontWeight: 600 }}>
+              Objective: 
+                <span style={{ fontWeight: "200" }}>
+                Score the highest points by cutting tokens and reaching Home quickly to rank at the top of the leaderboard.
+         
+                 
+                
                 </span>{" "}
               </p>
             </div>
@@ -206,6 +222,7 @@ function TournamentDetials() {
             height: "44px",
             alignItems: "center",
             justifyContent: "center",
+            borderRadius:"6px",
             fontSize: "16px",
             fontWeight: "400",
           }}
@@ -276,20 +293,21 @@ function TournamentDetials() {
               <div style={{ width: "80%" }}>
                 <p
                   className="ttext"
-                  style={{ color: "white", fontSize: "14px", fontWeight: 0 }}
+                  style={{ color: "white", fontSize: "14px", fontWeight: 400 }}
                 >
-                  First Price
+               FIRST PRIZE
                 </p>
-                <p
+                <span
                   className="ttext"
-                  style={{ color: "white", fontSize: "24px" }}
+                  style={{ color: "white", fontSize: "24px",fontWeight: 600 }}
                 >
-                  50
-                </p>
+                  500
+                </span>
                 <p
+                className="ttext"
                   style={{
                     fontSize: "12px",
-                    fontWeight: "500",
+                    fontWeight: 500,
                     lineHeight: "1.4",
                   }}
                 >
@@ -307,17 +325,17 @@ function TournamentDetials() {
                   className="ttext"
                   style={{ color: "black", fontSize: "14px" }}
                 >
-                  First Price
+                 PRIZE POOL
                 </p>
                 <p
                   className="ttext"
-                  style={{ color: "black", fontSize: "24px" }}
+                  style={{ color: "black", fontSize: "24px", fontWeight:400}}
                 >
                   50
                 </p>
               </div>
               <div style={{ width: "90%" }}>
-                <p style={{ fontSize: "14px", fontWeight: "500", margin: "0" }}>
+                <p style={{ fontSize: "14px", fontWeight: 500, margin: "0" }}>
                   Tournament Entries
                 </p>
                 <div className="progress-container" style={{ width: "410px" }}>
@@ -340,10 +358,10 @@ function TournamentDetials() {
                   alt=""
                 />
                 <div>
-                  <p className="ttext" style={{ color: "black" }}>
-                    First Price
+                  <p className="ttext" style={{ color: "black", fontSize:"14px", fontWeight:400}}>
+                    FEE PER ENTRY
                   </p>
-                  <p className="ttext" style={{ color: "black" }}>
+                  <p className="ttext" style={{ color: "black" ,fontSize:"18px",fontWeight:600 }}>
                     50
                   </p>
                 </div>
@@ -358,10 +376,10 @@ function TournamentDetials() {
                   alt=""
                 />
                 <div>
-                  <p className="ttext" style={{ color: "black" }}>
+                  <p className="ttext" style={{ color: "black" ,fontSize:"14px", fontWeight:400}}>
                     First Price
                   </p>
-                  <p className="ttext" style={{ color: "black" }}>
+                  <p className="ttext" style={{ color: "black", fontSize:"18px", fontWeight:600 }}>
                     50
                   </p>
                 </div>
@@ -401,6 +419,11 @@ function TournamentDetials() {
                     background: "#ddd",
                     borderRadius: "5px",
                     border: "none",
+                    fontSize:"16px",
+                    color:"black",
+                    fontWeight:500,
+                    width:"100px",
+                    height:"38px"
                   }}
                 >
                   हिंदी
