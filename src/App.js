@@ -18,6 +18,8 @@ import Referral from './components/miniScreens/Referral';
 import Matchmaking from './components/miniScreens/Matchmaking';
 import SupportScreen from './components/miniScreens/SupportScreen';
 import { useState } from 'react';
+import Tournament from './components/miniScreens/Tournament';
+import TournamentDetials from './components/miniScreens/TournamentDetials';
 
 function App() {
   const [rules,setrules]=useState(false)
@@ -40,6 +42,8 @@ function App() {
         <Route path="/referral" element={<Template MiniScreen={()=><Referral></Referral>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
         <Route path="/match" element={<Template MiniScreen={()=><Matchmaking></Matchmaking>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
         <Route path="/support" element={<Template MiniScreen={()=><SupportScreen></SupportScreen>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
+        <Route path="/tournament" element={<Template MiniScreen={()=><Tournament></Tournament>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
+        <Route path="/tournament-detials" element={<Template MiniScreen={()=><TournamentDetials></TournamentDetials>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
 
       </Routes>
 

@@ -804,7 +804,203 @@ input:checked + .slider:before {
   transform: translateX(25px);
 }
 
+.tournament{
+  font-family: Poppins;
+  width: 100%;
+}
+.t-header{
+  font-family: Poppins;
+  width: 100%;
+  align-items: center;
+height: 44px;
+}
+.th2{
+  font-family: Poppins;
+  text-align: center;
+  cursor: pointer;
+  width: 50%;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
 
+}
+.tunderline{
+  width: 100%;
+justify-content: left;
+box-shadow: 0px 6px 6px 0px #00000033;
+transition: transform 1s ease;
+
+}
+.tline{
+  margin: 0;
+width: 50%;
+height: 1px;
+background-color: #000000;
+
+
+}
+.tline.left{
+  animation: lefttoright 0.5s forwards;
+}
+.tline.right{
+  animation: righttoleft 0.5s forwards;
+}
+@keyframes lefttoright {
+  from {
+    transform: translate(0,0);
+  }
+  to {
+    transform: translate(250px,0);
+  }
+}
+@keyframes righttoleft {
+  from {
+    transform: translate(250px,0);
+  }
+  to {
+    transform: translate(0,0);
+  }
+}
+.t-list{
+  width: 100%;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 15px 15px 0 0;
+  gap: 20px;
+  justify-content: flex-start;
+  padding: 10px 5px 0;
+  position: relative;
+  top: -15px;
+}
+.sessionleft{
+  width: 40%;
+  border-radius: 12px 0 0 12px ;
+  height: 100%;
+  align-items: center;
+  background-color: #0d6efd;
+  gap: 7px;
+}
+.ttext{
+  margin: 0;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+.sessionright{
+  width: 60%;
+  justify-content: end;
+  gap: 10px;
+}
+/* Progress Bar Container */
+.progress-container {
+  width: 220px;
+  height: 10px;
+  background-color: #e0e0e0; /* Light gray */
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 8px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Progress Bar */
+.progress-bar {
+  height: 100%;
+  background-color: #4caf50; /* Green */
+  transition: width 0.3s ease-in-out; /* Smooth transition */
+}
+.card {
+  font-family: Poppins;
+  width: 440px;
+  height: 280px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 5px 0 #00000040;
+  transition: box-shadow 0.3s ease; /* Smooth hover effect */
+  margin: 20px auto; /* Center align */
+  font-family: Arial, sans-serif;
+}
+/* Button styling */
+.rotating-button {
+  background: initial;
+  color: #000;
+  content: "+";
+  font-size: 22px;
+  font-weight: 500;
+  height: 20px;
+  width: 20px;
+  line-height: 1;
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.8s ease;
+}
+
+/* Rotation animation */
+.rotate {
+  animation: rotate360 0.2s linear;
+}
+.rotate2 {
+  animation: rotate3602 0.2s linear;
+}
+/* Keyframes for rotation */
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-180deg);
+  }
+}
+
+@keyframes rotate3602 {
+  from {
+    transform: rotate(-180deg);
+   
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+.theaders{
+  font-size: 24px;
+    font-weight: 700;
+    margin: 10px;
+}
+.sheader{
+  background-color: initial !important;
+    border: none;
+    box-shadow: none;
+    color: #000 !important;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 95%;
+  text-align: left;
+  margin: 10px;
+  font-family: Poppins;
+  margin-bottom: 200px;
+
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+ padding: 5px;
+ 
+  border-style:none
+}
+
+.tr1 {
+  height: 40px;
+  padding: 0;
+  background-color: white;
+  border-bottom: 1.5px solid #bcd7ff;
+}
 @media (max-width: 768px) {
 .challenge-card{
   width: 95%;
