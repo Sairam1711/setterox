@@ -20,6 +20,7 @@ import SupportScreen from './components/miniScreens/SupportScreen';
 import { useState } from 'react';
 import Tournament from './components/miniScreens/Tournament';
 import TournamentDetials from './components/miniScreens/TournamentDetials';
+import { paths } from './Utils/constant';
 
 function App() {
   const [rules,setrules]=useState(false)
@@ -27,23 +28,23 @@ function App() {
   return (
 
 <Routes>
-        <Route path="/" element={<Template MiniScreen={()=><Login></Login>}></Template>} />
-        <Route path="/verify" element={<Template MiniScreen={()=><VerifyOtp></VerifyOtp>}></Template>} />
+        <Route path={paths.home} element={<Template MiniScreen={()=><Login></Login>}></Template>} />
+        <Route path={paths.verify} element={<Template MiniScreen={()=><VerifyOtp></VerifyOtp>}></Template>} />
         
-        <Route path="/registation" element={<Template MiniScreen={()=><Resgistation></Resgistation>}></Template>} />
-        <Route path="/lobby" element={<Template MiniScreen={()=><OurGames></OurGames>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
-        <Route path="/classic-game" element={<Template MiniScreen={()=><ClassicGame></ClassicGame>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
-        <Route path="/wallet" element={<Template MiniScreen={()=><Wallet></Wallet>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
-        <Route path="/buy" element={<Template MiniScreen={()=><Buy></Buy>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
-        <Route path="/pay" element={<Template MiniScreen={()=><Payscreen></Payscreen>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
-        <Route path="/history" element={<Template MiniScreen={()=><History></History>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
-        <Route path="/profile" element={<Template MiniScreen={()=><Profile></Profile>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
-        <Route path="/kyc" element={<Template setnotify={setnotify} notify={notify} setrules={setrules} rules={rules}  MiniScreen={()=><Kyc setnotify={setnotify} notify={notify} setrules={setrules} rules={rules}></Kyc>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
-        <Route path="/referral" element={<Template MiniScreen={()=><Referral></Referral>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
-        <Route path="/match" element={<Template MiniScreen={()=><Matchmaking></Matchmaking>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
-        <Route path="/support" element={<Template MiniScreen={()=><SupportScreen></SupportScreen>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
-        <Route path="/tournament" element={<Template MiniScreen={()=><Tournament></Tournament>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
-        <Route path="/tournament-detials" element={<Template MiniScreen={()=><TournamentDetials></TournamentDetials>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
+        <Route path={paths.registation} element={<Template MiniScreen={()=><Resgistation></Resgistation>}></Template>} />
+        <Route path={paths.lobby} element={<Template MiniScreen={()=><OurGames></OurGames>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
+        <Route path={paths.classicGame} element={<Template MiniScreen={()=><ClassicGame></ClassicGame>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
+        <Route path={paths.wallet} element={<Template MiniScreen={()=><Wallet></Wallet>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
+        <Route path={paths.buy} element={<Template MiniScreen={()=><Buy></Buy>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
+        <Route path={paths.pay} element={<Template MiniScreen={()=><Payscreen></Payscreen>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
+        <Route path={paths.history} element={<Template MiniScreen={()=><History></History>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
+        <Route path={paths.profile} element={<Template MiniScreen={()=><Profile></Profile>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
+        <Route path={paths.kyc} element={<Template setnotify={setnotify} notify={notify} setrules={setrules} rules={rules}  MiniScreen={()=><Kyc setnotify={setnotify} notify={notify} setrules={setrules} rules={rules}></Kyc>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
+        <Route path={paths.referral} element={<Template MiniScreen={()=><Referral></Referral>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
+        <Route path={paths.match} element={<Template MiniScreen={()=><Matchmaking></Matchmaking>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
+        <Route path={paths.support} element={<Template MiniScreen={()=><SupportScreen></SupportScreen>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
+        <Route path={paths.tournament}element={<Template MiniScreen={()=><Tournament></Tournament>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
+        <Route path={paths.tournamentDetails} element={<Template MiniScreen={()=><TournamentDetials></TournamentDetials>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
 
       </Routes>
 

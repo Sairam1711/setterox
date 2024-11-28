@@ -99,7 +99,7 @@ function Tournament() {
           >
             Closing Soon
           </p>
-          <div>
+          <div style={{width:"90%"}}>
             <p style={{ fontSize: "14px", fontWeight: "500", margin: "0" }}>
               Tournament Entries
             </p>

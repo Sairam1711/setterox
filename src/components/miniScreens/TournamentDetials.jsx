@@ -1,16 +1,131 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import cup from "../../assest/cup-star-svgrepo-com 2.png";
 import profile from "../../assest/IMG-20241118-WA0009 (1).png";
+import { useLocation } from "react-router-dom";
 function TournamentDetials() {
   const [click, setclick] = useState("");
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const [progress, setProgress] = useState(50); // Initial progress: 50%
-  const [isExpanded1, setIsExpanded1] = useState(false);
+  const { pathname } = useLocation();
+  const topRef = useRef(null); // Create a ref for the top of the page
 
+  const scrollToTop = () => {
+    topRef.current?.scrollIntoView({ behavior: "smooth" }); // Scrolls smoothly to the ref
+  };
+
+  useEffect(() => {
+    scrollToTop()
+  }, [pathname]);
+const Content=()=>{
+    return(
+        <div className="flex coloum ttext" style={{ color: "black" }}>
+        <div style={{ width: "90%" }} className="flex">
+          <p style={{ fontSize: "16px", fontWeight: 600 }}>
+            Total Moves:{" "}
+            <span style={{ fontWeight: "200" }}>
+              Each player has 36 moves to complete the game.
+            </span>{" "}
+          </p>
+        </div>
+
+        <div style={{ width: "90%" }} className="flex">
+          <p style={{ fontSize: "16px", fontWeight: 600 }}>
+            Time Limit per Move:{" "}
+            <span style={{ fontWeight: "200", margin: "10px" }}>
+              layers have 15 seconds to make each move. If a player misses a
+              move 6 times, they will be exited from the game, and their
+              current score will be final.
+            </span>{" "}
+          </p>
+        </div>
+
+        <div style={{ width: "90%" }} className="flex">
+          <p style={{ fontSize: "16px", fontWeight: 600 }}>
+            Scoring:{" "}
+            <span style={{ fontWeight: "200" }}>
+              <ul>
+                {" "}
+                <li>
+                  {" "}
+                  Moving one box earns 1 point. Get 10 Extra score when your
+                </li>
+                <li>
+                  token reach at final position. Players can tap on tokens
+                  to
+                </li>
+                <li> see the points each token carries.</li>
+              </ul>
+            </span>{" "}
+          </p>
+        </div>
+        <div style={{ width: "90%" }} className="flex">
+          <p style={{ fontSize: "16px", fontWeight: 600 }}>
+            Extra Moves:{" "}
+            <span style={{ fontWeight: "200" }}>
+              <ul>
+                <li>
+                  {" "}
+                  Players get extra moves when, They kill a token placed in
+                  a
+                </li>
+                <li>
+                  {" "}
+                  fixed position on the board. A token reaches the Home
+                </li>
+                <li>
+                  {" "}
+                  position. Token Cutting: Each game has 36 open moves, with
+                </li>
+                <li> 8-10 tokens available to cut for extra points.</li>
+              </ul>
+            </span>{" "}
+          </p>
+        </div>
+        <div style={{ width: "90%" }} className="flex">
+          <p style={{ fontSize: "16px", fontWeight: 600 }}>
+            Board Setup:{" "}
+            <span style={{ fontWeight: "200" }}>
+              All players have the same board layout, with tokens placed in
+              the same starting positions.
+            </span>{" "}
+          </p>
+        </div>
+
+        <div style={{ width: "90%" }} className="flex">
+          <p style={{ fontSize: "16px", fontWeight: 600 }}>
+            Dice Rolls:{" "}
+            <span style={{ fontWeight: "200" }}>
+              <ul>
+                <li>
+                  {" "}
+                  Every player receives an equal number of each dice value
+                  (1, 2, 3, 4, 5, and 6).{" "}
+                </li>
+                <li>
+                  {" "}
+                  The dice values are arranged in random order, so players
+                  get a different sequence of rolls.
+                </li>
+              </ul>
+            </span>{" "}
+          </p>
+        </div>
+        <div style={{ width: "90%" }} className="flex">
+          <p style={{ fontSize: "16px", fontWeight: 600 }}>
+            Objective:
+            <span style={{ fontWeight: "200" }}>
+              Score the highest points by cutting tokens and reaching Home
+              quickly to rank at the top of the leaderboard.
+            </span>{" "}
+          </p>
+        </div>
+      </div>
+    )
+}
   const RankTable = () => {
     return (
-      <table >
+      <table>
         <tr style={{ background: "#bcd7ff", height: "48px" }}>
           <th style={{ width: "12%" }}> </th>
           <th style={{ width: "18%" }}>Rank</th>
@@ -66,7 +181,7 @@ function TournamentDetials() {
       </>
     );
   };
-  const List2 = ({ lable, value }) => {
+  const List2 = ({ lable, value,Content }) => {
     const [isExpanded, setIsExpanded] = useState(false);
 
     const toggleExpand = () => {
@@ -76,7 +191,7 @@ function TournamentDetials() {
       <>
         <div
           className="summary-detils"
-          style={{ alignItems: "center", width: "95%" }}
+          style={{ alignItems: "center", width: "95%", userSelect:"none" }}
         >
           <span
             className="sheader"
@@ -87,17 +202,24 @@ function TournamentDetials() {
               flexDirection: "row",
               gap: "4px",
               alignItems: "center",
-              cursor: "pointer" 
+              cursor: "pointer",
             }}
             onClick={toggleExpand}
-      
           >
             {lable}
           </span>{" "}
           <span
-            className={`rotating-button flex ${isExpanded ? "rotate" : "rotate2"}`}
+            className={`rotating-button flex ${
+              isExpanded ? "rotate" : "rotate2"
+            }`}
             onClick={toggleExpand}
-            style={{ cursor: "pointer", width:"20px",justifyContent:"center", fontWeight:600 }}
+            style={{
+              cursor: "pointer",
+              width: "20px",
+              justifyContent: "center",
+              fontWeight: 600,
+              userSelect:"none"
+            }}
           >
             {value}
           </span>
@@ -110,108 +232,24 @@ function TournamentDetials() {
             transition: "height 0.3s ease-in-out", // Smooth transition effect
           }}
         >
-          <div className="flex coloum ttext" style={{color:"black"}}>
-            <div style={{ width: "90%" }} className="flex">
-              <p style={{ fontSize: "16px", fontWeight: 600 }}>
-                Total Moves:{" "}
-                <span style={{ fontWeight: "200" }}>
-                  Each player has 36 moves to complete the game.
-                </span>{" "}
-              </p>
-            </div>
-
-            <div style={{ width: "90%" }} className="flex">
-              <p style={{ fontSize: "16px", fontWeight: 600 }}>
-                Time Limit per Move:{" "}
-                <span style={{ fontWeight: "200", margin:"10px" }}>
-                  layers have 15 seconds to make each move. If a player misses a
-                  move 6 times, they will be exited from the game, and their
-                  current score will be final.
-                </span>{" "}
-              </p>
-            </div>
-
-            <div style={{ width: "90%" }} className="flex">
-              <p style={{ fontSize: "16px", fontWeight: 600 }}>
-                Scoring:{" "}
-                <span style={{ fontWeight: "200" }}>
-                 <ul> <li> Moving one box earns 1 point. Get 10 Extra score when your</li>
-                 <li>token reach at final position. Players can tap on tokens to</li>
-                 <li> see the points each token carries.</li>
-                  </ul>
-                </span>{" "}
-              </p>
-            </div>
-            <div style={{ width: "90%" }} className="flex">
-              <p style={{ fontSize: "16px", fontWeight: 600 }}>
-                Extra Moves:{" "}
-                <span style={{ fontWeight: "200" }}>
-                    <ul>
-                 <li> Players get extra moves when, They kill a token placed in a</li>
-                 <li> fixed position on the board. A token reaches the Home</li>
-                 <li>  position. Token Cutting: Each game has 36 open moves, with</li>
-                 <li>  8-10 tokens available to cut for extra points.</li>
-                 </ul>
-                </span>{" "}
-              </p>
-            </div>
-            <div style={{ width: "90%" }} className="flex">
-              <p style={{ fontSize: "16px", fontWeight: 600 }}>
-                Board Setup:{" "}
-                <span style={{ fontWeight: "200" }}>
-                  All players have the same board layout, with tokens placed in
-                  the same starting positions.
-                </span>{" "}
-              </p>
-            </div>
-
-            <div style={{ width: "90%" }} className="flex">
-              <p style={{ fontSize: "16px", fontWeight: 600 }}>
-                Dice Rolls:{" "}
-                <span style={{ fontWeight: "200" }}>
-                    <ul><li> Every player receives an equal number of each dice value (1,
-                        2, 3, 4, 5, and 6). </li>
-                    <li>  The dice values are arranged in random
-                  order, so players get a different sequence of rolls.
-             </li></ul>
-                 
-                
-                </span>{" "}
-              </p>
-            </div>
-            <div style={{ width: "90%" }} className="flex">
-              <p style={{ fontSize: "16px", fontWeight: 600 }}>
-              Objective: 
-                <span style={{ fontWeight: "200" }}>
-                Score the highest points by cutting tokens and reaching Home quickly to rank at the top of the leaderboard.
-         
-                 
-                
-                </span>{" "}
-              </p>
-            </div>
-          </div>
+         <Content></Content>
         </div>
       </>
     );
   };
-  const handleIncrease = () => {
-    setProgress((prev) => (prev < 100 ? prev + 10 : 100)); // Increase by 10%
-  };
-
-  const handleDecrease = () => {
-    setProgress((prev) => (prev > 0 ? prev - 10 : 0)); // Decrease by 10%
-  };
+ 
   return (
     <div className="" style={{ width: "100%", height: "100vh" }}>
       <div
-        className="flex coloum"
+        className="flex"
         style={{
           position: "absolute",
           background: "white",
-          width: "100%",
+          width: isMobile ? "100%" : "100%",
           height: "150px",
-          transform: "translate(0px,550px)",
+          transform: isMobile
+            ? "translate(-9px,450px)"
+            : "translate(0px,550px)",
           boxShadow: "0px -4px 6px 0px #00000033",
         }}
       >
@@ -222,7 +260,7 @@ function TournamentDetials() {
             height: "44px",
             alignItems: "center",
             justifyContent: "center",
-            borderRadius:"6px",
+            borderRadius: "6px",
             fontSize: "16px",
             fontWeight: "400",
           }}
@@ -231,7 +269,7 @@ function TournamentDetials() {
         </button>
       </div>
       <div className="flex coloum" style={{ width: "100%" }}>
-        <div className="flex sa t-header" style={{ width: "100%" }}>
+        <div className="flex sa t-header" style={{ width: "100%" }} ref={topRef} >
           <p
             className="th2"
             onClick={() => {
@@ -250,12 +288,20 @@ function TournamentDetials() {
           >
             LeaderBoard
           </p>
-        </div> 
+        </div>
         <div
           className="tunderline flex"
           style={{ justifyContent: click === "LeaderBoard" ? "" : "" }}
         >
-          <hr className={`tline ${click === "Details" ?"right": click === "LeaderBoard"? "left":""}`} />
+          <hr
+            className={`tline ${
+              click === "Details"
+                ? "right"
+                : click === "LeaderBoard"
+                ? "left"
+                : ""
+            }`}
+          />
         </div>
         {click === "LeaderBoard" ? (
           <>
@@ -264,7 +310,7 @@ function TournamentDetials() {
         ) : (
           <div
             className="flex coloum"
-            style={{ width: "100%", height: "auto" }}
+            style={{ width: isMobile ? "100%" : "100%", height: "auto" }}
           >
             <div>
               <img></img>
@@ -280,7 +326,7 @@ function TournamentDetials() {
             <div
               className="challenge-card flex  "
               style={{
-                width: "92%",
+                width: "95%",
                 color: "white",
                 backgroundColor: "#1a76fd",
                 border: "none",
@@ -295,16 +341,16 @@ function TournamentDetials() {
                   className="ttext"
                   style={{ color: "white", fontSize: "14px", fontWeight: 400 }}
                 >
-               FIRST PRIZE
+                  FIRST PRIZE
                 </p>
                 <span
                   className="ttext"
-                  style={{ color: "white", fontSize: "24px",fontWeight: 600 }}
+                  style={{ color: "white", fontSize: "24px", fontWeight: 600 }}
                 >
                   500
                 </span>
                 <p
-                className="ttext"
+                  className="ttext"
                   style={{
                     fontSize: "12px",
                     fontWeight: 500,
@@ -318,18 +364,22 @@ function TournamentDetials() {
             </div>
             <div
               className="card flex coloum "
-              style={{ height: "280px", justifyContent: "space-around" }}
+              style={{
+                height: "280px",
+                justifyContent: "space-around",
+                width: "95%",
+              }}
             >
               <div style={{ width: "90%" }}>
                 <p
                   className="ttext"
                   style={{ color: "black", fontSize: "14px" }}
                 >
-                 PRIZE POOL
+                  PRIZE POOL
                 </p>
                 <p
                   className="ttext"
-                  style={{ color: "black", fontSize: "24px", fontWeight:400}}
+                  style={{ color: "black", fontSize: "24px", fontWeight: 400 }}
                 >
                   50
                 </p>
@@ -338,7 +388,7 @@ function TournamentDetials() {
                 <p style={{ fontSize: "14px", fontWeight: 500, margin: "0" }}>
                   Tournament Entries
                 </p>
-                <div className="progress-container" style={{ width: "410px" }}>
+                <div className="progress-container" style={{ width: "90%" }}>
                   <div
                     className="progress-bar"
                     style={{ width: `${progress}%` }}
@@ -358,10 +408,24 @@ function TournamentDetials() {
                   alt=""
                 />
                 <div>
-                  <p className="ttext" style={{ color: "black", fontSize:"14px", fontWeight:400}}>
+                  <p
+                    className="ttext"
+                    style={{
+                      color: "black",
+                      fontSize: "14px",
+                      fontWeight: 400,
+                    }}
+                  >
                     FEE PER ENTRY
                   </p>
-                  <p className="ttext" style={{ color: "black" ,fontSize:"18px",fontWeight:600 }}>
+                  <p
+                    className="ttext"
+                    style={{
+                      color: "black",
+                      fontSize: "18px",
+                      fontWeight: 600,
+                    }}
+                  >
                     50
                   </p>
                 </div>
@@ -376,10 +440,24 @@ function TournamentDetials() {
                   alt=""
                 />
                 <div>
-                  <p className="ttext" style={{ color: "black" ,fontSize:"14px", fontWeight:400}}>
+                  <p
+                    className="ttext"
+                    style={{
+                      color: "black",
+                      fontSize: "14px",
+                      fontWeight: 400,
+                    }}
+                  >
                     First Price
                   </p>
-                  <p className="ttext" style={{ color: "black", fontSize:"18px", fontWeight:600 }}>
+                  <p
+                    className="ttext"
+                    style={{
+                      color: "black",
+                      fontSize: "18px",
+                      fontWeight: 600,
+                    }}
+                  >
                     50
                   </p>
                 </div>
@@ -387,7 +465,12 @@ function TournamentDetials() {
             </div>
             <div
               className="card flex coloum"
-              style={{ height: "305px", justifyContent: "start", gap: "5px" }}
+              style={{
+                height: "305px",
+                justifyContent: "start",
+                gap: "5px",
+                width: "95%",
+              }}
             >
               <p className="theaders" style={{ width: "90%" }}>
                 Prize Distribution
@@ -405,6 +488,7 @@ function TournamentDetials() {
                 minHeight: "237px",
                 gap: "10px",
                 marginBottom: "200px",
+                width: "95%",
               }}
             >
               <div
@@ -419,22 +503,24 @@ function TournamentDetials() {
                     background: "#ddd",
                     borderRadius: "5px",
                     border: "none",
-                    fontSize:"16px",
-                    color:"black",
-                    fontWeight:500,
-                    width:"100px",
-                    height:"38px"
+                    fontSize: "16px",
+                    color: "black",
+                    fontWeight: 500,
+                    width: "100px",
+                    height: "38px",
                   }}
                 >
                   हिंदी
                 </button>
               </div>
-              <List2 lable={"General Game Format Rules"} value={"+"}></List2>
+              <List2 lable={"General Game Format Rules"} value={"+"} Content={Content}></List2>
               <List2
                 lable={"Game Tie: Prize Distribution [Important]"}
                 value={"+"}
+                Content={Content}
               ></List2>
-              <List2 lable={"Frequently asked questions"} value={"+"}></List2>
+              <List2 lable={"Frequently asked questions"} value={"+"}
+              Content={Content}></List2>
             </div>
           </div>
         )}
