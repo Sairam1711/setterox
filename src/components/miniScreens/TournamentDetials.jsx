@@ -247,9 +247,8 @@ const Content=()=>{
           background: "white",
           width: isMobile ? "100%" : "100%",
           height: "150px",
-          transform: isMobile
-            ? "translate(-9px,450px)"
-            : "translate(0px,550px)",
+          bottom:0,
+          left:0,
           boxShadow: "0px -4px 6px 0px #00000033",
         }}
       >
