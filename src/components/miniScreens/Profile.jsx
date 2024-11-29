@@ -10,7 +10,7 @@ function Profile() {
       <div className="challenge-card mini" style={{justifyContent:"left" }}>
       <div className="challenge-header">
         <div className="Challengeheader" style={{justifyContent:"left"}}>
-          <span style={{marginLeft:"20px" ,fontWeight:"500"}}>{element}</span>
+          <span style={{marginLeft:"8px" ,fontWeight:"500"}}>{element}</span>
         </div>
         
       </div>
