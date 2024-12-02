@@ -42,8 +42,8 @@ function Tournament() {
               alt=""
             />
             <div>
-              <p className="ttext"  style={{fontSize:"18px"}}>First Price</p>
-              <p className="ttext" style={{fontSize:"20px"}}>50</p>
+              <p className="ttext"  style={{fontSize:isMobile?"16px":"18px" ,fontWeight:600,}}>FIRST PRIZE</p>
+              <p className="ttext" style={{fontSize:isMobile?"18px":"20px" ,fontWeight:500}}>50</p>
             </div>
           </div>
           <div
@@ -61,8 +61,8 @@ function Tournament() {
               alt=""
             />
             <div>
-              <p className="ttext" style={{fontSize:"14px"}}>PRIZE POOL</p>
-              <p className="ttext" style={{fontSize:"18px",fontWeight:400}}>50</p>
+              <p className="ttext" style={{fontSize:isMobile?"12px":"14px"}}>PRIZE POOL</p>
+              <p className="ttext" style={{fontSize:isMobile?"14px":"18px",fontWeight:400}}>50</p>
             </div>
           </div>
           <div
@@ -80,8 +80,8 @@ function Tournament() {
               alt=""
             />
             <div>
-              <p className="ttext" style={{fontSize:"14px"}}>ASSURED WINNERS</p>
-              <p className="ttext" style={{fontSize:"16px",fontWeight:400}}>50</p>
+              <p className="ttext" style={{fontSize:isMobile?"12px":"14px"}}>ASSURED WINNERS</p>
+              <p className="ttext" style={{fontSize:isMobile?"14px":"16px",fontWeight:400}}>50%</p>
             </div>
           </div>
         </div>
@@ -91,7 +91,7 @@ function Tournament() {
               textAlign: "left",
               width: "86%",
               color: "#d60000",
-              fontSize: "14px",
+              fontSize:isMobile?"12px": "14px",
               fontWeight: "500",
               minHeight: "22px",
               margin: "5px",
@@ -100,7 +100,7 @@ function Tournament() {
             Closing Soon
           </p>
           <div style={{width:"90%"}}>
-            <p style={{ fontSize: "14px", fontWeight: "500", margin: "0" }}>
+            <p style={{ fontSize:isMobile?"12px":"14px", fontWeight: "500", margin: "0" }}>
               Tournament Entries
             </p>
             <div className="progress-container">
@@ -109,7 +109,7 @@ function Tournament() {
                 style={{ width: `${progress}%` }}
               ></div>
             </div>
-            <p style={{ fontSize: "14px", fontWeight: "400", margin: "0" }}>
+            <p style={{fontSize:isMobile?"12px": "14px", fontWeight: "400", margin: "0" }}>
               152/180 filled
             </p>
           </div>
@@ -120,9 +120,10 @@ function Tournament() {
             className="modern-button small"
             style={{
               width: "90%",
+              height:isMobile?"25px":"",
               alignItems: "center",
               justifyContent: "center",
-              fontSize: "14px",
+              fontSize:isMobile?"12px": "14px",
               fontWeight: "400",
             }}
           >

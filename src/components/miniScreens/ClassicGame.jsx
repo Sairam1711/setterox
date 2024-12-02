@@ -30,6 +30,8 @@ const InputSection = ({setvalue}) => (
 
 // Challenge Card Component
 const ChallengeCard = ({ player1, player2, amount, showPlayButton }) => {
+  const [buttonlable,setbuttonlable]=useState('START')
+  const [buttonlable2,setbuttonlable2]=useState('REJECT')
   const navigate =useNavigate()
  return (<div className="challenge-card">
     <div className="challenge-header">
@@ -54,9 +56,12 @@ const ChallengeCard = ({ player1, player2, amount, showPlayButton }) => {
     
       </div>
       <div className="player">
-      <button className="play-button" onClick={()=>{
-        navigate("/match")
-      }}>Play</button>
+      <button className="play-button"  style={{ minWidth:buttonlable==="REQUESTED"?"100px":"77px"}} onClick={()=>{
+        // navigate("/match")
+        setbuttonlable("REQUESTED")
+        setbuttonlable2('CANCEL')
+      }}>{buttonlable}</button>
+      <button className="play-button" style={{background:"#ff0020"}}>{buttonlable2}</button>
       </div>
     </div>
  

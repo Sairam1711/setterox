@@ -319,9 +319,10 @@ height: 35px;
     border: none;
     border-radius: 6px;
     font-family: Inter;
-font-size: 16px;
+font-size: 14px;
 font-weight: 500;
     cursor: pointer;
+  padding: 0;
   }
   
   .play-button:hover {
@@ -888,7 +889,7 @@ background-color: #000000;
   font-size: 18px;
   width: 100%;
   font-weight: 600;
-  font-family:Poppins ;
+  font-family:Poppins;
 }
 .sessionright{
   width: 60%;
