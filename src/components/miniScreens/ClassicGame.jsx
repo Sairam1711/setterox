@@ -151,8 +151,8 @@ const ChallengeCardfrom = ({ player1, player2, amount, showPlayButton }) => {
                     }}REQUESTED
                     onClick={() => {
                       // navigate("/match")
-                      setbuttonlable("REQUESTED");
-                      setbuttonlable2("CANCEL");
+                      // setbuttonlable("REQUESTED");
+                      // setbuttonlable2("CANCEL");
                     }}
                   >
                     {buttonlable}
