@@ -21,11 +21,11 @@ function OurGames() {
       <div className="ourgames">
         <img
           className=""
-          style={{ borderRadius: "10px", width: isMobile?"95%":"385px" }}
+          style={{ borderRadius: "10px", width: isMobile?"100%":"385px" }}
           src={first}        ></img>
         <div className="two">
           <img
-            style={{ cursor: "pointer" }}
+              style={{ cursor: "pointer", width: isMobile?"80%": " 164px", height: " 164px" }}
             onClick={() => {
               navigate("/classic-game");
             }}
@@ -35,7 +35,7 @@ function OurGames() {
               navigate("/classic-game");
             }}
             className="imgtwo"
-            style={{ cursor: "pointer", width: isMobile?"90%": " 164px", height: " 164px" }}
+            style={{ cursor: "pointer", width: isMobile?"80%": " 164px", height: " 164px" }}
             src={second}          ></img>
         </div>
         <img
