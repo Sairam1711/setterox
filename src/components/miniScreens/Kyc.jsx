@@ -73,7 +73,7 @@ function Kyc({ notify, setnotify, rules, setrules }) {
           <input
             className="normal-input"
             placeholder="Enter your mobile"
-            style={{}}
+          
           ></input>
         </div>
         <span

@@ -19,20 +19,20 @@ function TournamentDetials() {
   }, [pathname]);
 const Content=()=>{
     return(
-        <div className="flex coloum ttext " style={{ color: "black" }}>
-        <div style={{ width: "90%" }} className="flex">
-          <p style={{ fontSize: "16px", fontWeight: 600 }}>
+        <div className="flex coloum ttext color-black " >
+        <div  className="flex width-90">
+          <p className="custom-div-text"  >
             Total Moves:{" "}
-            <span style={{ fontWeight: "200" }}>
+            <span className="f-w-200" >
               Each player has 36 moves to complete the game.
             </span>{" "}
           </p>
         </div>
 
-        <div style={{ width: "90%" }} className="flex">
-          <p style={{ fontSize: "16px", fontWeight: 600 }}>
+        <div className="flex width-90">
+          <p className="custom-div-text" >
             Time Limit per Move:{" "}
-            <span style={{ fontWeight: "200", margin: "10px" }}>
+            <span className="f-w-200 m-10" >
               layers have 15 seconds to make each move. If a player misses a
               move 6 times, they will be exited from the game, and their
               current score will be final.
@@ -40,10 +40,10 @@ const Content=()=>{
           </p>
         </div>
 
-        <div style={{ width: "90%" }} className="flex">
-          <p style={{ fontSize: "16px", fontWeight: 600 }}>
+        <div  className="flex width-90">
+          <p className="custom-div-text" >
             Scoring:{" "}
-            <span style={{ fontWeight: "200" }}>
+            <span className="f-w-200" >
               <ul>
                 {" "}
                 <li>
@@ -59,10 +59,10 @@ const Content=()=>{
             </span>{" "}
           </p>
         </div>
-        <div style={{ width: "90%" }} className="flex">
-          <p style={{ fontSize: "16px", fontWeight: 600 }}>
+        <div  className="flex width-90">
+          <p className="custom-div-text" >
             Extra Moves:{" "}
-            <span style={{ fontWeight: "200" }}>
+            <span className="f-w-200" >
               <ul>
                 <li>
                   {" "}
@@ -82,20 +82,20 @@ const Content=()=>{
             </span>{" "}
           </p>
         </div>
-        <div style={{ width: "90%" }} className="flex">
-          <p style={{ fontSize: "16px", fontWeight: 600 }}>
+        <div  className="flex width-90">
+          <p className="custom-div-text" >
             Board Setup:{" "}
-            <span style={{ fontWeight: "200" }}>
+            <span className="f-w-200" >
               All players have the same board layout, with tokens placed in
               the same starting positions.
             </span>{" "}
           </p>
         </div>
 
-        <div style={{ width: "90%" }} className="flex">
-          <p style={{ fontSize: "16px", fontWeight: 600 }}>
+        <div  className="flex width-90">
+          <p className="custom-div-text" >
             Dice Rolls:{" "}
-            <span style={{ fontWeight: "200" }}>
+            <span className="f-w-200" >
               <ul>
                 <li>
                   {" "}
@@ -111,10 +111,10 @@ const Content=()=>{
             </span>{" "}
           </p>
         </div>
-        <div style={{ width: "90%" }} className="flex">
-          <p style={{ fontSize: "16px", fontWeight: 600 }}>
+        <div className="flex width-90">
+          <p className="custom-div-text" >
             Objective:
-            <span style={{ fontWeight: "200" }}>
+            <span className="f-w-200" >
               Score the highest points by cutting tokens and reaching Home
               quickly to rank at the top of the leaderboard.
             </span>{" "}
@@ -135,16 +135,17 @@ const Content=()=>{
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13].map((element) => (
           <>
             <tr className="tr1">
-              <td className="flex" style={{ alignItems: "center" }}>
+              <td className="flex" >
                 {" "}
                 <img
                   src={profile}
-                  style={{ width: "45px", height: "45px" }}
+                  className="image-r"
+              
                 ></img>
               </td>
               <td>1</td>
               <td>Harsh_0009</td>
-              <td style={{ textAlign: "right" }}>429</td>
+              <td className="text-right" >429</td>
             </tr>
           </>
         ))}
@@ -156,28 +157,21 @@ const Content=()=>{
       <>
         <div className="summary-detils">
           <span
+          className="t-s"
             style={{
               width: isMobile ? "" : "300px",
-              textAlign: "left",
-              display: "flex",
-              flexDirection: "row",
-              gap: "4px",
-              alignItems: "center",
-              fontSize: "16px",
-              fontWeight: "600",
             }}
           >
             {lable}
           </span>{" "}
           <span
-            style={{
-              fontSize: "16px",
-            }}
+           className="value2"
+           
           >
             ₹ {value}
           </span>
         </div>
-        <hr style={{ width: "90%", height: "1px" }}></hr>
+        <hr className="hr-line" ></hr>
       </>
     );
   };
@@ -190,36 +184,25 @@ const Content=()=>{
     return (
       <>
         <div
-          className="summary-detils"
-          style={{ alignItems: "center", width: "95%", userSelect:"none" }}
+          className="summary-detils t-centered-element"
+         
         >
           <span
-            className="sheader"
+            className="sheader t-header"
             style={{
               width: isMobile ? "" : "420px",
-              textAlign: "left",
-              display: "flex",
-              flexDirection: "row",
-              gap: "4px",
-              alignItems: "center",
-              cursor: "pointer",
+             
             }}
             onClick={toggleExpand}
           >
             {lable}
           </span>{" "}
           <span
-            className={`rotating-button flex ${
+            className={`rotating-button pointer-style flex ${
               isExpanded ? "rotate" : "rotate2"
             }`}
             onClick={toggleExpand}
-            style={{
-              cursor: "pointer",
-              width: "20px",
-              justifyContent: "center",
-              fontWeight: 600,
-              userSelect:"none"
-            }}
+           
           >
             {value}
           </span>
@@ -292,16 +275,14 @@ const Content=()=>{
           </>
         ) : (
           <div
-            className="flex coloum fullwidth"
-            style={{ height: "auto" }}
+            className="flex coloum fullwidth height-auto"
+            
           >
             <div>
               <img></img>
               <p
-                style={{
-                  fontSize: "16px",
-                  fontWeight: 600,
-                }}
+              className="f-16-600"
+              
               >
                 You have 5 out of 5 entries left
               </p>
@@ -311,7 +292,7 @@ const Content=()=>{
               
             >
               <img className="cupimg" src={cup}></img>
-              <div style={{ width: "80%" }}>
+              <div className="width-80" >
                 <p
                   className="ttext first-text"
                 
@@ -334,14 +315,10 @@ const Content=()=>{
               </div>
             </div>
             <div
-              className="card flex coloum "
-              style={{
-                height: "280px",
-                justifyContent: "space-around",
-                width: "95%",
-              }}
+              className="card flex coloum container-style-h2"
+             
             >
-              <div style={{ width: "90%" }}>
+              <div className="width-90" >
                 <p
                   className="ttext prize-text "
                  
@@ -355,11 +332,11 @@ const Content=()=>{
                   50
                 </p>
               </div>
-              <div style={{ width: "90%" }}>
+              <div className="width-90">
                 <p className="custom-text" >
                   Tournament Entries
                 </p>
-                <div className="progress-container" style={{ width: "90%" }}>
+                <div className="progress-container width-90" >
                   <div
                     className="progress-bar"
                     style={{ width: `${progress}%` }}
@@ -394,8 +371,8 @@ const Content=()=>{
                 </div>
               </div>
               <div
-                className="flex"
-                style={{ gap: "5px", width: "90%", justifyContent: "start" }}
+                className="flex container-gap "
+            
               >
                 <img
                    className="custom-size"
@@ -422,7 +399,7 @@ const Content=()=>{
               className="card flex coloum fi"
             
             >
-              <p className="theaders" style={{ width: "90%" }}>
+              <p className="theaders width-90" >
                 Prize Distribution
               </p>
               <List lable={"Rank:1"} value={"100"}></List>
@@ -436,8 +413,8 @@ const Content=()=>{
            
             >
               <div
-                className="flex"
-                style={{ width: "95%", justifyContent: "space-between" }}
+                className="flex container-space-between"
+               
               >
                 {" "}
                 <p className="theaders">Game Rules & FAQ</p>{" "}

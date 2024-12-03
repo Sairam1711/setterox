@@ -75,8 +75,8 @@ const ChallengeCard = ({ player1, player2, amount, showPlayButton }) => {
                     {buttonlable}
                   </button>
                   <button
-                    className="play-button"
-                    style={{ background: "#ff0020" }}
+                    className="play-button bg-red"
+                   
                   >
                     {buttonlable2}
                   </button>
@@ -169,7 +169,7 @@ const ChallengeCardfrom = ({ player1, player2, amount, showPlayButton }) => {
       </div>
       {showPlayButton ? (
         <>
-          <div className="challenge-content" style={{transform:"translate(0,-5px)",}}>
+          <div className="challenge-content custom-translate-style" >
           <div className="flex custom-container" >
             <div className="fconatain flex coloum" >
               <p className="fheader">ENTRY FEE</p>
@@ -180,8 +180,8 @@ const ChallengeCardfrom = ({ player1, player2, amount, showPlayButton }) => {
               <span className="famount">200</span>
             </div>
           </div>
-            <div className="player" style={{flexDirection:"column" ,gap:0}}>
-              <div className="player-avatar" style={{margin:"0"}}></div>
+            <div className="player custom-column-style-c">
+              <div className="player-avatar margin-0" ></div>
               <span>{player1}</span>
             </div>
        
@@ -221,11 +221,9 @@ const ChallengeCardfrom = ({ player1, player2, amount, showPlayButton }) => {
 const ChallengeCard2 = ({ player1, player2, amount, showPlayButton }) => (
   <div className="challenge-card">
     <div className="challenge-header">
-      <div className="Challengeheader" style={{ textAlign: "left" }}>
+      <div className="Challengeheader text-left">
         <span
-          style={{
-            width: "90%",
-          }}
+        className="width-90"
         >
           Current Playing: 114
         </span>
