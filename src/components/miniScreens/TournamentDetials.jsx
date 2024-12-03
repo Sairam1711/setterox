@@ -356,7 +356,7 @@ const Content=()=>{
                 </p>
               </div>
               <div style={{ width: "90%" }}>
-                <p style={{ fontSize: "14px", fontWeight: 500, margin: "0" }}>
+                <p className="custom-text" >
                   Tournament Entries
                 </p>
                 <div className="progress-container" style={{ width: "90%" }}>
@@ -365,37 +365,29 @@ const Content=()=>{
                     style={{ width: `${progress}%` }}
                   ></div>
                 </div>
-                <p style={{ fontSize: "14px", fontWeight: "400", margin: "0" }}>
+                <p  className='custom-text four'>
                   152/180 filled
                 </p>
               </div>
               <div
-                className="flex"
-                style={{ gap: "5px", width: "90%", justifyContent: "start" }}
+                className="flex custom-container3"
+                
               >
                 <img
-                  style={{ width: "28px", height: "28px" }}
+              className="custom-size"
                   src={cup}
                   alt=""
                 />
                 <div>
                   <p
-                    className="ttext"
-                    style={{
-                      color: "black",
-                      fontSize: "14px",
-                      fontWeight: 400,
-                    }}
+                    className="ttext text-style-td"
+                 
                   >
                     FEE PER ENTRY
                   </p>
                   <p
-                    className="ttext"
-                    style={{
-                      color: "black",
-                      fontSize: "18px",
-                      fontWeight: 600,
-                    }}
+                    className="ttext text-style-td f6"
+                  
                   >
                     50
                   </p>
@@ -406,7 +398,7 @@ const Content=()=>{
                 style={{ gap: "5px", width: "90%", justifyContent: "start" }}
               >
                 <img
-                  style={{ width: "28px", height: "28px" }}
+                   className="custom-size"
                   src={cup}
                   alt=""
                 />
@@ -418,12 +410,8 @@ const Content=()=>{
                     First Price
                   </p>
                   <p
-                    className="ttext"
-                    style={{
-                      color: "black",
-                      fontSize: "18px",
-                      fontWeight: 600,
-                    }}
+                    className="ttext text-style-td f6"
+            
                   >
                     50
                   </p>

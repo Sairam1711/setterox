@@ -1522,6 +1522,70 @@ text-align: center;
   background: transparent;
   color: #000000;
 }
+.custom-container {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.custom-text {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+.custom-text.four{
+  font-weight: 400;
+}
+.custom-container3 {
+  gap: 5px;
+  width: 90%;
+  justify-content: flex-start;
+}
+.custom-size {
+  width: 28px;
+  height: 28px;
+}
+.text-style-td {
+  color: black;
+  font-size: 14px;
+  font-weight: 400;
+}
+.text-style-td.f6{
+  font-size: 18px;
+  font-weight: 600;
+}
+.container-style-p {
+  height: 183px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 13px;
+}
+.container-style-h {
+  height: 502px;
+  display: flex;
+  gap: 20px;
+}
+.text-style-c2 {
+  color: #344054;
+  font-weight: 500;
+}
+.text-left-style {
+  width: 90%;
+  color: #017C0E;
+  text-align: left;
+}
+.justify-left{
+  justify-content: left;
+}
+.margin-left-style {
+  margin-left: 8px;
+  font-weight: 500;
+}
+.custom-margin-style {
+  margin: 0;
+  margin-left: 10px;
+  width: 100%;
+}
 /* Media query for mobile devices */
 @media (max-width: 768px) {
   .modern-button.referral-button {

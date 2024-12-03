@@ -96,7 +96,7 @@ function Matchmaking() {
           className="flex refered coloum penalty-details "
         
         >
-          <div style={{ textAlign: "center" }}>
+          <div className="textalingn-center">
             <p
              className="penalty-text mobile-font"
             >
@@ -106,7 +106,7 @@ function Matchmaking() {
           <hr
           className="penalty-divider"
           ></hr>
-          <div style={{ textAlign: "center" }}>
+          <div className="textalingn-center">
             <p
            className="penalty-text mobile-font"
             >
@@ -116,7 +116,7 @@ function Matchmaking() {
           <hr
              className="penalty-divider"
           ></hr>
-          <div style={{ textAlign: "center" }}>
+          <div className="textalingn-center">
             <p
             className="penalty-text mobile-font"
             >

@@ -170,7 +170,7 @@ const ChallengeCardfrom = ({ player1, player2, amount, showPlayButton }) => {
       {showPlayButton ? (
         <>
           <div className="challenge-content" style={{transform:"translate(0,-5px)",}}>
-          <div className="flex" style={{width:"30%" ,height:"100%", justifyContent:"space-between"}}>
+          <div className="flex custom-container" >
             <div className="fconatain flex coloum" >
               <p className="fheader">ENTRY FEE</p>
               <span className="famount">100</span>

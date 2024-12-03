@@ -19,12 +19,8 @@ function Payscreen() {
       </div>
       <div className="cardlist">
         <div
-          className="challenge-card"
-          style={{
-            height: "183px",
-            justifyContent: "start",
-            gap: "13px",
-          }}
+          className="challenge-card container-style-p"
+        
         >
           <div className="challenge-header " style={{ flexDirection: "column" }}>
             <div className="Challengeheader">
@@ -49,8 +45,8 @@ function Payscreen() {
         </div>
 
         <div
-          className="challenge-card"
-          style={{ height: "502px", gap: "20px" }}
+          className="challenge-card container-style-h"
+        
         >
           <div className="challenge-header">
             <div className="Challengeheader">
@@ -60,8 +56,8 @@ function Payscreen() {
           <div className="amount">
             <label
               htmlFor="phone-input"
-              style={{ color: "#344054", fontWeight: "500" }}
-              className="phone-label"
+           
+              className="phone-label text-style-c2"
             >
               {payment === "Bank Transfer" ? "Account Number" : "UPI ID"}
             </label>
@@ -74,7 +70,7 @@ function Payscreen() {
               }
             ></input>
           </div>
-          <span style={{ width: "90%", color: "#017C0E", textAlign: "left" }}>
+          <span className="text-left-style">
             Bank Name should be same as kaiful haque
           </span>
           <div className="amount">
