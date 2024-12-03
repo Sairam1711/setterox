@@ -25,14 +25,8 @@ function VerifyOtp() {
 
     return (
         <div
-            style={{
-                width: "346px",
-                height: "374px",
-                display: "flex",
-                flexDirection: "column",
-                gap: "10px",
-                marginTop: "83px",
-            }}
+        className='verfiy-div'
+           
         >
             <h1 style={{ margin: "0" }}>Verify OTP</h1>
             <p className="textcontent">
@@ -46,15 +40,7 @@ function VerifyOtp() {
                         type="text"
                         maxLength="1"
                         value={value}
-                        className="normal-input"
-                        style={{
-                            width: "50px",
-                            height: "48px",
-                            padding:"0",
-                            borderRadius: "8px",
-                            border: "1px solid #D0D5DD",
-                            textAlign: "center",
-                        }}
+                        className="normal-input otp-input"
                         onChange={(e) => handleChange(e.target.value, index)}
                         onKeyDown={(e) => handleKeyDown(e, index)}
                         ref={(el) => (inputs.current[index] = el)} // Assign the input element to the ref array

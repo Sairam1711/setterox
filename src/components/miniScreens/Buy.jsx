@@ -9,15 +9,8 @@ function Buy() {
     <div className="wallet">
       <div className="headerbuttons">
         <button
-          className="modern-button small"
-          style={{
-            borderRadius: "4px",
-            background: " #4DB1F1",
-            textAlign: "center",
-            alignItems: "center",
-            width: "104px",
-            height: "35px",
-          }}
+          className="modern-button small back"
+        
           onClick={() => {
             navigate(-1)
           }}
@@ -25,33 +18,17 @@ function Buy() {
           <img src={arrowleft}></img> Back
         </button>
         <button
-          className="modern-button  primary"
-          style={{
-            border: "2px solid #4DB1F1",
-            borderRadius:"4px",
-            color: "#4DB1F1",
-            textAlign: "center",
-            alignItems: "center",
-
-            width: "160px",
-            height: "35px",
-            fontFamily: "Inter",
-            fontSize: "16px",
-            fontWeight: " 600",
-          }}
+          className="modern-button  primary guide"
+      
         >
           {" "}
           Guide
         </button>
       </div>
-      <div className="cardlist" style={{marginTop:isMobile?"15px":""}}>
+      <div className="cardlist margin-top" >
         <div
-          className="challenge-card"
-          style={{
-            height: "291px",
-            justifyContent: "start",
-            gap: "13px",
-          }}
+          className="challenge-card buy-card"
+        
         >
           <div className="challenge-header">
             <div className="Challengeheader">
@@ -60,37 +37,22 @@ function Buy() {
           </div>
 
           <div className="amount">
-            <label htmlFor="phone-input" style={{color:"#344054"}} className="phone-label">
+            <label htmlFor="phone-input" className="phone-label lablecolor">
               Enter Amount
             </label>
             <input className="normal-input" placeholder="Amount"></input>
           </div>
           <span
-            style={{
-              width: "90%",
-              textAlign: "left",
-              color: " #667085",
-            }}
+          className="min20"
+       
           >
             Min:{20}
           </span>
           <div className="moneychip">
             {[50, 100, 200, 500, 1000].map((element) => (
               <div
-                className="modern-button  primary"
-                style={{
-                  border: "2px solid #4DB1F1",
-                  color: "#4DB1F1",
-                  textAlign: "left",
-                  alignItems: "center",
-                  padding: "0",
-                  width: "67px",
-                  height: "35px",
-                  fontFamily: "Inter",
-                  fontSize: isMobile?"14px":"16px",
-                  borderRadius: "7px",
-                  fontWeight: " 600",
-                }}
+                className="modern-button  primary chipbt"
+               
               >
                 {" "}
                 + {element}
@@ -98,14 +60,8 @@ function Buy() {
             ))}
           </div>
           <button
-            className="modern-button full"
-            style={{
-              width: "95%",
-              fontFamily: "Inter",
-              fontSize: "24px",
-              fontWeight: " 600",
-              borderRadius: "4px",
-            }}
+            className="modern-button full paybt"
+     
             onClick={()=>{
   
 }}
@@ -114,7 +70,7 @@ function Buy() {
           </button>
         </div>
 
-        <div className="challenge-card" style={{ height: "291px",  gap:"10px"}}>
+        <div className="challenge-card buy-card2" >
           <div className="challenge-header">
             <div className="Challengeheader">
               <span>Summary</span>
@@ -122,69 +78,38 @@ function Buy() {
           </div>
           <div className="summary-detils">
             <span
-              style={{
-                width:isMobile?"": "300px",
-                textAlign: "left",
-                display: "flex",
-                flexDirection: "row",
-                gap: "4px",
-                alignItems: "center",
-              }}
+            className="deposit"
+          
             >
               Deposit Amount (Excl. Govt. Tax ){" "}
               <div
-                style={{
-                  width: " 21px",
-                  height: "24px",
-                  background: "#C6DAFD",
-                  borderRadius: "4px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
+              className="a"
+              
               >
                 <span
-                  style={{
-                    color: "#0D6EFD",
-
-                    fontFamily: "Inter",
-                    fontSize: " 14px",
-                    fontWeight: " 600",
-                    textAlign: "center",
-                  }}
+                className="text-style "
+                 
                 >
                   A
                 </span>
               </div>{" "}
             </span>{" "}
-            <span style={{ color: "#017C0E" }}>₹ 0. 00</span>
+            <span className="green" >₹ 0. 00</span>
           </div>
           <div className="summary-detils">
             <span
-              style={{
-                width:isMobile?"": "300px",
-                textAlign: "left",
-                display: "flex",
-                flexDirection: "row",
-                gap: "4px",
-                alignItems: "center",
-              }}
+             className="deposit"
+             
             >
               Govt Tax (28%){" "}
             </span>{" "}
             <span>₹ 0. 00</span>
           </div>
-          <hr style={{ width: "90%", height: "1px" }}></hr>
+          <hr className="lineb" ></hr>
           <div className="summary-detils">
             <span
-              style={{
-                width:isMobile?"": "300px",
-                textAlign: "left",
-                display: "flex",
-                flexDirection: "row",
-                gap: "4px",
-                alignItems: "center",
-              }}
+             className="deposit"
+             
             >
               Total{" "}
             </span>{" "}
@@ -192,110 +117,56 @@ function Buy() {
           </div>
           <div className="summary-detils">
             <span
-              style={{
-                width:isMobile?"": "300px",
-                textAlign: "left",
-                display: "flex",
-                flexDirection: "row",
-                gap: "4px",
-                alignItems: "center",
-              }}
+             className="deposit"
+             
             >
               Cashback Bonus
               <div
-                style={{
-                  width: " 21px",
-                  height: "24px",
-                  background: "#C6DAFD",
-                  borderRadius: "4px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
+              className="a"
+               
               >
                 <span
-                  style={{
-                    color: "#0D6EFD",
-
-                    fontFamily: "Inter",
-                    fontSize: " 14px",
-                    fontWeight: " 600",
-                    textAlign: "center",
-                  }}
+                   className="text-style "
+                
                 >
                   B
                 </span>
               </div>{" "}
             </span>{" "}
-            <span style={{ color: "#017C0E" }}>₹ 0. 00</span>
+            <span className="green" >₹ 0. 00</span>
           </div>
-          <hr style={{ width: "90%", height: "1px" }}></hr>
+          <hr className="lineb" ></hr>
           <div className="summary-detils">
             <span
-              style={{
-                width:isMobile?"": "300px",
-                textAlign: "left",
-                display: "flex",
-                flexDirection: "row",
-                gap: "4px",
-                alignItems: "center",
-                fontFamily: "Inter",
-                fontSize: " 14px",
-                fontWeight: "800",
-              }}
+            className="text-row"
+         
             >
               Add To Wallet Balance
               <div
-                style={{
-                  width: " 21px",
-                  height: "24px",
-                  background: "#C6DAFD",
-                  borderRadius: "4px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
+              className="a"
+              
               >
                 <span
-                  style={{
-                    color: "#0D6EFD",
-
-                    fontFamily: "Inter",
-                    fontSize: " 14px",
-                    fontWeight: " 600",
-                    textAlign: "center",
-                  }}
+                   className="text-style "
+               
                 >
                   A
                 </span>
               </div>{" "}
               +
               <div
-                style={{
-                  width: " 21px",
-                  height: "24px",
-                  background: "#C6DAFD",
-                  borderRadius: "4px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
+              className="a"
+             
               >
                 <span
-                  style={{
-                    color: "#0D6EFD",
-
-                    fontFamily: "Inter",
-                    fontSize: " 14px",
-                    fontWeight: " 600",
-                    textAlign: "center",
-                  }}
+                   className="text-style "
+                
                 >
                   B
                 </span>
               </div>{" "}
             </span>{" "}
-            <span style={{ color: "#017C0E" }}>₹ 0. 00</span>
+            <span className="green" >₹ 0. 00</span>
           </div>
         </div>
       </div>

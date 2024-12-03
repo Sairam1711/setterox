@@ -35,15 +35,8 @@ function Profile() {
 }}></input>
 
 <button
-className="modern-button full"
-style={{
-  width: "79px",
-  height:"44px",
-  fontFamily: "Inter",
-  fontSize: "16px",
-  fontWeight: " 600",
-  borderRadius: "4px",
-}}
+className="modern-button full edit-button-style"
+
 >
 Edit
 </button>
@@ -73,20 +66,8 @@ Edit
             </div>
             <div className='redbox2'>
             <button
-          className="modern-button  primary"
-          style={{
-            border: "1px solid #D60000",
-            borderRadius:"6px",
-            color: "#D60000",
-            textAlign: "center",
-            alignItems: "center",
-
-            width: "140px",
-            height: "35px",
-            fontFamily: "Inter",
-            fontSize: "14px",
-            fontWeight: " 500",
-          }}
+          className="modern-button  primary alert-button"
+          
           onClick={()=>{
             navigate("/kyc")
           }}
@@ -104,7 +85,7 @@ Edit
             </div>
            
           </div>
-          <div style={{display:"flex",flexDirection:"row", width:"100%" ,height:"100%",flexWrap:"wrap", justifyContent:"space-around"}}>
+          <div className='flex-container'>
           {         ["Games Played","Chip Won","Referral Earning","Penalty"].map((element)=> <Mini_card element={element}></Mini_card>)}
           </div>
 

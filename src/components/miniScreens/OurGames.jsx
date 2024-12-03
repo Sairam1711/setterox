@@ -9,20 +9,14 @@ function OurGames() {
   const isMobile = useMediaQuery({ maxWidth: 768 });
   return (
     <div
-      style={{
-        width: "346px",
-        height: "374px",
-        display: "flex",
-        flexDirection: "column",
-        gap: "10px",
-      }}
+      className="our-games-container "
     >
       <p className="our-game-header">Our Games</p>
       <div className="ourgames">
         <img
-          className=""
-          style={{ borderRadius: "10px", width: isMobile?"100%":"385px" }}
-          src={first}        ></img>
+          className="our-games-image main"
+          style={{  width: isMobile?"100%":"385px" }}
+          src={first}    ></img>
         <div className="two">
           <img
               style={{ cursor: "pointer", width: isMobile?"80%": " 164px", height: " 164px" }}

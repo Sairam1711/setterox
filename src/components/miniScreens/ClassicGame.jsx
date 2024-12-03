@@ -8,9 +8,9 @@ import { useMediaQuery } from "react-responsive";
 const Header = () => (
   <div className="header">
     <div className="line"></div>
-    <img style={{ width: "20px", height: " 20px" }} src={icon}></img>
+    <img className="iconimg" src={icon}></img>
     <p className="headerText">Classic Mode Rich</p>
-    <img style={{ width: "20px", height: " 20px" }} src={icon}></img>
+    <img className="iconimg"  src={icon}></img>
     <div className="line"></div>
   </div>
 );
@@ -106,12 +106,7 @@ const ChallengeCard = ({ player1, player2, amount, showPlayButton }) => {
           <div className="challenge-header">
             <span
               className="amountrs-centered"
-              style={{
-                fontFamily: "Inter",
-                fontSize: "20px",
-                fontWeight: "700",
-                margin: "15px",
-              }}
+            
             >
               Rs. {amount}
             </span>
@@ -148,7 +143,7 @@ const ChallengeCardfrom = ({ player1, player2, amount, showPlayButton }) => {
                     style={{
                       width:isMobile?"57px": "77px",
                       height:"30px"
-                    }}REQUESTED
+                    }}
                     onClick={() => {
                       // navigate("/match")
                       // setbuttonlable("REQUESTED");
@@ -208,12 +203,7 @@ const ChallengeCardfrom = ({ player1, player2, amount, showPlayButton }) => {
           <div className="challenge-header">
             <span
               className="amountrs-centered"
-              style={{
-                fontFamily: "Inter",
-                fontSize: "20px",
-                fontWeight: "700",
-                margin: "15px",
-              }}
+           
             >
               Rs. {amount}
             </span>

@@ -18,26 +18,18 @@ function Tournament() {
   const Tcard=()=>{
     return(
         <div
-        className="challenge-card"
-        style={{
-          height: "182px",
-          border: "1px solid #0d6efd",
-          flexDirection: "row",
-        }}
+        className="challenge-card t-card-style"
+      
       >
         <div className="sessionleft flex coloum">
          
           <div
-            className="flex"
-            style={{ gap: "5px", width: "85%", justifyContent: "start" }}
+            className="flex flex-style"
+           
           >
             <img
-              style={{
-                width: "28px",
-                height: "28px",
-                background: "white",
-                borderRadius: "20px",
-              }}
+             className="circle-style"
+           
               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHgSURBVHgB1VRLTgJBEH01ihBdiDfApb8IN9AbjBtkp5xAvYHeQE+AS8UNN5AboIJuGU8AJmIISLfVNQNBQzdMlIUvaZqp7n71L+C/g2a6VahloJJZQJX4qw1NF1joVXGTC36v4LDRhEbGchqgvL3ueu65DlF4Po7IA3h6H72VNSZko9QBmxawPINCfc9FYfcg/+KPQtJbyaGy3v527tfSSCZqbECa7SyivFlBLA9InfCveXwm5PnGEa8Wr6b8r+TaIF2UO6SObTR2BUo/yj60jHAeKpSQXYqs+/kQ3W7FV+DRqux+My27hGKEMFzGCzEGb/EVaB0Spt6zkcKzKLFcpupCZPknP2LZtdE4kmwee44ks2fJztQku/vAlKCie5gyNck2JIbYeKWpJCWsqYi7rWvE9mCIuTaawS0TeH1ebOkwB/AORDaFfDqGFeSC6QkH3CEaJZoCDtMV+sthIlPdNG42glGOzAj5WQQR3CHStAdpLp3lri1hqdOSNRicRudhCSc+fBuFW4FHk+ubvKrsSmciS7JWCrigMfnhog5kv9s5lSlLum2jsOfATMulxOQZIyN7Ntg9SC2OWz9u4QNiwDGLOIGEqtR8eXuNBeH8IbziTzCpB/L1c1lzxSzNN4Yv1/+vjoD4VEwAAAAASUVORK5CYII="
               alt=""
             />
@@ -47,16 +39,11 @@ function Tournament() {
             </div>
           </div>
           <div
-            className="flex"
-            style={{ gap: "5px", width: "85%", justifyContent: "start" }}
+            className="flex flex-style"
+           
           >
             <img
-              style={{
-                width: "28px",
-                height: "28px",
-                background: "white",
-                borderRadius: "20px",
-              }}
+              className="circle-style"
               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEDSURBVHgBzZTNDcIwDIVfWgaBI4IDI7ABnKqKE0wCnQCYAI78bAOqOBIGKSZBQgKaNnZ66TvaL/5cOw3QOqXXscQeScxIb12QWkqOyABUiIrLAMllCsIcQvEBKlojQDxAms9N910EyA94L5bEs+cD7GIDu7dStVnb/bO4/0U1IpWVvIfB3lWigzpRsXNEDZT+4pRVVKj5ArvYUiGnNE7DXlWyegfcxZLK6tJuQJJzF6txds/+o04F9mGmt/iJ0XNiup3++mgBjxS4Sq4rY19+ndzjOPQCZI/dt1SccWxhAMIWh77mWEMAGnG84ZrlAHstmd2HALzXshnA81M10ywfoY16Ab5pSTS+eFNZAAAAAElFTkSuQmCC"
               alt=""
             />
@@ -66,16 +53,11 @@ function Tournament() {
             </div>
           </div>
           <div
-            className="flex"
-            style={{ gap: "5px", width: "85%", justifyContent: "start" }}
+            className="flex flex-style"
+           
           >
             <img
-              style={{
-                width: "28px",
-                height: "28px",
-                background: "white",
-                borderRadius: "20px",
-              }}
+                className="circle-style"
               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGVSURBVHgBtVVNTsJAFP6mJZgYFxwBl0ZIPAJH0E1hB55APAFwAuUG7Q5hU09gPYEmlri0R8BEXRDt87VGpDPD2PLzJW1m5v18mW/mvQF2DJHbs/XUAIleOo6Fh8mxmyfMTHD6UkH54wKgLs8qkjViwgFsK8DoKCpGYE4MhUgggLAHOqIswa8MhAbWgYALQR5G9eBvaRlOSNgGxrVFXgvFMSviXIwgkYBYgt0R8EHa8IuE5CWYQQg/vSXpAZKPnFKVjNZEkpvaubI+rp8txk7o8r+9KoV5B4QOnGlvpd0Jr0zJVQIhIg1LH800kZR82ud/V/XPSiftgCLoQPSqLsZaV5b1cXlakhLds0dDCbK4FSzaB2O+P4T1FjCHTr7bbGhmVnKhw5dVxd77QypX8pV5TOJE6ytsP7shGc3wbqNeJN069RYJGmBdJIUoQSX4KaQ1SChHu17GPwUkweMO2tEZVhdaEkA0xAbJzQQJJvUu7/GSv0hjnaU2Q/IE+R791nMV8WeHK72dhlDsYX5wDf+w0NuwE3wD+EeDYMJZw7UAAAAASUVORK5CYII="
               alt=""
             />
@@ -87,15 +69,7 @@ function Tournament() {
         </div>
         <div className="sessionright flex coloum">
           <p
-            style={{
-              textAlign: "left",
-              width: "86%",
-              color: "#d60000",
-              fontSize:isMobile?"12px": "14px",
-              fontWeight: "500",
-              minHeight: "22px",
-              margin: "5px",
-            }}
+           className="t-text-style"
           >
             Closing Soon
           </p>
@@ -117,15 +91,8 @@ function Tournament() {
             onClick={() => {
               navigate("/tournament-detials");
             }}
-            className="modern-button small"
-            style={{
-              width: "90%",
-              height:isMobile?"25px":"",
-              alignItems: "center",
-              justifyContent: "center",
-              fontSize:isMobile?"12px": "14px",
-              fontWeight: "400",
-            }}
+            className="modern-button small t-bt"
+           
           >
             Enter for 5
           </button>

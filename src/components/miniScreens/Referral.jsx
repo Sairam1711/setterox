@@ -6,8 +6,8 @@ function Referral() {
   return (
     <div className="profile">
       <div
-        className="challenge-card"
-        style={{ height: "134px", gap: "0px", margin: "20px" }}
+        className="challenge-card referral-card"
+       
       >
         <div className="challenge-header">
           <div className="Challengeheader">
@@ -15,20 +15,20 @@ function Referral() {
           </div>
         </div>
         <div className="flex refered">
-          <div style={{ textAlign: "center" }}>
+          <div className="textalingn-center">
             <p className="referedp">Refered Players</p>
             <span className="refered-span">₹ 0</span>
           </div>
           <div className="vrline"></div>
-          <div style={{ textAlign: "center" }}>
+          <div className="textalingn-center">
             <p className="referedp">Referral Earning</p>
             <span className="refered-span">₹ 0</span>
           </div>
         </div>
       </div>
       <div
-        className="challenge-card"
-        style={{ height: "598px", gap: "0px", margin: "20px" }}
+        className="challenge-card referral-large-card"
+       
       >
         <div className="challenge-header">
           <div className="Challengeheader">
@@ -48,60 +48,31 @@ function Referral() {
           />
           <button className="set-button">Copy</button>
         </div>
-        <p className="kycheader" style={{ textAlign: "center", justifyContent:"center" }}>
+        <p className="kycheader textalingn-center justify-center " >
           OR
         </p>
-        <div className="flex coloum" style={{height:"100%" ,justifyContent:"start", gap:"16.6px" }}>
+        <div className="flex coloum referral-flex-column" >
         <div
-          className="modern-button full primary"
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            width: isMobile?"300px":"387px",
-            height: "50.4px",
-            justifyContent: "center",
-            gap: "11px",
-            padding: "0",
-            background: "#198754",
-          }}
+          className="modern-button full primary referral-button"
+          
         >
           {" "}
           <img src={whatsapp_icon} alt="" />
           <span
-            style={{
-              color: "white",
-              fontfamily: "Inter",
-              fontSize: "20px",
-              fontweight: 600,
-            }}
+            className="referral-text"
           >
             {"Share On Whatsapp"}{" "}
           </span>{" "}
         </div>
         <div
-          className="modern-button full primary"
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            width: isMobile?"300px":"387px",
-            height: "50.4px",
-            justifyContent: "center",
-            gap: "11px",
-            padding: "0",
-            background: "#6C757D",
-          }}
+          className="modern-button full primary referral-button gray"
+         
         >
           {" "}
           <img src={whatsapp_icon} alt="" />
           <span
-            style={{
-              color: "white",
-              fontfamily: "Inter",
-              fontSize: "20px",
-              fontweight: 600,
-            }}
+          className="referral-text"
+         
           >
             {"Copy To Clipboard"}{" "}
           </span>{" "}
@@ -109,21 +80,21 @@ function Referral() {
         </div>
       </div>
       <div
-        className="challenge-card"
-        style={{ height: "224px", gap: "0px", margin: "20px" }}
+        className="challenge-card card-style"
+        
       >
         <div className="challenge-header">
           <div className="Challengeheader">
             <span>How it Works</span>
           </div>
         </div>
-        <div className="flex refered coloum" style={{ justifyContent:"start",alignItems:"center"}}>
-          <div style={{ textAlign: "center" }}>
+        <div className="flex refered coloum center-align" >
+          <div className="textalingn-center" >
             <p style={{width:isMobile?"100%":"332px" }} className="referedp2">You can refer and <span>Earn 1%</span> of your referral winning, every time</p>
          
           </div>
-          <hr style={{width:"90%",border: "1px solid #D9D9D9", margin:"0"}}></hr>
-          <div style={{textAlign:"center"}}>
+          <hr className="separator-line"></hr>
+          <div className="textalingn-center" >
             <p style={{width:isMobile?"100%":"361px", marginTop:"17px"}} className="referedp2">Like if your player plays for <span>₹10000 </span>and wins, You will get <span>₹100</span> as referral amount.</p>
           
           </div>

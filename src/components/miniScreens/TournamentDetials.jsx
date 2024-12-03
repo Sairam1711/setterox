@@ -19,7 +19,7 @@ function TournamentDetials() {
   }, [pathname]);
 const Content=()=>{
     return(
-        <div className="flex coloum ttext" style={{ color: "black" }}>
+        <div className="flex coloum ttext " style={{ color: "black" }}>
         <div style={{ width: "90%" }} className="flex">
           <p style={{ fontSize: "16px", fontWeight: 600 }}>
             Total Moves:{" "}
@@ -239,36 +239,20 @@ const Content=()=>{
   };
  
   return (
-    <div className="" style={{ width: "100%", height: "100vh" }}>
+    <div className="td-div" >
       <div
-        className="flex"
-        style={{
-          position: "absolute",
-          background: "white",
-          width: isMobile ? "100%" : "100%",
-          height: "150px",
-          bottom:0,
-          left:0,
-          boxShadow: "0px -4px 6px 0px #00000033",
-        }}
+        className="flex postion-ab "
+       
       >
         <button
-          className="modern-button small"
-          style={{
-            width: "70%",
-            height: "44px",
-            alignItems: "center",
-            justifyContent: "center",
-            borderRadius: "6px",
-            fontSize: "16px",
-            fontWeight: "400",
-          }}
+          className="modern-button small footer-button"
+         
         >
           Enter for 5
         </button>
       </div>
-      <div className="flex coloum" style={{ width: "100%" }}>
-        <div className="flex sa t-header" style={{ width: "100%" }} ref={topRef} >
+      <div className="flex coloum fullwidth" >
+        <div className="flex sa t-header fullwidth" ref={topRef} >
           <p
             className="th2"
             onClick={() => {
@@ -308,8 +292,8 @@ const Content=()=>{
           </>
         ) : (
           <div
-            className="flex coloum"
-            style={{ width: isMobile ? "100%" : "100%", height: "auto" }}
+            className="flex coloum fullwidth"
+            style={{ height: "auto" }}
           >
             <div>
               <img></img>
@@ -323,38 +307,26 @@ const Content=()=>{
               </p>
             </div>
             <div
-              className="challenge-card flex  "
-              style={{
-                width: "95%",
-                color: "white",
-                backgroundColor: "#1a76fd",
-                border: "none",
-                gap: "10px",
-                height: "131px",
-                justifyContent: "center",
-              }}
+              className="challenge-card flex blue-card"
+              
             >
-              <img style={{ width: "52px", height: "52px" }} src={cup}></img>
+              <img className="cupimg" src={cup}></img>
               <div style={{ width: "80%" }}>
                 <p
-                  className="ttext"
-                  style={{ color: "white", fontSize: "14px", fontWeight: 400 }}
+                  className="ttext first-text"
+                
                 >
                   FIRST PRIZE
                 </p>
                 <span
-                  className="ttext"
-                  style={{ color: "white", fontSize: "24px", fontWeight: 600 }}
+                  className="ttext amount-text"
+                 
                 >
                   500
                 </span>
                 <p
-                  className="ttext"
-                  style={{
-                    fontSize: "12px",
-                    fontWeight: 500,
-                    lineHeight: "1.4",
-                  }}
+                  className="ttext long-text"
+                
                 >
                   Note: Final prize will be announced at the end of the
                   tournament
@@ -371,14 +343,14 @@ const Content=()=>{
             >
               <div style={{ width: "90%" }}>
                 <p
-                  className="ttext"
-                  style={{ color: "black", fontSize: "14px" }}
+                  className="ttext prize-text "
+                 
                 >
                   PRIZE POOL
                 </p>
                 <p
-                  className="ttext"
-                  style={{ color: "black", fontSize: "24px", fontWeight: 400 }}
+                  className="ttext am-text"
+                  
                 >
                   50
                 </p>
@@ -440,12 +412,8 @@ const Content=()=>{
                 />
                 <div>
                   <p
-                    className="ttext"
-                    style={{
-                      color: "black",
-                      fontSize: "14px",
-                      fontWeight: 400,
-                    }}
+                    className="ttext first-t"
+                    
                   >
                     First Price
                   </p>
@@ -463,13 +431,8 @@ const Content=()=>{
               </div>
             </div>
             <div
-              className="card flex coloum"
-              style={{
-                height: "305px",
-                justifyContent: "start",
-                gap: "5px",
-                width: "95%",
-              }}
+              className="card flex coloum fi"
+            
             >
               <p className="theaders" style={{ width: "90%" }}>
                 Prize Distribution
@@ -481,33 +444,18 @@ const Content=()=>{
               <List lable={"Rank:19-94"} value={"100"}></List>
             </div>
             <div
-              className="card flex coloum"
-              style={{
-                height: "auto",
-                minHeight: "237px",
-                gap: "10px",
-                marginBottom: "200px",
-                width: "95%",
-              }}
+              className="card flex coloum se "
+           
             >
               <div
-                className="flex  "
+                className="flex"
                 style={{ width: "95%", justifyContent: "space-between" }}
               >
                 {" "}
                 <p className="theaders">Game Rules & FAQ</p>{" "}
                 <button
-                  className="modern-button small  primary"
-                  style={{
-                    background: "#ddd",
-                    borderRadius: "5px",
-                    border: "none",
-                    fontSize: "16px",
-                    color: "black",
-                    fontWeight: 500,
-                    width: "100px",
-                    height: "38px",
-                  }}
+                  className="modern-button small  primary lanbt"
+             
                 >
                   हिंदी
                 </button>

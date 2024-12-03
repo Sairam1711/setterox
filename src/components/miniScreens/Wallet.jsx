@@ -8,15 +8,8 @@ function Wallet() {
     <div className="wallet">
       <div className="headerbuttons">
         <button
-          className="modern-button small"
-          style={{
-            borderRadius: "5px",
-            background: " #4DB1F1",
-            textAlign: "center",
-            alignItems: "center",
-            width: "104px",
-            height: "35px",
-          }}
+          className="modern-button small back"
+       
           onClick={() => {
             navigate(-1);
           }}
@@ -24,19 +17,8 @@ function Wallet() {
           <img src={arrowleft}></img> Back
         </button>
         <button
-          className="modern-button  primary"
-          style={{
-            border: "2px solid #4DB1F1",
-            color: "#4DB1F1",
-            textAlign: "center",
-            alignItems: "center",
-
-            width: "160px",
-            height: "35px",
-            fontFamily: "Inter",
-            fontSize: "16px",
-            fontWeight: " 600",
-          }}
+          className="modern-button  primary guide"
+        
         >
           {" "}
           Wallet History
@@ -56,13 +38,8 @@ function Wallet() {
           <p className="chipstext">Chips</p>
           <p className="chipstext2">200.93</p>
           <button
-            className="modern-button full"
-            style={{
-              width: "95%",
-              fontFamily: "Inter",
-              fontSize: "24px",
-              fontWeight: " 600",
-            }}
+            className="modern-button full wallbutn"
+           
             onClick={() => {
               navigate("/buy");
             }}
@@ -84,13 +61,8 @@ function Wallet() {
           <p className="chipstext">Chips</p>
           <p className="chipstext2">200.93</p>
           <button
-            className="modern-button full"
-            style={{
-              width: "95%",
-              fontFamily: "Inter",
-              fontSize: "24px",
-              fontWeight: " 600",
-            }}
+            className="modern-button full wallbutn"
+           
             onClick={() => {
               navigate("/pay");
             }}
