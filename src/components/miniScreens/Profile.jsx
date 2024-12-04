@@ -29,7 +29,7 @@ function Profile() {
       >
         <div className="challenge-header">
           <div className="Challengeheader">
-            <span>Payment Details</span>
+            <span>Profile</span>
           </div>
         </div>
         <div className="amount">
