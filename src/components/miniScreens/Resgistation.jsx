@@ -3,8 +3,7 @@ import React from 'react'
 function Resgistation() {
     return (
    <div className='resgistation-div' >
-     <h1 style={{margin:"0"
-}}>
+     <h1 className='.margin-0'>
 Register
 </h1>
 <p className='textcontent'>

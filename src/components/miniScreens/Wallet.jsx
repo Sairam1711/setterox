@@ -25,7 +25,7 @@ function Wallet() {
         </button>
       </div>
       <div className="cardlist">
-        <div className="challenge-card" style={{ height: "291px" ,marginTop:"10px" }}>
+        <div className="challenge-card height-291 margin-10">
           <div className="challenge-header">
             <div className="Challengeheader">
               <span>Deposit Chips</span>
@@ -48,7 +48,7 @@ function Wallet() {
           </button>
         </div>
 
-        <div className="challenge-card" style={{ height: "291px" }}>
+        <div className="challenge-card height-291">
           <div className="challenge-header">
             <div className="Challengeheader">
               <span>Deposit Chips</span>

@@ -40,7 +40,7 @@ function Referral() {
           className="referral-image"
           src="https://s3-alpha-sig.figma.com/img/9642/63b9/ec0d8da76700b4a4ee34baaaaa1edf13?Expires=1733702400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=AdltjY5oJ7kIdI58f4YO-twQMZiZGbD-fVfSqX2q1VRuX42lmr1ESPSJHziq0Bz9arBOVQiJDFyT0WQt80qc-nTMuXCBZPE-JF1ohqLHvDcV2jWeZfc-5f1FdzCRjeR2RP9FXCNoP6WqCR7CRaTp1r8ttm1zyXZp3Wqw0kMYKj89~v-qfdW4NlwTADlVa6RONccFJuF9Y25ezNKOor6E63V6IK9ZvpOfzdRmqCfsJa-rLQ55iH3513ZXBOEgyMkt~ifGDXrSOzuLgiQYIOoRFP5SmDJmVicUZNlrBX3MhkA0VPcbNCHURafQSIOedqE~V0cEMZDEPdq~FwPTi2tI2Q__"
         ></img>
-        <div className="input-section" style={{ marginBottom: "0px" }}>
+        <div className="input-section margin-0" >
           <input
             type="text"
             placeholder="Enter Number"
@@ -90,12 +90,12 @@ function Referral() {
         </div>
         <div className="flex refered coloum center-align" >
           <div className="textalingn-center" >
-            <p style={{width:isMobile?"100%":"332px" }} className="referedp2">You can refer and <span>Earn 1%</span> of your referral winning, every time</p>
+            <p   className="referedp2 p2">You can refer and <span>Earn 1%</span> of your referral winning, every time</p>
          
           </div>
           <hr className="separator-line"></hr>
           <div className="textalingn-center" >
-            <p style={{width:isMobile?"100%":"361px", marginTop:"17px"}} className="referedp2">Like if your player plays for <span>₹10000 </span>and wins, You will get <span>₹100</span> as referral amount.</p>
+            <p  className="referedp2 p3">Like if your player plays for <span>₹10000 </span>and wins, You will get <span>₹100</span> as referral amount.</p>
           
           </div>
         </div>

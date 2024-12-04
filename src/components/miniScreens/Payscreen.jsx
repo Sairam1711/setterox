@@ -22,7 +22,7 @@ function Payscreen() {
           className="challenge-card container-style-p"
         
         >
-          <div className="challenge-header " style={{ flexDirection: "column" }}>
+          <div className="challenge-header coloum " >
             <div className="Challengeheader">
               <span>Payment Mode</span>
             </div>
@@ -76,8 +76,8 @@ function Payscreen() {
           <div className="amount">
             <label
               htmlFor="phone-input"
-              style={{ color: "#344054" }}
-              className="phone-label"
+             
+              className="phone-label color-3"
             >
               {payment === "Bank Transfer" ? "IFSC" : " Re Enter UPI ID"}
             </label>
@@ -96,8 +96,8 @@ function Payscreen() {
             <div className="amount">
               <label
                 htmlFor="phone-input"
-                style={{ color: "#344054" }}
-                className="phone-label"
+               
+                className="phone-label color-3"
               >
                 Chips
               </label>

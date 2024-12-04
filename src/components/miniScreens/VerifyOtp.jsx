@@ -28,12 +28,12 @@ function VerifyOtp() {
         className='verfiy-div'
            
         >
-            <h1 style={{ margin: "0" }}>Verify OTP</h1>
+            <h1 className=' margin-0'>Verify OTP</h1>
             <p className="textcontent">
                 Lorem Ipsum doler sit amet Lorem Ipsum doler sit amet
             </p>
             <label htmlFor="phone-input" className="phone-label">Enter OTP</label>
-            <div className="flex" style={{ gap: "8px" }}>
+            <div className="flex gap-8" >
                 {otp.map((value, index) => (
                     <input
                         key={index}
@@ -48,7 +48,7 @@ function VerifyOtp() {
                 ))}
             </div>
             <button className="modern-button full">Login</button>
-            <p style={{ textAlign: "center" }}>Resend OTP</p>
+            <p  className="textalingn-center" >Resend OTP</p>
         </div>
     );
 }

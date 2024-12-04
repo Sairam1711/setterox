@@ -46,8 +46,8 @@ function Matchmaking() {
       </div>
       <div  className="game-result"><p>Game Result</p></div>
       <div
-        className="flex coloum action-buttons"
-        style={{width: isMobile?"100%" : "" }}
+        className="flex coloum action-buttons w-m-100"
+       
       >
         <div
           className="modern-button full primary won-button"

@@ -48,9 +48,7 @@ function Template({MiniScreen,MiniButtons,notify,setnotify,rules,setrules}) {
     }}></img>
     </div>
 { rules?<>
-    <ul className='flex coloum ulist' style={{height:"100%" ,justifyContent:"start",
-        gap:"8px", margin:"0",alignItems:"left"
-    }}>
+    <ul className='flex coloum ulist t-container'>
   <li><strong>Players:</strong><span> 2 players</span></li>
   <li><strong>Tokens:</strong><span> Each player has 2 tokens, but only 1 token needs to reach the finish 🎲</span></li>
   <li><strong>Objective:</strong><span> Be the first to move one token to the final home position.</span></li>
@@ -77,14 +75,14 @@ function Template({MiniScreen,MiniButtons,notify,setnotify,rules,setrules}) {
 }
 <div className='loginbutton'>
     <div className='styled-element-flex'>
-        <img style={{cursor:"pointer"}} onClick={toggleExpand} src={menu} className='menuimage'></img>
+        <img   onClick={toggleExpand} src={menu} className='menuimage c-p'></img>
     <p className='logintext'>LOGO HERE</p>
     </div>
     {/* <label class="switch">
     <input type="checkbox" id="theme-toggle"></input>
     <span class="slider"></span>
   </label> */}
-    {MiniButtons?<MiniButtons></MiniButtons>:<div style={{display:"flex",flexDirection:"row", gap:"10px"}}>
+    {MiniButtons?<MiniButtons></MiniButtons>:<div className='tflex'>
     <div>
 </div>
         <button className='modern-button small primary'> <img className='icon' src={buttonIcon} alt="" /> Get App </button>
@@ -110,7 +108,7 @@ function Template({MiniScreen,MiniButtons,notify,setnotify,rules,setrules}) {
         <h3 className='tagline'>Tagline here</h3>
         </div>
    
-<p className='endp' style={{top:"723px"}}>For best experience, open <a className='textDecorate'>LudoPlayers.com</a> on chrome mobile</p>
+<p className='endp top-234' >For best experience, open <a className='textDecorate'>LudoPlayers.com</a> on chrome mobile</p>
 
     </div>
 

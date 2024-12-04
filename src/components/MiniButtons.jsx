@@ -13,7 +13,7 @@ function MiniButtons() {
         >
           {" "}
           <img className="icon" src={iconone} alt="" />
-          <span style={{ width: "10px" }}>{0}</span>
+          <span className="width-10" >{0}</span>
         </div>
         <div
           className="modern-button small primary bt1"
@@ -21,7 +21,7 @@ function MiniButtons() {
         >
           {" "}
           <img className="icon" src={icontow} alt="" />
-          <span style={{ width: "10px" }}>{0} </span>{" "}
+          <span className="width-10" >{0} </span>{" "}
         </div>
       </div>
     </>

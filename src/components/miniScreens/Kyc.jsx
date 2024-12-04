@@ -47,8 +47,8 @@ function Kyc({ notify, setnotify, rules, setrules }) {
         </div>
         <div className="amount">
           <label
-            htmlFor="normal-input"
-            style={{ color: "#344054", fontWeight: "500" }}
+            htmlFor="normal-input f-2-c"
+          
             className="phone-label"
           >
             Select Varification Method
@@ -63,8 +63,8 @@ function Kyc({ notify, setnotify, rules, setrules }) {
         </div>
         <div className="amount">
           <label
-            htmlFor="normal-input"
-            style={{ color: "#344054", fontWeight: "500" }}
+            htmlFor="normal-input f-2-c"
+          
             className="phone-label"
           >
             Email Address

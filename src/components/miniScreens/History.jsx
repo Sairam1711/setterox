@@ -5,13 +5,11 @@ function History() {
   const isMobile = useMediaQuery({ maxWidth: 768 });
     return (
         <div className='history'>
-            <div className="moneychip" style={{margin:"20px"}}>
+            <div className="moneychip m-20">
             {["All", "Wallet", "Diamond", "Games",].map((element,index) => (
               <div
-              className={`modern-button primary hbts ${index === 0 ? 'selected' : 'default'}`}
-              style={{
-                fontSize: isMobile ? '14px' : '16px',
-              }}
+              className={`modern-button primary font-res hbts ${index === 0 ? 'selected' : 'default'}`}
+             
               >
                {element}
               </div>
@@ -23,15 +21,15 @@ function History() {
     <button className="set-button">Set</button>
   </div>
  { [1,1,1,1,1,1,1,1].map( element=> <><div className='listelement'>
-    <div className='flex coloum' style={{ width:"50px"}}>
-        <img style={{width:"30px",height:"30px"}} src={icon} alt="" />
+    <div className='flex coloum w-50'>
+        <img className='img30-30'  src={icon} alt="" />
         <span className='hspan'>13 Sep</span>
         <span className='hspan'>1:08 am</span>
     </div>
     <div class="vertical-line"></div>
 
     <div className='history-text' >
-        <div className='flex fullwidth sb' > <span className='htext'>Lost Against Malik_Sahab </span> <span className='htext' style={{color:"#D60000"}}>(-) 30</span></div>
+        <div className='flex fullwidth sb' > <span className='htext'>Lost Against Malik_Sahab </span> <span className='htext color-4' >(-) 30</span></div>
         <div className='flex fullwidth sb'  > <span className='htext2'>Room Code: 0974674839</span>   <span className='htext2'>Closing Balance : 250.99</span> </div>
        </div>
    
