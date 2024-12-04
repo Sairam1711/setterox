@@ -1974,7 +1974,9 @@ top: 723px;
 .Challengeheader.desktop {
   gap: 60px; /* Desktop gap */
 }
-
+.Challengeheader.mobile {
+  gap: 0px; /* Desktop gap */
+}
 /* Styling for the player buttons container */
 .player2 {
   display: flex;
