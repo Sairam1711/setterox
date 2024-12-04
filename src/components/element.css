@@ -738,7 +738,12 @@ input:checked + .slider:before {
   width: 50%;
   margin: 0;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
+}
+
+
+.th2.active {
+  font-weight: 600; /* Font weight for the active state */
 }
 .tunderline {
   width: 100%;
@@ -1738,8 +1743,292 @@ top: 723px;
 .f-2-c{
   color: #344054; font-weight: 500
 }
+.p2-container {
+  height: 314px;
+  gap: 10px;
+  margin: 20px;
+}
+.label-p {
+  color: #344054;
+  font-weight: 500;
+}
+.flex-row-p {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.input-style-p2 {
+  width: 307px;
+  background: #ededed;
+}
+.text-style-profile {
+  color: #344054;
+  font-weight: 500;
+}
+.background-light {
+  background: #ededed;
+}
+.text-small {
+  width: 90%;
+  font-size: 14px;
+  font-weight: 400;
+}
+.text-small-2 {
+  width: 90%;
+  font-size: 20px;
+  font-weight: 700;
+}
+.card-p{
+  height: 233px;
+  gap: 10px;
+  margin: 20px;
+}
+.w-300-res{
+  width: 300px;
+}
+.w-346{ width: 346px }
+.table-header {
+  background: #bcd7ff;
+  height: 48px;
+}
+
+.header-empty {
+  width: 12%;
+}
+
+.header-rank {
+  width: 18%;
+}
+
+.header-name {
+  width: 45%;
+}
+
+.header-score {
+  width: 20%;
+  text-align: right;
+}
+.dynamic-width {
+  width: 420px; /* Default width for non-mobile devices */
+}
+.expandable-div {
+  height: 0;
+  display: none;
+  overflow: hidden; /* Ensures content doesn't spill out */
+  transition: height 0.3s ease-in-out; /* Smooth transition */
+}
+
+.expandable-div.expanded {
+  height: auto;
+  display: block;
+}
+
+.expandable-div.collapsed {
+  height: 0;
+  display: none;
+}
+.ttext2 {
+  font-weight: 600; /* Default font weight */
+}
+
+.prize-text2 {
+  font-weight: 600;
+}
+
+.amount-text2 {
+  font-weight: 500;
+}
+
+.mobile.prize-text2 {
+  font-size: 16px;
+}
+
+.desktop.prize-text2 {
+  font-size: 18px;
+}
+
+.mobile.amount-text2 {
+  font-size: 18px;
+}
+
+.desktop.amount-text2 {
+  font-size: 20px;
+}
+.ttext-123 {
+  font-weight: 400; /* Default weight for all text */
+}
+
+.prize-pool-text.mobile {
+  font-size: 12px;
+}
+
+.prize-pool-text.desktop {
+  font-size: 14px;
+}
+
+.prize-amount-text.mobile {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.prize-amount-text.desktop {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.ttext-456 {
+  font-weight: 400; /* Default font weight */
+}
+
+.assured-winners-text.mobile {
+  font-size: 12px;
+}
+
+.assured-winners-text.desktop {
+  font-size: 14px;
+}
+
+.assured-percentage-text.mobile {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.assured-percentage-text.desktop {
+  font-size: 16px;
+  font-weight: 400;
+}
+.width-90 {
+  width: 90%; /* Assuming this is set globally */
+}
+
+.tournament-text {
+  font-weight: 500;
+  margin: 0;
+}
+
+.tournament-text.mobile {
+  font-size: 12px;
+}
+
+.tournament-text.desktop {
+  font-size: 14px;
+}
+
+.progress-info-text {
+  font-weight: 400;
+  margin: 0;
+}
+
+.progress-info-text.mobile {
+  font-size: 12px;
+}
+
+.progress-info-text.desktop {
+  font-size: 14px;
+}
+
+.progress-container {
+  width: 100%;
+  background-color: #e0e0e0; /* Add background for progress container */
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.font-400{
+  font-weight: 400;
+}
+.w-194{
+  width: 444px;
+}
+.our-games-image.main {
+  width: 100%; /* Default to mobile */
+}
+
+.our-games-image.main.desktop {
+  width: 385px;
+}
+
+.two {
+  display: flex;
+  gap: 10px;
+  /* Additional styling for the two images container */
+}
+
+.game-thumbnail {
+  cursor: pointer;
+  width: 80%; /* Default mobile size */
+  height: 164px;
+}
+
+.game-thumbnail.desktop {
+  width: 164px; /* Desktop size */
+}
+
+.third-image {
+  width: 95%; /* Default mobile size */
+}
+
+.third-image.desktop {
+  width: 368px; /* Desktop size */
+}
+.Challengeheader.desktop {
+  gap: 60px; /* Desktop gap */
+}
+
+/* Styling for the player buttons container */
+.player2 {
+  display: flex;
+  gap: 10px;
+}
+
+/* Common button styles */
+.play-button2 {
+  height: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+}
+
+/* Primary button (Play button) */
+.play-button-primary {
+  background-color: #007bff; /* Adjust as needed */
+  width: 77px; /* Default width for desktop */
+}
+
+.play-button-primary.mobile {
+  width: 57px; /* Width for mobile */
+}
+
+/* Secondary button (Cancel button) */
+.play-button-secondary {
+  background-color: #ff0020; /* Adjust as needed */
+  width: 77px; /* Default width for desktop */
+}
+
+.play-button-secondary.mobile {
+  width: 57px; /* Width for mobile */
+}
 /* Media query for mobile devices */
 @media (max-width: 768px) {
+  .w-194{
+    width: 95%;
+  }
+  .dynamic-width{
+width: auto;
+  }
+ .w-300-res{
+width: auto;
+  }
+  .card-p{
+    margin: auto;
+  }
+  .p2-container 
+  {
+    margin: 15px;
+  }
   .font-res{
     font-size:14px ;
   }

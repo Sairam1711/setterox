@@ -131,37 +131,27 @@ const ChallengeCardfrom = ({ player1, player2, amount, showPlayButton }) => {
       <div className="challenge-header">
         {showPlayButton ? (
           <>
-            <div className="Challengeheader" style={{gap:isMobile?"0px": "60px"}}>
-              <span>Challenge from {player1}</span>
+             <div className={`Challengeheader ${isMobile ? "mobile" : "desktop"}`}>
+      <span>Challenge from {player1}</span>
 
-              <div className="player">
-            
-                
-                  {" "}
-                  <button
-                    className="play-button"
-                    style={{
-                      width:isMobile?"57px": "77px",
-                      height:"30px"
-                    }}
-                    onClick={() => {
-                      // navigate("/match")
-                      // setbuttonlable("REQUESTED");
-                      // setbuttonlable2("CANCEL");
-                    }}
-                  >
-                    {buttonlable}
-                  </button>
-                  <button
-                    className="play-button"
-                    style={{ background: "#ff0020" , height:"30px",  width:isMobile?"57px": "77px", }}
-                  >
-                    {buttonlable2}
-                  </button>
-             
-            
-            </div>
-            </div>
+      <div className="player">
+        <button
+          className={`play-button play-button2 play-button-primary ${isMobile ? "mobile" : "desktop"}`}
+          onClick={() => {
+            // navigate("/match")
+            // setbuttonlable("REQUESTED");
+            // setbuttonlable2("CANCEL");
+          }}
+        >
+          {buttonlable}
+        </button>
+        <button
+          className="play-button play-button2 play-button-secondary"
+        >
+          {buttonlable2}
+        </button>
+      </div>
+    </div>
           </>
         ) : (
           ""

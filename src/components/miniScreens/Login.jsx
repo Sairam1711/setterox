@@ -26,7 +26,7 @@ function Login() {
           <label htmlFor="phone-input" className="phone-label">
             Phone Number
           </label>
-          <div className="phone-input-wrapper" style={{ width: "346px" }}>
+          <div className="phone-input-wrapper w-346">
             <select
               value={countryCode}
               onChange={handleCountryChange}

@@ -13,29 +13,36 @@ function OurGames() {
     >
       <p className="our-game-header">Our Games</p>
       <div className="ourgames">
-        <img
-          className="our-games-image main"
-          style={{  width: isMobile?"100%":"385px" }}
-          src={first}    ></img>
-        <div className="two">
-          <img
-              style={{ cursor: "pointer", width: isMobile?"80%": " 164px", height: " 164px" }}
-            onClick={() => {
-              navigate("/classic-game");
-            }}
-            src={second}          ></img>
-          <img
-            onClick={() => {
-              navigate("/classic-game");
-            }}
-            className="imgtwo"
-            style={{ cursor: "pointer", width: isMobile?"80%": " 164px", height: " 164px" }}
-            src={second}          ></img>
-        </div>
-        <img
-          width={ isMobile?"95%": "368px"}
-          src={third}></img>
-      </div>
+  <img
+    className={`our-games-image main ${isMobile ? "mobile" : "desktop"}`}
+    src={first}
+    alt="Main game"
+  />
+  <div className="two">
+    <img
+      className={`game-thumbnail ${isMobile ? "mobile" : "desktop"}`}
+      onClick={() => {
+        navigate("/classic-game");
+      }}
+      src={second}
+      alt="Classic game"
+    />
+    <img
+      className={`game-thumbnail ${isMobile ? "mobile" : "desktop"}`}
+      onClick={() => {
+        navigate("/classic-game");
+      }}
+      src={second}
+      alt="Classic game"
+    />
+  </div>
+  <img
+    className={`third-image ${isMobile ? "mobile" : "desktop"}`}
+    src={third}
+    alt="Third game"
+  />
+</div>
+
     </div>
   );
 }

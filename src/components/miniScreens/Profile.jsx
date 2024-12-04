@@ -24,12 +24,8 @@ function Profile() {
   return (
     <div className="profile">
       <div
-        className="challenge-card"
-        style={{
-          height: "314px",
-          gap: "10px",
-          margin: isMobile ? "15px" : "20px",
-        }}
+        className="challenge-card p2-container "
+       
       >
         <div className="challenge-header">
           <div className="Challengeheader">
@@ -39,16 +35,16 @@ function Profile() {
         <div className="amount">
           <label
             htmlFor="phone-input"
-            style={{ color: "#344054", fontWeight: "500" }}
-            className="phone-label"
+          
+            className="phone-label label-p "
           >
             Username
           </label>
-          <div style={{ display: "flex", flexDirection: "row", gap: "5px" }}>
+          <div className="flex-row-p" >
             <input
-              className="normal-input"
+              className="normal-input input-style-p2"
               placeholder="Enter your name"
-              style={{ width: "307px", background: "#EDEDED" }}
+          
             ></input>
 
             <button className="modern-button full edit-button-style">
@@ -58,28 +54,30 @@ function Profile() {
         </div>
         <div className="amount">
           <label
-            htmlFor="phone-input"
-            style={{ color: "#344054", fontWeight: "500" }}
+            htmlFor="phone-input text-style-profile"
+           
             className="phone-label"
           >
             Mobile Number
           </label>
 
           <input
-            className="normal-input"
+            className="normal-input background-light"
             placeholder="Enter your mobile"
-            style={{ background: "#EDEDED" }}
+           
           ></input>
         </div>
         <div className="redbox">
           <div className="redbox1">
             <span
-              style={{ width: "90%", fontSize: "14px", fontWeight: " 400" }}
+             className="text-small"
+            
             >
               KYC Status
             </span>
             <span
-              style={{ width: "90%", fontSize: "20px", fontWeight: " 700" }}
+            className="text-small-2"
+              
             >
               Pending
             </span>
@@ -98,8 +96,8 @@ function Profile() {
         </div>
       </div>
       <div
-        className="challenge-card"
-        style={{ height: "233px", gap: "10px", margin: isMobile ? "" : "20px" }}
+        className="challenge-card card-p"
+       
       >
         <div className="challenge-header">
           <div className="Challengeheader">
