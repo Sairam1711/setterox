@@ -1,17 +1,53 @@
 import React, { useState } from "react";
 import "../Login/login.css";
 import { useNavigate } from "react-router-dom";
+import { apiRoutes, validatePhoneNumber } from "../../Utils/constant";
+import useAxios from "../../api/useAxios";
+
 function Login() {
+  const axiosData = useAxios();
   const [countryCode, setCountryCode] = useState("+91");
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [errors, setErrors] = useState({});
   const navigate = useNavigate();
-  const handleCountryChange = (event) => {
-    setCountryCode(event.target.value);
+  const handleCountryChange = (e) => {
+    setCountryCode(e.target.value);
+    setErrors({}); // Clear errors when country code changes
   };
 
-  const handlePhoneChange = (event) => {
-    setPhoneNumber(event.target.value);
+  const handlePhoneChange = (e) => {
+    setPhoneNumber(e.target.value);
+    setErrors({}); // Clear errors when phone number changes
   };
+
+  const handleSubmit = async (e) => {
+    // e.preventDefault();
+    const validationErrors = validatePhoneNumber(countryCode, phoneNumber);
+
+    if (Object.keys(validationErrors).length === 0) {
+   const payload={
+    Phone:phoneNumber
+   }
+      const response= await axiosData.post(apiRoutes.login, payload, {
+        
+      });
+// console.log(response.data);
+       navigate("verify",{state:{...response.data,...{phone:phoneNumber}}});
+      //  alert(`Phone number submitted: ${countryCode} ${phoneNumber}`);
+      setPhoneNumber('');
+      setErrors({});
+    } else {
+      setErrors(validationErrors);
+    }
+  };
+
+  // const handleCountryChange = (event) => {
+  //   setCountryCode(event.target.value);
+  // };
+
+  // const handlePhoneChange = (event) => {
+  //   setPhoneNumber(event.target.value);
+  // };
   return (
     <div
     className="login-div"
@@ -47,6 +83,7 @@ function Login() {
               className="phone-number-input"
             />
           </div>
+          {errors.phone && <p className="error" >{errors.phone}</p>}
         </div>
       </div>
       <div className="flex2">
@@ -69,7 +106,8 @@ function Login() {
       <button
         className="modern-button full"
         onClick={() => {
-          navigate("verify");
+          // navigate("verify");
+          handleSubmit()
         }}
       >
         login

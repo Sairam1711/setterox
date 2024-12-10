@@ -1239,6 +1239,19 @@ th {
   border: 1px solid #D0D5DD;
   text-align: center;
 }
+
+.normal-input.otp-input:focus {
+  outline: none;             /* Removes the border on focus */
+}
+.pointer{
+cursor: pointer;
+}
+.hover:hover{
+  color: #0D6EFD;
+}
+.user-select{
+  user-select: none;
+}
 .td-div{ width: 100%; height: 100vh }
 .postion-ab {
   position: absolute;
@@ -1372,6 +1385,9 @@ th {
 }
 .textalingn-center{
 text-align: center;
+}
+.w-auto{
+  width: 100px;
 }
 .justify-center{
   justify-content: center;
@@ -2012,6 +2028,9 @@ top: 723px;
 
 .play-button-secondary.mobile {
   width: 57px; /* Width for mobile */
+}
+.error{
+   color: red
 }
 /* Media query for mobile devices */
 @media (max-width: 768px) {
