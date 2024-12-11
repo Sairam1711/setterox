@@ -34,7 +34,7 @@ function Resgistation() {
       });
       console.log(response);
 
-      alert("Form submitted successfully!");
+      alert("resgister successfully!");
       setFormData({
         fullName: "",
         phoneNumber: "",

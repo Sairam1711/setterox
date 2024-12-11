@@ -370,10 +370,13 @@ height: 80px;
   @media (max-width: 768px) {
 .leftside{
   width: 100%;
+
 }
 .liftbottom{
   width: 95%;
   padding: 20px;
+ 
+
 }
 .hey{font-family: Inter;
   font-size: 30px;

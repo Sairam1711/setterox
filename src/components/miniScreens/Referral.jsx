@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import whatsapp_icon from "../../assest/Vector (18).png";
 import { useMediaQuery } from "react-responsive";
+import { ProfileContext } from "../ProfileProvider";
 function Referral() {
   const isMobile = useMediaQuery({ maxWidth: 768 });
+  const { profile, loading } = useContext(ProfileContext);
   return (
     <div className="profile">
       <div
@@ -22,7 +24,7 @@ function Referral() {
           <div className="vrline"></div>
           <div className="textalingn-center">
             <p className="referedp">Referral Earning</p>
-            <span className="refered-span">₹ 0</span>
+            <span className="refered-span">₹ {profile.referral_earning}</span>
           </div>
         </div>
       </div>

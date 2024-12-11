@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./element.css";
 import iconone from "../assest/diamond-solid-svgrepo-com 1.png";
 import icontow from "../assest/wallet-2-svgrepo-com.png";
+import { ProfileContext } from "./ProfileProvider";
 
 function MiniButtons() {
+  const { profile, loading } = useContext(ProfileContext);
   return (
     <>
       <div className="minibtdiv">
@@ -21,7 +23,7 @@ function MiniButtons() {
         >
           {" "}
           <img className="icon" src={icontow} alt="" />
-          <span className="width-10" >{0} </span>{" "}
+          <span className="width-10" >{profile.Wallet_balance} </span>{" "}
         </div>
       </div>
     </>

@@ -1,10 +1,42 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { useNavigate } from "react-router-dom";
-
+import { ProfileContext } from "../ProfileProvider";
+import { apiRoutes, userProfile } from "../../Utils/constant";
+import useAxios from "../../api/useAxios";
 function Profile() {
   const isMobile = useMediaQuery({ maxWidth: 768 });
+  const { profile, loading,getprofile } = useContext(ProfileContext);
+  const [edit ,setedit]=useState(false)
+  const [name,setname]=useState()
   const navigate = useNavigate();
+  const user3c =userProfile;
+  const axiosData = useAxios()
+  const onChange=(e)=>{
+    setname(e.target.value)
+  }
+  const updateprofile= async()=>{
+    try {
+      const response = await axiosData.patch(apiRoutes.userEdit,{
+      Name:name
+    })
+    getprofile()
+  } catch (error) {
+    console.log(error);
+  }
+  }
+  const onedit=async()=>{
+    if (edit&&name) {
+      updateprofile()
+    }
+   
+
+    setedit(!edit)
+  }
+const logout=()=>{
+  localStorage.removeItem('authToken');
+  navigate('/')
+}
   const Mini_card = ({ element }) => {
     return (
       <div className="challenge-card mini justify-left" >
@@ -44,11 +76,13 @@ function Profile() {
             <input
               className="normal-input input-style-p2"
               placeholder="Enter your name"
-          
+              disabled={!edit}
+          value={edit?name:loading?"loading...":profile.Name}
+          onChange={onChange}
             ></input>
 
-            <button className="modern-button full edit-button-style">
-              Edit
+            <button className={`modern-button full edit-button-style  ${!edit?"":"save-color"}` }  onClick={onedit}>
+              {!edit?"Edit":"Save"}
             </button>
           </div>
         </div>
@@ -57,6 +91,7 @@ function Profile() {
             htmlFor="phone-input text-style-profile"
            
             className="phone-label"
+           
           >
             Mobile Number
           </label>
@@ -64,7 +99,8 @@ function Profile() {
           <input
             className="normal-input background-light"
             placeholder="Enter your mobile"
-           
+            value={profile.Phone}
+            disabled
           ></input>
         </div>
         <div className="redbox">
@@ -79,7 +115,7 @@ function Profile() {
             className="text-small-2"
               
             >
-              Pending
+              {profile.verified!=="unverified" ?"Completed":"Pending"}
             </span>
           </div>
           <div className="redbox2">
@@ -111,7 +147,9 @@ function Profile() {
             )
           )}
         </div>
+
       </div>
+      <button className="modern-button  primary alert-button  logout " onClick={logout}> Logout</button>
     </div>
   );
 }

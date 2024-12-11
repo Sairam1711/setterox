@@ -17,14 +17,17 @@ import Kyc from './components/miniScreens/Kyc';
 import Referral from './components/miniScreens/Referral';
 import Matchmaking from './components/miniScreens/Matchmaking';
 import SupportScreen from './components/miniScreens/SupportScreen';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Tournament from './components/miniScreens/Tournament';
 import TournamentDetials from './components/miniScreens/TournamentDetials';
 import { paths } from './Utils/constant';
 
+
 function App() {
   const [rules,setrules]=useState(false)
   const [notify,setnotify]=useState(false)
+
+
   return (
 
 <Routes>

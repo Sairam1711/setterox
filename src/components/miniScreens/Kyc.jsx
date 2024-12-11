@@ -1,12 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
 import arrowleft from "../../assest/arrow-left.png";
 import alert from "../../assest/Group 41.png";
 import { useNavigate } from "react-router-dom";
+import { apiRoutes, validateForm } from "../../Utils/constant";
+import useAxios from "../../api/useAxios";
 
 function Kyc({ notify, setnotify, rules, setrules }) {
   const navigate = useNavigate();
+  const axiosData = useAxios()
+  const [formData, setFormData] = useState({
+    aadharNumber: "",
+    email: "",
+    method: "not",
+  });
+
+  const [errors, setErrors] = useState({});
+
+  // Handle input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+ 
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+ 
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const validationErrors = validateForm(formData);
+    setErrors(validationErrors);
+
+    if (Object.keys(validationErrors).length === 0) {
+      try {
+        const payload = {
+          aadhaar_number:formData.aadharNumber,email:formData.email
+        }
+        const response = await axiosData.post(apiRoutes.otpKyc,{ payload  })
+     
+    } catch (error) {
+      console.log(error);
+    }  
+      setrules(false);
+      setnotify(true);
+    }
+  };
   return (
-    <div className="wallet">
+    <div className="wallet gap-41">
       <div className="headerbuttons">
         <button
           className="modern-button small back"
@@ -37,7 +79,7 @@ function Kyc({ notify, setnotify, rules, setrules }) {
       </div>
 
       <div
-        className="challenge-card kyc-card "
+        className="challenge-card kyc-card gap-20"
        
       >
         <div className="challenge-header">
@@ -54,12 +96,37 @@ function Kyc({ notify, setnotify, rules, setrules }) {
             Select Varification Method
           </label>
           <div className="dropdown-container">
-            <select className="styled-select">
-              <option value="upi">Select Method</option>
-              <option value="credit">Credit Card</option>
-              <option value="debit">Debit Card</option>
+            <select className="styled-select"
+             name="method"
+             value={formData.method}
+             onChange={handleChange}
+            >
+              <option value=" ">Select Method</option>
+              <option value="Aadhar">Aadhar Vai Card</option>
+          
             </select>
+            
           </div>
+          {errors.method && <p className="error margin-0">{errors.method}</p>}
+        </div>
+        <div className="amount">
+          <label
+            htmlFor="normal-input f-2-c"
+          
+            className="phone-label"
+          >
+            Aadhar Card Number
+          </label>
+
+          <input
+            className="normal-input"
+            placeholder="Enter Aadhar Card Number"
+            name="aadharNumber"
+            value={formData.aadharNumber}
+            onChange={handleChange}
+
+          ></input>
+           {errors.aadharNumber && <p className="error margin-0">{errors.aadharNumber}</p>}
         </div>
         <div className="amount">
           <label
@@ -72,10 +139,14 @@ function Kyc({ notify, setnotify, rules, setrules }) {
 
           <input
             className="normal-input"
-            placeholder="Enter your mobile"
-          
+            placeholder="Enter your email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
           ></input>
+             {errors.email && <p className="error margin-0">{errors.email}</p>}
         </div>
+      
         <span
          className="agument"
         
@@ -92,9 +163,8 @@ function Kyc({ notify, setnotify, rules, setrules }) {
         <button
           className="modern-button full requestbt"
          
-          onClick={() => {
-            setrules(false);
-            setnotify(true);
+          onClick={(e) => {
+           handleSubmit(e)
           }}
         >
           Request for KYC
