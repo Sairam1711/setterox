@@ -1,8 +1,9 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useContext } from "react";
 import "../Login/login.css";
-import { apiRoutes, paths } from "../../Utils/constant";
+import { apiRoutes, onwheelStop, paths } from "../../Utils/constant";
 import useAxios from "../../api/useAxios";
 import { useLocation, useNavigate } from "react-router-dom";
+import { ProfileContext } from "../ProfileProvider";
 
 function VerifyOtp() {
   const axiosData = useAxios();
@@ -10,6 +11,7 @@ function VerifyOtp() {
   const inputs = useRef([]);
   const location=useLocation();
   const navigate = useNavigate();
+  const { showSnackbar } = useContext(ProfileContext);
   const handleChange = (value, index) => {
     // Update the OTP array
     const newOtp = [...otp];
@@ -37,11 +39,14 @@ function VerifyOtp() {
       };
       const response = await axiosData.post(apiRoutes.verifyOtp, payload, {
       });
-      console.log(response);
+     
+
       if(response.data.token){
         const token=response.data.token
         localStorage.setItem('authToken',token);
         navigate(paths.lobby)
+      }else if(response.data.status===101){
+        showSnackbar(response.data.msg,"error")
       }
      
     } catch (error) {
@@ -61,8 +66,9 @@ function VerifyOtp() {
         {otp.map((value, index) => (
           <input
             key={index}
-            type="text"
+            type="number"
             maxLength="1"
+            onWheel={(e)=>onwheelStop(e)}
             value={value}
             className="normal-input otp-input"
             onChange={(e) => handleChange(e.target.value, index)}

@@ -1248,7 +1248,7 @@ th {
   text-align: center;
 }
 
-.normal-input.otp-input:focus {
+.normal-input,.amount-input:focus {
   outline: none;             /* Removes the border on focus */
 }
 .pointer{
@@ -2037,7 +2037,14 @@ top: 723px;
   background-color: #ff0020; /* Adjust as needed */
   width: 77px; /* Default width for desktop */
 }
+.play-button-secondary:hover{
+  background-color: #cf011d;
 
+}
+.bg-red:hover{
+  background-color: #cf011d;
+
+}
 .play-button-secondary.mobile {
   width: 57px; /* Width for mobile */
 }

@@ -5,7 +5,6 @@ import { ProfileContext } from "../ProfileProvider";
 import { apiRoutes } from "../../Utils/constant";
 import useAxios from "../../api/useAxios";
 function History() {
-  const isMobile = useMediaQuery({ maxWidth: 768 });
   const axiosData = useAxios();
   const { profile, loading, getprofile, history } = useContext(ProfileContext);
   const [Allhistory, sethistory] = useState(history);
@@ -47,7 +46,7 @@ function History() {
         <button className="set-button">Set</button>
       </div>
       {loading || !Allhistory || Allhistory.data.length === 0 ? (
-        <>No date found {history.totalPages}</>
+        <>No date found</>
       ) : (
         Allhistory.data.map((element) => (
           <>

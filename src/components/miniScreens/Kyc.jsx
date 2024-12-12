@@ -1,14 +1,16 @@
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import arrowleft from "../../assest/arrow-left.png";
 import alert from "../../assest/Group 41.png";
 import { useLocation, useNavigate } from "react-router-dom";
 import { apiRoutes, paths, validateForm } from "../../Utils/constant";
 import useAxios from "../../api/useAxios";
+import { ProfileContext } from "../ProfileProvider";
 
 function Kyc({ notify, setnotify, rules, setrules }) {
   const navigate = useNavigate();
   const axiosData = useAxios();
   const [verifyScreen ,setVerifyScreen]=useState(true)
+  const {showSnackbar } = useContext(ProfileContext);
   const [formData, setFormData] = useState({
     aadharNumber: "",
     email: "",
@@ -44,10 +46,13 @@ function Kyc({ notify, setnotify, rules, setrules }) {
         otp: twofactor_code,
       };
       const response = await axiosData.post(apiRoutes.verifyAadharOtp, payload, {});
-      console.log(response);
-      navigate(-1);
+      
+      
+
+      // navigate(-1);
     } catch (error) {
       console.log(error);
+      showSnackbar("error","error")
     }
   };
 

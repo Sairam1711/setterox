@@ -2,6 +2,9 @@ import React, { createContext, useState, useEffect } from "react";
 import axios from "axios";
 import { apiRoutes } from "../Utils/constant";
 import useAxios from "../api/useAxios";
+import ReusableSnackbar from "./ReusableSnackbar";
+import { Snackbar, Alert } from '@mui/material';
+import { useNavigate } from "react-router-dom";
 
 export const ProfileContext = createContext();
 const initialUserProfile = {
@@ -54,6 +57,7 @@ const initialUserProfile = {
   __v: 0,
 };
 export const ProfileProvider = ({ children }) => {
+  const navigate = useNavigate();
   const axiosData = useAxios();
   const [profile, setProfile] = useState(initialUserProfile);
   const [history, setHistory] = useState({
@@ -61,6 +65,24 @@ export const ProfileProvider = ({ children }) => {
     data: []
 });
   const [loading, setLoading] = useState(true);
+  const [snackbar, setSnackbar] = useState({
+    open: false,
+    message: '',
+    severity: 'info',
+  });
+const logout=()=>{
+  localStorage.removeItem('authToken');
+  setLoading(!loading)
+  navigate('/')
+}
+  const showSnackbar = (message, severity = 'info') => {
+    setSnackbar({ open: true, message, severity });
+  };
+
+  const closeSnackbar = () => {
+    setSnackbar({ ...snackbar, open: false });
+  };
+
   const getprofile = async () => {
     setLoading(true);
     console.log("object");
@@ -107,6 +129,21 @@ export const ProfileProvider = ({ children }) => {
     setHistory({...await getgamehistory(id),...await paymentHistory(id)})
 return {...getgamehistory,...paymentHistory}
   }
+
+  const SnackBar=()=>{
+    return(
+      <Snackbar
+      open={snackbar.open}
+      autoHideDuration={3000}
+      onClose={closeSnackbar}
+      anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+    >
+      <Alert onClose={closeSnackbar} severity={snackbar.severity} variant="filled">
+        {snackbar.message}
+      </Alert>
+    </Snackbar>
+    )
+  }
   useEffect(() => {
     const auth = localStorage.getItem("authToken");
     if (auth) {
@@ -116,8 +153,9 @@ return {...getgamehistory,...paymentHistory}
   }, []);
 
   return (
-    <ProfileContext.Provider value={{ profile, loading, getprofile,paymentHistory,history }}>
+    <ProfileContext.Provider value={{ profile, loading, getprofile,paymentHistory,history,showSnackbar,logout }}>
       {children}
+    <SnackBar></SnackBar>
     </ProfileContext.Provider>
   );
 };

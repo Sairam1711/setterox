@@ -1,3 +1,5 @@
+import { common } from "@mui/material/colors";
+
 export const paths = {
     home: "/",
     verify: "/verify",
@@ -16,7 +18,10 @@ export const paths = {
     tournament: "/tournament",
     tournamentDetails: "/tournament-detials",
   };
-
+export const commonStings={
+error:"error",
+success:"success"
+}
   export const apiRoutes={
     userProfile: "/me",
     userEdit: "/user/edit",
@@ -144,7 +149,10 @@ export const calculateDeposit = (depositAmount, gstRate) => {
     walletBalance
   };
 };
-
+ export const onwheelStop=(e)=>{
+  e.preventDefault();
+  e.target.blur();
+ }
 
 export const gstRate = 0.28;
 export const userProfile = {

@@ -2,9 +2,12 @@ import React, { useContext, useEffect, useState } from "react";
 import arrowleft from "../../assest/arrow-left.png";
 import { useNavigate } from "react-router-dom";
 import { ProfileContext } from "../ProfileProvider";
-import { validatePaymentDetails } from "../../Utils/constant";
+import { apiRoutes, validatePaymentDetails } from "../../Utils/constant";
+import useAxios from "../../api/useAxios";
+
 function Payscreen() {
-  const { profile, loading } = useContext(ProfileContext);
+  const axiosData = useAxios();
+  const { profile, loading,showSnackbar } = useContext(ProfileContext);
   const navigate = useNavigate();
   const [payment, setPayment] = useState("upi");
   const [paymentDetails, setPaymentDetails] = useState({
@@ -29,13 +32,22 @@ useEffect(()=>{
   };
 
   // Handle submit validation
-  const handleSubmit = () => {
+  const handleSubmit = async() => {
     const validationErrors = validatePaymentDetails(payment, paymentDetails);
     console.log(validationErrors);
     setErrors(validationErrors);
 
     if (Object.keys(validationErrors).length === 0) {
       // Process the submission (e.g., API call)
+     const payload= {
+      amount:paymentDetails.chips,type:payment,payment_gatway:"manualupi"
+     }
+      const response= await axiosData.post(apiRoutes.withdrawMoney, payload, {
+        
+      });
+if(!response.data.success){
+  showSnackbar(response.data.msg,"error")
+}
       console.log("Payment details submitted:", paymentDetails);
     }
   };

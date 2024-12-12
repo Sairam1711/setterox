@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "../Login/login.css";
 import { useNavigate } from "react-router-dom";
-import { apiRoutes, validatePhoneNumber } from "../../Utils/constant";
+import { apiRoutes, commonStings, validatePhoneNumber } from "../../Utils/constant";
 import useAxios from "../../api/useAxios";
+import { ProfileContext } from "../ProfileProvider";
 
 function Login() {
   const axiosData = useAxios();
   const [countryCode, setCountryCode] = useState("+91");
   const [phoneNumber, setPhoneNumber] = useState("");
+  const { showSnackbar } = useContext(ProfileContext);
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
   const handleCountryChange = (e) => {
@@ -32,7 +34,13 @@ function Login() {
         
       });
 // console.log(response.data);
-       navigate("verify",{state:{...response.data,...{phone:phoneNumber}}});
+if(response.data.code===401){
+  showSnackbar(response.data.message, 'error')
+}else{
+  showSnackbar("Login Success", commonStings.success)
+  navigate("verify",{state:{...response.data,...{phone:phoneNumber}}});
+}
+    
       //  alert(`Phone number submitted: ${countryCode} ${phoneNumber}`);
       setPhoneNumber('');
       setErrors({});

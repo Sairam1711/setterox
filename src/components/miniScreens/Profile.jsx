@@ -6,7 +6,7 @@ import { apiRoutes, userProfile } from "../../Utils/constant";
 import useAxios from "../../api/useAxios";
 function Profile() {
   const isMobile = useMediaQuery({ maxWidth: 768 });
-  const { profile, loading,getprofile } = useContext(ProfileContext);
+  const { profile, loading,getprofile,logout } = useContext(ProfileContext);
   const [edit ,setedit]=useState(false)
   const [name,setname]=useState()
   const navigate = useNavigate();
@@ -33,10 +33,7 @@ function Profile() {
 
     setedit(!edit)
   }
-const logout=()=>{
-  localStorage.removeItem('authToken');
-  navigate('/')
-}
+
   const Mini_card = ({ element }) => {
     return (
       <div className="challenge-card mini justify-left" >
