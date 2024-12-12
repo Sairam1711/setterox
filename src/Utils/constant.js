@@ -34,7 +34,37 @@ export const paths = {
     verifyOtp: "/login/finish",
     register: "/register",
   }
-  
+  // paymentValidation.js
+
+export const validatePaymentDetails = (payment, paymentDetails) => {
+  const errors = {};
+
+  // Validate UPI ID
+  if (payment === "UPI" || payment === "upi") {
+    if (!/^[\w.-]+@[a-zA-Z0-9]+$/.test(paymentDetails.upiId)) {
+      errors.upiId = "Please enter a valid UPI ID.";
+    }
+    if (paymentDetails.upiId !== paymentDetails.reEnterUpiId) {
+      errors.reEnterUpiId = "UPI IDs do not match.";
+    }
+    if (!paymentDetails.chips) {
+      errors.chips = "Please enter the number of chips.";
+    }
+  }
+
+  // Validate Bank Transfer
+  if (payment === "Bank Transfer") {
+    if (!/^\d{9,18}$/.test(paymentDetails.accountNumber)) {
+      errors.accountNumber = "Please enter a valid account number (9-18 digits).";
+    }
+    if (!/^[A-Z]{4}0[A-Z0-9]{6}$/.test(paymentDetails.ifsc)) {
+      errors.ifsc = "Please enter a valid IFSC code.";
+    }
+  }
+
+  return errors;
+};
+
   export const validatePhoneNumber = (countryCode, phoneNumber) => {
     const errors = {};
   
@@ -100,8 +130,23 @@ export const validateForm = ({ aadharNumber, email, method }) => {
 
   return errors;
 };
+export const calculateDeposit = (depositAmount, gstRate) => {
+  // Calculations
+  const govtTax = depositAmount * gstRate; // GST calculation
+  const totalAmount = depositAmount - govtTax; // Total amount including GST
+  const cashbackBonus = govtTax; // Cashback bonus is equal to GST in this case
+  const walletBalance = totalAmount + cashbackBonus; // Total added to wallet
+  
+  return {
+    govtTax,
+    totalAmount,
+    cashbackBonus,
+    walletBalance
+  };
+};
 
 
+export const gstRate = 0.28;
 export const userProfile = {
   _id: "675819a5a8ef29a834df3f9a",
   user_type: "User",

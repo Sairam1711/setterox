@@ -322,6 +322,8 @@ height: 80px;
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
   text-align: left;
+  cursor: pointer;
+  color: #0D6EFD
 }
 .styled-element-flex {
   display: flex;

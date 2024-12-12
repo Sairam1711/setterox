@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import arrowleft from "../../assest/arrow-left.png";
 import { useNavigate } from "react-router-dom";
+import { ProfileContext } from "../ProfileProvider";
 function Wallet() {
   const navigate = useNavigate();
-
+  const { profile, loading } = useContext(ProfileContext);
   return (
     <div className="wallet">
       <div className="headerbuttons">
@@ -36,7 +37,7 @@ function Wallet() {
             सकते है || Bank या UPI में निकाला नहीं जा सकता 
           </div>
           <p className="chipstext">Chips</p>
-          <p className="chipstext2">200.93</p>
+          <p className="chipstext2">{profile.Wallet_balance}</p>
           <button
             className="modern-button full wallbutn"
            
@@ -51,7 +52,7 @@ function Wallet() {
         <div className="challenge-card height-291">
           <div className="challenge-header">
             <div className="Challengeheader">
-              <span>Deposit Chips</span>
+              <span>Winning Chips</span>
             </div>
           </div>
           <div className="bluefiled">
@@ -59,7 +60,7 @@ function Wallet() {
             सकते है || Bank या UPI में निकाला नहीं जा सकता 
           </div>
           <p className="chipstext">Chips</p>
-          <p className="chipstext2">200.93</p>
+          <p className="chipstext2">{profile.wonAmount}</p>
           <button
             className="modern-button full wallbutn"
            
