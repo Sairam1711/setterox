@@ -104,7 +104,7 @@ if(response.data.code===401){
           You agree to our friendly{" "}
           <a
         className="textDecorate"
-           
+          href="#terms" 
           >
             privacy policy
           </a>

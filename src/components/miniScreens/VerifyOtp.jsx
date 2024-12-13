@@ -11,7 +11,7 @@ function VerifyOtp() {
   const inputs = useRef([]);
   const location=useLocation();
   const navigate = useNavigate();
-  const { showSnackbar } = useContext(ProfileContext);
+  const { showSnackbar,setLoading } = useContext(ProfileContext);
   const handleChange = (value, index) => {
     // Update the OTP array
     const newOtp = [...otp];
@@ -48,7 +48,7 @@ function VerifyOtp() {
       }else if(response.data.status===101){
         showSnackbar(response.data.msg,"error")
       }
-     
+      setLoading(false)
     } catch (error) {
       console.log(error);
     }

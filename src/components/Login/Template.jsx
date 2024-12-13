@@ -51,7 +51,6 @@ function Template({
     setIsExpanded(!isExpanded);
     setfirstrender(true);
   };
-  console.log(loading,profile,"sddd");
   return (
 
     <div className="loginContainer" ref={homeRef}>

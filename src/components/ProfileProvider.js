@@ -186,7 +186,7 @@ const getgatewaysettings=async()=>{
   }, []);
 
   return (
-    <ProfileContext.Provider value={{ profile, loading, getprofile,paymentHistory,history,showSnackbar,logout }}>
+    <ProfileContext.Provider value={{ profile, loading, getprofile,paymentHistory,history,showSnackbar,logout ,setLoading }}>
       {children}
     <SnackBar></SnackBar>
     </ProfileContext.Provider>
