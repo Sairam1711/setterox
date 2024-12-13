@@ -196,7 +196,7 @@ function Terms() {
 <List2
  lable={"Contact Us"}
  value={"+"}
- Content={ContactUS}
+ Content={Content}
 ></List2>
 <List2
  lable={"Grievance Redressal"}
