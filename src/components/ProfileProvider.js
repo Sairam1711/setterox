@@ -157,7 +157,7 @@ const getgatewaysettings=async()=>{
         autoHideDuration={3000} // Adjust the duration for auto-hide
         onClose={closeSnackbar}
         sx={{background:"white"}}
-        anchorOrigin={{ vertical:isMobile? "top":"bottom", horizontal: "right" }}
+        anchorOrigin={{ vertical:isMobile? "top":"bottom", horizontal:isMobile?"center" : "right" }}
        
       >
         <Box sx={{ width: "100%", position: "relative" }}>
