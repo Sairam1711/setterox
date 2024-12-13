@@ -91,7 +91,7 @@ if(response.data.code===401){
               className="phone-number-input"
             />
           </div>
-          {errors.phone && <p className="error" >{errors.phone}</p>}
+          {errors.phone && <p className="error-text" >{errors.phone}</p>}
         </div>
       </div>
       <div className="flex2">

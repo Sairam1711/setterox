@@ -17,6 +17,7 @@ export const paths = {
     support: "/support",
     tournament: "/tournament",
     tournamentDetails: "/tournament-detials",
+    terms:"terms"
   };
 export const commonStings={
 error:"error",

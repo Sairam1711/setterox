@@ -21,6 +21,7 @@ import { useEffect, useState } from 'react';
 import Tournament from './components/miniScreens/Tournament';
 import TournamentDetials from './components/miniScreens/TournamentDetials';
 import { paths } from './Utils/constant';
+import Terms from './components/miniScreens/Terms';
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
         <Route path={paths.support} element={<Template MiniScreen={()=><SupportScreen></SupportScreen>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
         <Route path={paths.tournament}element={<Template MiniScreen={()=><Tournament></Tournament>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
         <Route path={paths.tournamentDetails} element={<Template MiniScreen={()=><TournamentDetials></TournamentDetials>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
+        <Route path={paths.terms} element={<Template MiniScreen={()=><Terms></Terms>} MiniButtons={()=><MiniButtons></MiniButtons>}></Template>} />
 
       </Routes>
 

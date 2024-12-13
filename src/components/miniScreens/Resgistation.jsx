@@ -64,7 +64,7 @@ function Resgistation() {
         onChange={handleChange}
       ></input>
       {errors.fullName && (
-        <p className="phone-label error margin-0">{errors.fullName}</p>
+        <p className="phone-label error-text margin-0">{errors.fullName}</p>
       )}
 
       <label htmlFor="phone-input" className="phone-label">
@@ -78,7 +78,7 @@ function Resgistation() {
         onChange={handleChange}
       ></input>
       {errors.phoneNumber && (
-        <p className="phone-label error margin-0">{errors.phoneNumber}</p>
+        <p className="phone-label error-text margin-0">{errors.phoneNumber}</p>
       )}
       <label htmlFor="phone-input" className="phone-label">
         Refferal

@@ -39,15 +39,15 @@ const truncateText=(text, limit) =>{
              <div onClick={()=>{
               toggleExpand(false)
               navigate("/lobby")
-             }} className='menu-list'>
-                <div className='menu-1'>  <img className='iconmenu' src={dice}></img> <p className='menu-content'>Play</p></div>
+             }} className='menu-list box-color'>
+                <div className='menu-1 '>  <img className='iconmenu' src={dice}></img> <p className='menu-content'>Play</p></div>
               <img src={arrow}></img>
              </div>
              <div 
               onClick={()=>{
                 toggleExpand(false)
                 navigate("/Wallet")
-               }}className='menu-list'>
+               }}className='menu-list '>
                 <div className='menu-1'>  <img  className='iconmenu' src={wallet}></img> <p className='menu-content'>Wallet</p></div>
               <img src={arrow}></img>
              </div>
@@ -55,7 +55,7 @@ const truncateText=(text, limit) =>{
               onClick={()=>{
                 toggleExpand(false)
                 navigate("/history")
-               }}className='menu-list'>
+               }}className='menu-list box-color'>
                 <div className='menu-1'>  <img className='iconmenu' src={dice}></img> <p className='menu-content'>History</p></div>
               <img src={arrow}></img>
              </div>
@@ -71,7 +71,7 @@ const truncateText=(text, limit) =>{
               onClick={()=>{
                 toggleExpand(false)
                 navigate("/referral")
-               }} className='menu-list'>
+               }} className='menu-list box-color'>
                 <div className='menu-1'>  <img className='iconmenu' src={refrence}></img> <p className='menu-content'>Refer & Earn</p></div>
               <img src={arrow}></img>
              </div>

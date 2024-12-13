@@ -491,6 +491,7 @@
 .flex.sb {
   justify-content: space-between;
 }
+
 .fullwidth {
   width: 100%;
 }
@@ -830,6 +831,8 @@ input:checked + .slider:before {
   width: 100%;
   font-weight: 600;
   font-family: Poppins;
+  
+
 }
 .sessionright {
   width: 60%;
@@ -968,16 +971,16 @@ th {
 }
 .modern-button.back {
   border-radius: 4px;
-  background: #4db1f1;
+  background:#0d6efd;
   text-align: center;
   align-items: center;
   width: 104px;
   height: 35px;
 }
 .modern-button.guide {
-  border: 2px solid #4db1f1;
+  border: 2px solid #0d6efd;
   border-radius: 4px;
-  color: #4db1f1;
+  color: #0d6efd;
   text-align: center;
   align-items: center;
 
@@ -1425,6 +1428,9 @@ text-align: center;
 .modern-button.referral-button.gray{
   background-color:  #6c757d;
 }
+.copy-field{
+  width: 387px;
+}
 .referral-text {
   color: white;
   font-family: "Inter", sans-serif;
@@ -1843,17 +1849,38 @@ top: 723px;
   height: 0;
   display: none;
   overflow: hidden; /* Ensures content doesn't spill out */
-  transition: height 0.3s ease-in-out; /* Smooth transition */
-}
-
-.expandable-div.expanded {
-  height: auto;
   display: block;
 }
-
+.margin-auto{
+  margin: auto;
+}
+.expandable-div.expanded {
+ 
+  animation: expandable 0.2s linear forwards;
+}
+@keyframes expandable {
+  0% {
+    height:0;
+ 
+  }
+  100% {
+    height: auto;
+ 
+  }
+}
 .expandable-div.collapsed {
   height: 0;
-  display: none;
+  animation: collapsed  0.2s linear forwards;
+}
+@keyframes collapsed {
+  0% {
+    height: auto;
+ 
+  }
+  100% {
+  height: 0px;
+ 
+  }
 }
 .ttext2 {
   font-weight: 600; /* Default font weight */
@@ -2048,7 +2075,7 @@ top: 723px;
 .play-button-secondary.mobile {
   width: 57px; /* Width for mobile */
 }
-.error{
+.error-text{
   font-size: 14px;
   font-family:  Inter, sans-serif;
    color: red
@@ -2074,6 +2101,61 @@ gap: 20px;
 .modern-button.logout:hover{
   background-color: #d60000;
   color: #ffffff;
+}
+.box-color{
+ background-color:  #f8f9fa
+}
+.border-1px{
+  border-bottom: 1px solid #cccbcb;
+
+}
+.border-1px-radius{
+  border: 1px solid #cccbcb;
+  border-radius: 5px;
+}
+.sheader.terms{
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0
+}
+.c-list{
+margin-top: 20px;
+}
+.t-h{
+  width: 85%;
+height: 34px;
+padding: 6%;
+padding-top: 10px;
+padding-bottom: 10px;
+}
+.size-24{
+  transform: rotate(90deg);
+  height: 20px;
+  width: 24px;
+  object-fit: contain;
+}
+.i-rotate {
+  animation: irotate360 0.2s linear forwards;
+}
+.i-rotate2 {
+  animation: irotate3602 0.2s linear forwards;
+}
+@keyframes irotate360 {
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(270deg);
+  }
+}
+
+@keyframes irotate3602 {
+  from {
+    transform: rotate(270deg);;
+  }
+  to {
+    transform: rotate(90deg); ;
+  }
 }
 /* Media query for mobile devices */
 @media (max-width: 768px) {
@@ -2105,6 +2187,9 @@ width: auto;
   .modern-button.referral-button {
     width: 300px;
   }
+  .input-section.copy-field{
+    width: 300px;
+  }
   .t-text-style {
     font-size: 12px;
   }
@@ -2113,7 +2198,49 @@ width: auto;
     font-size: 12px;
   }
 }
+.progress-bar2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: transparent;
+  z-index: 0;
+  animation: progressAnimation 3s linear forwards;
+}
 
+/* Color variations based on severity */
+.success {
+  background-color: green;
+}
+
+.error {
+  background-color: red;
+}
+
+.warning {
+  background-color: yellow;
+}
+
+.info {
+  background-color: blue;
+}
+
+/* Keyframes for progress bar animation */
+@keyframes progressAnimation {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+/* Snackbar alert styling */
+.snackbar-alert {
+  position: relative;
+  z-index: 1;
+}
 @media (min-width: 769px) {
   .modern-button .referral-button {
     width: 387px;

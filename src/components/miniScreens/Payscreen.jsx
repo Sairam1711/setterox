@@ -104,8 +104,8 @@ if(!response.data.success){
             name={payment === "Bank Transfer" ? "accountNumber" : "upiId"}
             onChange={handleChange}
           />
-          {errors.accountNumber && <p className="error margin-0">{errors.accountNumber}</p>}
-          {errors.upiId && <p className="error margin-0">{errors.upiId}</p>}
+          {errors.accountNumber && <p className="error-text margin-0">{errors.accountNumber}</p>}
+          {errors.upiId && <p className="error-text margin-0">{errors.upiId}</p>}
         </div>
 
         <span className="text-left-style">
@@ -124,8 +124,8 @@ if(!response.data.success){
             name={payment === "Bank Transfer" ? "ifsc" : "reEnterUpiId"}
             onChange={handleChange}
           />
-          {errors.ifsc && <p className="error margin-0">{errors.ifsc}</p>}
-          {errors.reEnterUpiId && <p className="error margin-0">{errors.reEnterUpiId}</p>}
+          {errors.ifsc && <p className="error-text margin-0">{errors.ifsc}</p>}
+          {errors.reEnterUpiId && <p className="error-text margin-0">{errors.reEnterUpiId}</p>}
         </div>
 
         {payment !== "Bank Transfer" && (
@@ -137,13 +137,13 @@ if(!response.data.success){
               name="chips"
               onChange={handleChange}
             />
-            {errors.chips && <p className="error margin-0">{errors.chips}</p>}
+            {errors.chips && <p className="error-text margin-0">{errors.chips}</p>}
           </div>
         )}
 
         <span className="centered-text">
           By Continuing, you agree to our{" "}
-          <a className="textDecorate" >
+          <a className="textDecorate" href="#/terms" >
             Legal Terms
           </a>{" "}
           and you are 18 years or older.

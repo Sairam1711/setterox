@@ -133,7 +133,7 @@ function Kyc({ notify, setnotify, rules, setrules }) {
                 <option value="Aadhar">Aadhar Vai Card</option>
               </select>
             </div>
-            {errors.method && <p className="error margin-0">{errors.method}</p>}
+            {errors.method && <p className="error-text margin-0">{errors.method}</p>}
           </div>
           <div className="amount">
             <label htmlFor="normal-input f-2-c" className="phone-label">
@@ -148,7 +148,7 @@ function Kyc({ notify, setnotify, rules, setrules }) {
               onChange={handleChange}
             ></input>
             {errors.aadharNumber && (
-              <p className="error margin-0">{errors.aadharNumber}</p>
+              <p className="error-text margin-0">{errors.aadharNumber}</p>
             )}
           </div>
           <div className="amount">
@@ -163,7 +163,7 @@ function Kyc({ notify, setnotify, rules, setrules }) {
               value={formData.email}
               onChange={handleChange}
             ></input>
-            {errors.email && <p className="error margin-0">{errors.email}</p>}
+            {errors.email && <p className="error-text margin-0">{errors.email}</p>}
           </div>
 
           <span className="agument">

@@ -3,10 +3,12 @@ import axios from "axios";
 import { apiRoutes } from "../Utils/constant";
 import useAxios from "../api/useAxios";
 import ReusableSnackbar from "./ReusableSnackbar";
-import { Snackbar, Alert } from '@mui/material';
+import { Snackbar, Alert, LinearProgress ,Box, colors  } from '@mui/material';
 import { useNavigate } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 
 export const ProfileContext = createContext();
+
 const initialUserProfile = {
   id: "",
   user_type: "",
@@ -57,6 +59,7 @@ const initialUserProfile = {
   __v: 0,
 };
 export const ProfileProvider = ({ children }) => {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
   const navigate = useNavigate();
   const axiosData = useAxios();
   const [profile, setProfile] = useState(initialUserProfile);
@@ -70,6 +73,7 @@ export const ProfileProvider = ({ children }) => {
     message: '',
     severity: 'info',
   });
+ 
 const logout=()=>{
   localStorage.removeItem('authToken');
   setLoading(!loading)
@@ -85,7 +89,7 @@ const logout=()=>{
 
   const getprofile = async () => {
     setLoading(true);
-    console.log("object");
+
     try {
       const response = await axiosData.get(apiRoutes.userProfile, {});
       const data = response.data.data;
@@ -129,27 +133,56 @@ const logout=()=>{
     setHistory({...await getgamehistory(id),...await paymentHistory(id)})
 return {...getgamehistory,...paymentHistory}
   }
+const getgamesite_data=async()=>{
+  try {
+    const response = await axiosData.get(apiRoutes.siteData);
+    return response.data
+  } catch (error) {
+    console.log(error);
+  }
+}
 
+const getgatewaysettings=async()=>{
+  try {
+    const response = await axiosData.get(apiRoutes.gatewaySettings);
+    return response.data
+  } catch (error) {
+    console.log(error);
+  }
+}
   const SnackBar=()=>{
-    return(
+    return (
       <Snackbar
-      open={snackbar.open}
-      autoHideDuration={3000}
-      onClose={closeSnackbar}
-      anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-    >
-      <Alert onClose={closeSnackbar} severity={snackbar.severity} variant="filled">
-        {snackbar.message}
-      </Alert>
-    </Snackbar>
-    )
+        open={snackbar.open}
+        autoHideDuration={3000} // Adjust the duration for auto-hide
+        onClose={closeSnackbar}
+        sx={{background:"white"}}
+        anchorOrigin={{ vertical:isMobile? "top":"bottom", horizontal: "right" }}
+       
+      >
+        <Box sx={{ width: "100%", position: "relative" }}>
+          <Alert
+            onClose={closeSnackbar}
+            severity={snackbar.severity}
+            variant="outlined"
+            className="snackbar-alert"
+          >
+            {snackbar.message}
+          </Alert>
+
+          {/* Progress bar */}
+          <Box className={`progress-bar2 ${snackbar.severity}`} />
+        </Box>
+      </Snackbar>)
   }
   useEffect(() => {
     const auth = localStorage.getItem("authToken");
     if (auth) {
       getprofile();
-  
+
     }
+    getgatewaysettings()
+    getgamesite_data()
   }, []);
 
   return (

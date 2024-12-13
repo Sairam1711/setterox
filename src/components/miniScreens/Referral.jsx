@@ -42,7 +42,7 @@ function Referral() {
           className="referral-image"
           src="https://s3-alpha-sig.figma.com/img/9642/63b9/ec0d8da76700b4a4ee34baaaaa1edf13?Expires=1733702400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=AdltjY5oJ7kIdI58f4YO-twQMZiZGbD-fVfSqX2q1VRuX42lmr1ESPSJHziq0Bz9arBOVQiJDFyT0WQt80qc-nTMuXCBZPE-JF1ohqLHvDcV2jWeZfc-5f1FdzCRjeR2RP9FXCNoP6WqCR7CRaTp1r8ttm1zyXZp3Wqw0kMYKj89~v-qfdW4NlwTADlVa6RONccFJuF9Y25ezNKOor6E63V6IK9ZvpOfzdRmqCfsJa-rLQ55iH3513ZXBOEgyMkt~ifGDXrSOzuLgiQYIOoRFP5SmDJmVicUZNlrBX3MhkA0VPcbNCHURafQSIOedqE~V0cEMZDEPdq~FwPTi2tI2Q__"
         ></img>
-        <div className="input-section margin-0" >
+        <div className="input-section copy-field margin-0" >
           <input
             type="text"
             placeholder="Enter Number"
